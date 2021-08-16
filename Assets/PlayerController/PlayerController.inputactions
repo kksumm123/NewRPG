@@ -71,6 +71,114 @@
                     "isPartOfComposite": true
                 }
             ]
+        },
+        {
+            "name": "Look",
+            "id": "65277f1f-1cc9-4efe-87c7-1b75b94ae8e4",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Value",
+                    "id": "86aab3b1-be2b-47da-b39b-5aecbb6d8d77",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "9f99b506-f78b-407f-9bc5-b2c1814deb04",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Jump",
+            "id": "f50ae1c5-7a9f-433a-b044-60fc4c7d30d6",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "a52f3c79-b103-486d-993a-5b7aedf62f11",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "fd0acaa9-e4db-4f0c-a6ad-71d606db9f29",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Aim",
+            "id": "8613796e-a763-454b-96ca-de31faf8fe49",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "7b10028e-0d41-44c7-866a-63cdcdffac99",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "772dd6f7-03a8-44b0-89b8-327657f4b470",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Shoot",
+            "id": "55d7d22d-d8e9-49c6-9106-a13bced174b0",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "1ebbd056-1ea0-4391-865c-17a1dba9371d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ec858483-0f43-41e8-9207-2da42261380c",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
