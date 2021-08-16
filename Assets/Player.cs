@@ -1,8 +1,11 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
-[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(CapsuleCollider))]
+[RequireComponent(typeof(NavMeshAgent))]
 public class Player : MonoBehaviour
 {
     Animator animator;
@@ -32,9 +35,9 @@ public class Player : MonoBehaviour
         if (move != Vector3.zero)
         {
             Vector3 relateMove = Vector3.zero;
-            // forward * move.z ÇÒ´ç
+            // forward * move.z í• ë‹¹
             relateMove = Camera.main.transform.forward * move.z;
-            // right * move.x ÇÒ´ç (+= ÇØÁÖ´Â ÀÌÀ¯´Â forward µÈ °ª¿¡ ´õÇØÁÖ±â À§ÇÔ)
+            // right * move.x í• ë‹¹ (+= í•´ì£¼ëŠ” ì´ìœ ëŠ” forward ëœ ê°’ì— ë”í•´ì£¼ê¸° ìœ„í•¨)
             relateMove += Camera.main.transform.right * move.x;
             relateMove.y = 0;
             move = relateMove;
@@ -43,7 +46,7 @@ public class Player : MonoBehaviour
 
             float forwardDegree = transform.forward.VectorToDegree();
             float moveDegree = move.VectorToDegree();
-            float dirRadian = (moveDegree - forwardDegree + 90) * Mathf.PI / 180; //¶óµğ¾È°ª
+            float dirRadian = (moveDegree - forwardDegree + 90) * Mathf.PI / 180; //ë¼ë””ì•ˆê°’
             Vector3 dir;
             dir.x = Mathf.Cos(dirRadian);// 
             dir.z = Mathf.Sin(dirRadian);//
