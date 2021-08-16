@@ -9,12 +9,14 @@ using UnityEngine.AI;
 public class Player : MonoBehaviour
 {
     Animator animator;
+    NavMeshAgent agent;
 
     [SerializeField] float speed = 5;
 
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
+        agent = GetComponent<NavMeshAgent>();
     }
 
     void Update()
@@ -54,7 +56,10 @@ public class Player : MonoBehaviour
             animator.SetFloat("DirX", dir.x);
             animator.SetFloat("DirY", dir.z);
 
-            transform.Translate(speed * Time.deltaTime * move, Space.World);
+            //transform.Translate(speed * Time.deltaTime * move, Space.World);
+            var pos = agent.nextPosition;
+            pos += speed * Time.deltaTime * move;
+            agent.nextPosition = pos;
         }
 
         animator.SetFloat("Speed", move.sqrMagnitude);
