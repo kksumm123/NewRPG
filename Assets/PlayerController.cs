@@ -33,6 +33,8 @@ public class PlayerController : MonoBehaviour
 
         var input = moveAction.ReadValue<Vector2>();
         Vector3 move = new Vector3(input.x, 0, input.y);
+        move = move.x * Camera.main.transform.right + move.z * Camera.main.transform.forward;
+        move.y = 0;
         controller.Move(move * Time.deltaTime * playerSpeed);
 
         if (move != Vector3.zero)
