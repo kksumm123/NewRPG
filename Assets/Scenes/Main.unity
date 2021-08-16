@@ -25684,6 +25684,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7627576338539272580, guid: 6d7ae70e9dd8bcd4c8a59a4b269c0c8e, type: 3}
+      propertyPath: m_MinMoveDistance
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1551045555656659452, guid: 6d7ae70e9dd8bcd4c8a59a4b269c0c8e, type: 3}
       propertyPath: m_Name
       value: Player
@@ -25732,13 +25736,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5025565952506549959, guid: 6d7ae70e9dd8bcd4c8a59a4b269c0c8e, type: 3}
-      propertyPath: m_Constraints
-      value: 64
-      objectReference: {fileID: 0}
-    - target: {fileID: 5025565952506549959, guid: 6d7ae70e9dd8bcd4c8a59a4b269c0c8e, type: 3}
-      propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 1551045557012000367, guid: 6d7ae70e9dd8bcd4c8a59a4b269c0c8e, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 853934311}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d7ae70e9dd8bcd4c8a59a4b269c0c8e, type: 3}

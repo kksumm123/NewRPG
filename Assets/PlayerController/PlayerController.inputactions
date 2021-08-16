@@ -2,179 +2,147 @@
     "name": "PlayerController",
     "maps": [
         {
-            "name": "Move",
-            "id": "13170385-ee53-4119-a7c6-baf0b46ba464",
-            "actions": [
-                {
-                    "name": "New action",
-                    "type": "Button",
-                    "id": "492121e0-7732-4a52-bce6-1f68a6f0250a",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "2D Vector",
-                    "id": "0adfad4a-6402-43d5-b02e-21387c521bc0",
-                    "path": "2DVector",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "New action",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "up",
-                    "id": "05fb0f6c-0ce6-47cf-9e27-2123811484f2",
-                    "path": "<Keyboard>/w",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "New action",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "down",
-                    "id": "5fa53edf-c8c1-44eb-962e-7d5b39f943bd",
-                    "path": "<Keyboard>/s",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "New action",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "left",
-                    "id": "038b7746-c727-4ccd-82bf-ad0872434841",
-                    "path": "<Keyboard>/a",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "New action",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "943ffa4d-fe9b-462c-9074-115be0e87582",
-                    "path": "<Keyboard>/d",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "New action",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                }
-            ]
-        },
-        {
-            "name": "Look",
+            "name": "Player",
             "id": "65277f1f-1cc9-4efe-87c7-1b75b94ae8e4",
             "actions": [
                 {
-                    "name": "New action",
+                    "name": "Move",
                     "type": "Value",
                     "id": "86aab3b1-be2b-47da-b39b-5aecbb6d8d77",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Look",
+                    "type": "Value",
+                    "id": "cf5fa066-d544-4ee0-96cd-c0a54d603f91",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "19378778-58fb-4d80-8310-e4389e384e12",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Aim",
+                    "type": "Button",
+                    "id": "d48d2757-2bcb-4721-bdcf-748ddee124e4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Shoot",
+                    "type": "Button",
+                    "id": "acae44c9-add3-4a3a-8166-f803c795b65d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
                 {
+                    "name": "WASD",
+                    "id": "4f28cec9-ebe1-4f3d-a0dc-2659154d0688",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "2db07ade-1b4a-4e57-b33a-201409aefd2c",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "2b033780-a3a6-47a7-809d-fe5b3715a7f8",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "b3b43f96-5698-4f79-8a75-bb15f746cce6",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "463622fb-c7c5-4e38-a056-9a9de5538a34",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "",
-                    "id": "9f99b506-f78b-407f-9bc5-b2c1814deb04",
+                    "id": "fa423b31-036f-4eb6-a91b-494de47d699b",
                     "path": "<Mouse>/delta",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "Look",
                     "isComposite": false,
                     "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "Jump",
-            "id": "f50ae1c5-7a9f-433a-b044-60fc4c7d30d6",
-            "actions": [
-                {
-                    "name": "New action",
-                    "type": "Button",
-                    "id": "a52f3c79-b103-486d-993a-5b7aedf62f11",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                }
-            ],
-            "bindings": [
+                },
                 {
                     "name": "",
-                    "id": "fd0acaa9-e4db-4f0c-a6ad-71d606db9f29",
+                    "id": "79f84b6d-e324-485d-a57f-846328de6b63",
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "Aim",
-            "id": "8613796e-a763-454b-96ca-de31faf8fe49",
-            "actions": [
-                {
-                    "name": "New action",
-                    "type": "Button",
-                    "id": "7b10028e-0d41-44c7-866a-63cdcdffac99",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                }
-            ],
-            "bindings": [
+                },
                 {
                     "name": "",
-                    "id": "772dd6f7-03a8-44b0-89b8-327657f4b470",
+                    "id": "792502db-a959-48dd-88b0-d4379c1acd9d",
                     "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "Aim",
                     "isComposite": false,
                     "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "Shoot",
-            "id": "55d7d22d-d8e9-49c6-9106-a13bced174b0",
-            "actions": [
-                {
-                    "name": "New action",
-                    "type": "Button",
-                    "id": "1ebbd056-1ea0-4391-865c-17a1dba9371d",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                }
-            ],
-            "bindings": [
+                },
                 {
                     "name": "",
-                    "id": "ec858483-0f43-41e8-9207-2da42261380c",
+                    "id": "69d4d75e-0523-47b6-a406-2767c9290eb2",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "Shoot",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

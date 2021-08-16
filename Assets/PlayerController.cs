@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+[RequireComponent(typeof(CharacterController))] 
 public class PlayerController : MonoBehaviour
 {
     public PlayerInput playerInput;
@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        controller = gameObject.AddComponent<CharacterController>();
+        controller = gameObject.GetComponent<CharacterController>();
         moveAction = playerInput.actions["Move"];
         jumpAction = playerInput.actions["Jump"];
     }
