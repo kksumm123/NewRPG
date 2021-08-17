@@ -38,10 +38,11 @@ public class PlayerController : MonoBehaviour
         animator.SetTrigger("FireStart");
         GameObject bullet = Instantiate(bulletPrefab, barrelTransform.transform.position, Camera.main.transform.rotation, bulletParent);
         var bulletController = bullet.GetComponent<BulletController>();
-
-        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit, Mathf.Infinity))
+        bool isHit = Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit, Mathf.Infinity);
+        if (isHit)
         {
             bulletController.target = hit.point;
+            bulletController.targetContactNormal = hit.normal;
             bulletController.hit = true;
         }
         else

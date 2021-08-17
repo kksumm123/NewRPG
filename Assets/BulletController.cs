@@ -9,6 +9,8 @@ public class BulletController : MonoBehaviour
     float timeToDestroy = 3f;
     public Vector3 target;
     public bool hit;
+    public Vector3 targetContactNormal;
+
     private void OnEnable()
     {
         Destroy(gameObject, timeToDestroy);
@@ -18,13 +20,18 @@ public class BulletController : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
         if (!hit && Vector3.Distance(transform.position, target) < 0.01f)
         {
+            if (hit)
+                Instantiate(bulletDecal, target + targetContactNormal * 0.0001f, Quaternion.LookRotation(targetContactNormal));
+
             Destroy(gameObject);
+            print("Update hit");
         }
     }
     private void OnCollisionEnter(Collision other)
     {
-        var contact = other.GetContact(0);
+        var contact = other.GetContact(0); 
         Instantiate(bulletDecal, contact.point + contact.normal * 0.0001f, Quaternion.LookRotation(contact.normal));
         Destroy(gameObject);
+        print("ColEnter hit");
     }
 }
