@@ -5120,7 +5120,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7751407330398467951, guid: d8596d02f4a4eed468b31328ca1fac2b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8596d02f4a4eed468b31328ca1fac2b, type: 3}
@@ -8428,7 +8428,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3361698703542681505, guid: f214a20a2faba8e4caa223596ed59fc0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3361698703542681506, guid: f214a20a2faba8e4caa223596ed59fc0, type: 3}
       propertyPath: m_Follow
@@ -28358,7 +28358,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &3361698702928005683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28371,7 +28371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2fba25a5cd15594e8f050a11e386c80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ConfineMode: 0
+  m_ConfineMode: 1
   m_BoundingVolume: {fileID: 0}
   m_BoundingShape2D: {fileID: 0}
   m_ConfineScreenEdges: 1
@@ -28613,7 +28613,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &7751407330198355148
 MonoBehaviour:
   m_ObjectHideFlags: 0
