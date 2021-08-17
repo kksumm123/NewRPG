@@ -7,11 +7,12 @@ public class PlayerController : MonoBehaviour
     public PlayerInput playerInput;
     InputAction moveAction;
     InputAction jumpAction;
+    Animator animator;
 
     private CharacterController controller;
     private Vector3 playerVelocity;
     private bool groundedPlayer;
-    private float playerSpeed = 2.0f;
+    [SerializeField] float playerSpeed = 2.0f;
     private float jumpHeight = 1.0f;
     private float gravityValue = -9.81f;
 
@@ -20,6 +21,7 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         controller = gameObject.GetComponent<CharacterController>();
+        animator = GetComponentInChildren<Animator>();
         moveAction = playerInput.actions["Move"];
         jumpAction = playerInput.actions["Jump"];
     }
@@ -37,6 +39,20 @@ public class PlayerController : MonoBehaviour
         move = move.x * Camera.main.transform.right + move.z * Camera.main.transform.forward;
         move.y = 0;
         controller.Move(move * Time.deltaTime * playerSpeed);
+
+        if (move.sqrMagnitude > 0)
+        {
+            float forwardDegree = transform.forward.VectorToDegree();
+            float moveDegree = move.VectorToDegree();
+            float dirRadian = (moveDegree - forwardDegree + 90) * Mathf.PI / 180; //라디안값
+            Vector3 dir;
+            dir.x = Mathf.Cos(dirRadian);// 
+            dir.z = Mathf.Sin(dirRadian);//
+
+            animator.SetFloat("DirX", dir.x);
+            animator.SetFloat("DirY", dir.z);
+        }
+        animator.SetFloat("Speed", move.sqrMagnitude);
 
         // Changes the height position of the player..
         if (jumpAction.triggered && groundedPlayer)

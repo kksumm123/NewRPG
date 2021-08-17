@@ -8523,7 +8523,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1551045555656659452, guid: 6d7ae70e9dd8bcd4c8a59a4b269c0c8e, type: 3}
   m_PrefabInstance: {fileID: 1551045557012000364}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &741093258
+--- !u!114 &741093261
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8536,20 +8536,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggleButton:
-    m_Name: Toggle Button
+    m_Name: toggleKey
     m_Type: 1
-    m_ExpectedControlType: Button
-    m_Id: cdf4fe8e-f3af-473b-a464-516aa16dc29f
+    m_ExpectedControlType: 
+    m_Id: 4130f6ea-bfde-41ef-b1ed-5af5beb1d8dc
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 
-      m_Id: 2f2f8241-3965-4bae-9900-99147138704d
+      m_Id: 34311c8d-97e1-4efe-b31b-f994234c42fc
       m_Path: <Keyboard>/tab
       m_Interactions: 
       m_Processors: 
       m_Groups: 
-      m_Action: Toggle Button
+      m_Action: toggleKey
       m_Flags: 0
 --- !u!1001 &741909952
 PrefabInstance:
@@ -26059,6 +26059,10 @@ PrefabInstance:
     - target: {fileID: 1551045555656659453, guid: 6d7ae70e9dd8bcd4c8a59a4b269c0c8e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1551045557012000366, guid: 6d7ae70e9dd8bcd4c8a59a4b269c0c8e, type: 3}
+      propertyPath: playerSpeed
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1551045557012000367, guid: 6d7ae70e9dd8bcd4c8a59a4b269c0c8e, type: 3}
       propertyPath: m_Camera
