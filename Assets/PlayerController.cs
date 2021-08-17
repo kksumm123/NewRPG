@@ -27,18 +27,22 @@ public class PlayerController : MonoBehaviour
         jumpAction = playerInput.actions["Jump"];
         shootAction = playerInput.actions["Shoot"];
         shootAction.performed += ShootAction_performed;
+        mapLayer = 1 << LayerMask.NameToLayer("Environment");
     }
 
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] GameObject barrelTransform;
     [SerializeField] Transform bulletParent;
     [SerializeField] float bulletHitMissDistance = 25f;
+    LayerMask mapLayer;
+
     void ShootAction_performed(InputAction.CallbackContext obj)
     {
         animator.SetTrigger("FireStart");
         GameObject bullet = Instantiate(bulletPrefab, barrelTransform.transform.position, Camera.main.transform.rotation, bulletParent);
         var bulletController = bullet.GetComponent<BulletController>();
-        bool isHit = Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit, Mathf.Infinity);
+        bool isHit = Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit, Mathf.Infinity, mapLayer);
+        print($"shoot, Ray ishit = {isHit}");
         if (isHit)
         {
             bulletController.target = hit.point;

@@ -17,21 +17,32 @@ public class BulletController : MonoBehaviour
     }
     private void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+        //transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+        transform.Translate(new Vector3(0, 0, speed * Time.deltaTime));
+        print("유후");
         if (!hit && Vector3.Distance(transform.position, target) < 0.01f)
         {
             if (hit)
+            {
                 Instantiate(bulletDecal, target + targetContactNormal * 0.0001f, Quaternion.LookRotation(targetContactNormal));
+                isHit = true;
+            }
 
             Destroy(gameObject);
-            print("Update hit");
+            print("Update");
         }
     }
+
+    bool isHit = false;
     private void OnCollisionEnter(Collision other)
     {
-        var contact = other.GetContact(0); 
-        Instantiate(bulletDecal, contact.point + contact.normal * 0.0001f, Quaternion.LookRotation(contact.normal));
-        Destroy(gameObject);
-        print("ColEnter hit");
+        if (isHit == false)
+        {
+            isHit = true;
+            var contact = other.GetContact(0);
+            Instantiate(bulletDecal, contact.point + contact.normal * 0.0001f, Quaternion.LookRotation(contact.normal));
+            Destroy(gameObject);
+            print("ColEnter");
+        }
     }
 }
