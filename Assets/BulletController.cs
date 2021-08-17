@@ -6,7 +6,7 @@ public class BulletController : MonoBehaviour
 {
     [SerializeField] GameObject bulletDecal = null;
     public float speed = 50f;
-    float timeToDestroy = 3f;
+    [SerializeField] float timeToDestroy = 7f;
     public Vector3 target;
     public bool hit;
     public Vector3 targetContactNormal;
@@ -28,7 +28,6 @@ public class BulletController : MonoBehaviour
             }
 
             Destroy(gameObject);
-            print("Update");
         }
     }
 
@@ -41,7 +40,6 @@ public class BulletController : MonoBehaviour
             var contact = other.GetContact(0);
             Instantiate(bulletDecal, contact.point + contact.normal * 0.0001f, Quaternion.LookRotation(contact.normal));
             Destroy(gameObject);
-            print("ColEnter");
         }
     }
 }
