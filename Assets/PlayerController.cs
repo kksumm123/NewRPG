@@ -36,18 +36,18 @@ public class PlayerController : MonoBehaviour
     void ShootAction_performed(InputAction.CallbackContext obj)
     {
         GameObject bullet = Instantiate(bulletPrefab, barrelTransform.transform.position, Quaternion.identity, bulletParent);
-        var bulletController = bullet.GetComponent<bulletController>();
+        //var bulletController = bullet.GetComponent<bulletController>();
 
-        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit, Mathf.Infinity))
-        {
-            bulletController.target = hit.point;
-            bulletController.hit = true;
-        }
-        else
-        {
-            bulletController.target = Camera.main.transform.position, Camera.main.transform.forward * bulletHitMissDistance;
-            bulletController.hit = true;
-        }
+        //if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit, Mathf.Infinity))
+        //{
+        //    bulletController.target = hit.point;
+        //    bulletController.hit = true;
+        //}
+        //else
+        //{
+        //    bulletController.target = Camera.main.transform.position + Camera.main.transform.forward * bulletHitMissDistance;
+        //    bulletController.hit = true;
+        //}
     }
 
     void Update()
