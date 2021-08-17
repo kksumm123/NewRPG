@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     private float jumpHeight = 1.0f;
     private float gravityValue = -9.81f;
 
-    [SerializeField] float rotationSpeed = 5;
+    [SerializeField] float rotationSpeed = 15;
 
     void Awake()
     {
@@ -35,7 +35,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float bulletHitMissDistance = 25f;
     void ShootAction_performed(InputAction.CallbackContext obj)
     {
-        GameObject bullet = Instantiate(bulletPrefab, barrelTransform.transform.position, Quaternion.identity, bulletParent);
+        animator.SetTrigger("FireStart");
+        GameObject bullet = Instantiate(bulletPrefab, barrelTransform.transform.position, Camera.main.transform.rotation, bulletParent);
         var bulletController = bullet.GetComponent<BulletController>();
 
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit, Mathf.Infinity))

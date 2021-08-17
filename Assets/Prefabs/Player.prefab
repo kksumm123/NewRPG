@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &390161547
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 390161548}
+  m_Layer: 0
+  m_Name: BarrelPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &390161548
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390161547}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.098, y: 1.851, z: 0.847}
+  m_LocalScale: {x: -1, y: -1, z: -1}
+  m_Children: []
+  m_Father: {fileID: 1551045557515545118}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &527571523
 GameObject:
   m_ObjectHideFlags: 0
@@ -42,6 +72,7 @@ GameObject:
   - component: {fileID: 1551045557012000366}
   - component: {fileID: 1551045557012000367}
   - component: {fileID: 8764958579618544764}
+  - component: {fileID: 741093261}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -78,7 +109,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInput: {fileID: 1551045557012000367}
+  playerSpeed: 5
   rotationSpeed: 5
+  bulletPrefab: {fileID: 3748202955257745274, guid: e9c25b0f844b2764c8cf7c4d0c06f4a1, type: 3}
+  barrelTransform: {fileID: 390161547}
+  bulletParent: {fileID: 0}
+  bulletHitMissDistance: 25
 --- !u!114 &1551045557012000367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,6 +163,34 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 1.3, z: 0}
+--- !u!114 &741093261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551045555656659452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c80bc67905d09847bff879638f65ae0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleButton:
+    m_Name: toggleKey
+    m_Type: 1
+    m_ExpectedControlType: 
+    m_Id: 4130f6ea-bfde-41ef-b1ed-5af5beb1d8dc
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 34311c8d-97e1-4efe-b31b-f994234c42fc
+      m_Path: <Keyboard>/tab
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: toggleKey
+      m_Flags: 0
 --- !u!1 &1551045557515908608
 GameObject:
   m_ObjectHideFlags: 0
@@ -1190,6 +1254,7 @@ Transform:
   m_Children:
   - {fileID: 1551045557515545122}
   - {fileID: 1551045557515545116}
+  - {fileID: 390161548}
   m_Father: {fileID: 1551045555656659453}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
