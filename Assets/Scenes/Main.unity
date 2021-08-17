@@ -28361,6 +28361,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1551045557012000366, guid: 6d7ae70e9dd8bcd4c8a59a4b269c0c8e, type: 3}
+      propertyPath: targetPosGo
+      value: 
+      objectReference: {fileID: 829653815354609235, guid: f5d49cdb6afa4524fb6c5dfd81f09171, type: 3}
+    - target: {fileID: 1551045557012000366, guid: 6d7ae70e9dd8bcd4c8a59a4b269c0c8e, type: 3}
       propertyPath: bulletParent
       value: 
       objectReference: {fileID: 71753475}

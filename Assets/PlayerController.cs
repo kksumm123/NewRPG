@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -35,7 +36,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Transform bulletParent;
     [SerializeField] float bulletHitMissDistance = 25f;
     LayerMask mapLayer;
-
+    [SerializeField] GameObject targetPosGo;
     void ShootAction_performed(InputAction.CallbackContext obj)
     {
         animator.SetTrigger("FireStart");
@@ -44,9 +45,11 @@ public class PlayerController : MonoBehaviour
             , Quaternion.LookRotation(Camera.main.transform.forward), bulletParent);
         var bulletController = bullet.GetComponent<BulletController>();
         bool isHit = Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit, Mathf.Infinity, mapLayer);
+        
         print($"shoot, Ray ishit = {isHit}");
         if (isHit)
         {
+            StartCoroutine(PointBulletTargetsPos(bullet, hit.point));
             bulletController.target = hit.point;
             bulletController.targetContactNormal = hit.normal;
             bulletController.hit = true;
@@ -56,6 +59,15 @@ public class PlayerController : MonoBehaviour
             bulletController.target = Camera.main.transform.position + Camera.main.transform.forward * bulletHitMissDistance;
             bulletController.hit = true;
         }
+    }
+
+    private IEnumerator PointBulletTargetsPos(GameObject bullet, Vector3 point)
+    {
+        var newGo = Instantiate(targetPosGo, point, Quaternion.identity);
+        while (bullet != null)
+            yield return null;
+
+        Destroy(newGo);
     }
 
     void Update()
