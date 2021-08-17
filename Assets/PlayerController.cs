@@ -39,7 +39,9 @@ public class PlayerController : MonoBehaviour
     void ShootAction_performed(InputAction.CallbackContext obj)
     {
         animator.SetTrigger("FireStart");
-        GameObject bullet = Instantiate(bulletPrefab, barrelTransform.transform.position, Camera.main.transform.rotation, bulletParent);
+        //GameObject bullet = Instantiate(bulletPrefab, barrelTransform.transform.position, Camera.main.transform.rotation, bulletParent);
+        GameObject bullet = Instantiate(bulletPrefab, barrelTransform.transform.position
+            , Quaternion.LookRotation(Camera.main.transform.forward), bulletParent);
         var bulletController = bullet.GetComponent<BulletController>();
         bool isHit = Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit, Mathf.Infinity, mapLayer);
         print($"shoot, Ray ishit = {isHit}");

@@ -19,8 +19,7 @@ public class BulletController : MonoBehaviour
     {
         //transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
         transform.Translate(new Vector3(0, 0, speed * Time.deltaTime));
-        print("유후");
-        if (!hit && Vector3.Distance(transform.position, target) < 0.01f)
+        if (!hit && Vector3.Distance(transform.position, target) < 1f)
         {
             if (hit)
             {
