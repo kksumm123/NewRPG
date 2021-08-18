@@ -157,7 +157,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrowDecal: {fileID: 5513020356613837314, guid: a8dca79665ebc2242ad543e7dde8258e, type: 3}
-  speed: 15
+  speed: 25
   timeToDestroy: 7
-  goalAngles: 1
-  lerpValue: 1
