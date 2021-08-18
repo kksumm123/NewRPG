@@ -847,11 +847,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4000012506713666, guid: 58d97d456aead63499ac7d5316541f78, type: 3}
   m_PrefabInstance: {fileID: 58092181}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &71753475 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 71753475, guid: 7a08ac76ed0ed2e4cbd1c4791bcc3f52, type: 3}
-  m_PrefabInstance: {fileID: 8623959141925723022}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &74827397
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28123,7 +28118,7 @@ PrefabInstance:
     - target: {fileID: 5983572188036056017, guid: 06be8f175242d084a9e278a7a4b08902, type: 3}
       propertyPath: bulletParent
       value: 
-      objectReference: {fileID: 71753475}
+      objectReference: {fileID: 8623959141988287629}
     - target: {fileID: 5983572188036056018, guid: 06be8f175242d084a9e278a7a4b08902, type: 3}
       propertyPath: m_Name
       value: Archer
@@ -28755,3 +28750,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a08ac76ed0ed2e4cbd1c4791bcc3f52, type: 3}
+--- !u!4 &8623959141988287629 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 71753475, guid: 7a08ac76ed0ed2e4cbd1c4791bcc3f52, type: 3}
+  m_PrefabInstance: {fileID: 8623959141925723022}
+  m_PrefabAsset: {fileID: 0}
