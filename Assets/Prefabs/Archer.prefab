@@ -2527,7 +2527,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6364062014487214359}
-  m_LocalRotation: {x: -0, y: 0.9999995, z: -0, w: 0.0010362766}
+  m_LocalRotation: {x: 0, y: 0.9999995, z: 0, w: 0.0010386014}
   m_LocalPosition: {x: -0.007, y: 0, z: 3.517}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2552,16 +2552,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a3d28e5f933e0c448500a2ead42ce46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parameterAttack: FireStart
-  parameterSpeed: Speed
+  parameterAttack: Attack
+  parameterSpeed: MoveSpeed
   parameterIsMoving: IsMoving
   playerInput: {fileID: 6364062014487214357}
   playerSpeed: 5
   rotationSpeed: 15
-  bulletPrefab: {fileID: 3748202955257745274, guid: e9c25b0f844b2764c8cf7c4d0c06f4a1, type: 3}
+  bulletPrefab: {fileID: 5513020356613837314, guid: 0246d438329458646848aba5c5649864, type: 3}
   barrelTransform: {fileID: 5609192757274692704}
   bulletParent: {fileID: 3458700238139163146}
   bulletHitMissDistance: 25
+  mapLayer:
+    serializedVersion: 2
+    m_Bits: 0
   targetPosGo: {fileID: 829653815354609235, guid: f5d49cdb6afa4524fb6c5dfd81f09171, type: 3}
 --- !u!114 &6364062014487214357
 MonoBehaviour:
@@ -2657,7 +2660,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6364062015150933246
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2757,7 +2760,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6364062015536706720
 RectTransform:
   m_ObjectHideFlags: 0

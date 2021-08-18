@@ -47,20 +47,20 @@ public class PlayerController : MonoBehaviour
         //GameObject bullet = Instantiate(bulletPrefab, barrelTransform.transform.position, Camera.main.transform.rotation, bulletParent);
         GameObject bullet = Instantiate(bulletPrefab, barrelTransform.transform.position
             , Quaternion.LookRotation(Camera.main.transform.forward), bulletParent);
-        var bulletController = bullet.GetComponent<BulletController>();
+        var bulletController = bullet.GetComponent<IProjectile>();
         bool isHit = Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit, Mathf.Infinity, mapLayer);
         if (isHit)
         {
             bullet.transform.LookAt(hit.point);
             //StartCoroutine(PointBulletTargetsPos(bullet, hit.point));
-            bulletController.target = hit.point;
-            bulletController.targetContactNormal = hit.normal;
-            bulletController.hit = true;
+            bulletController.Target = hit.point;
+            bulletController.TargetContactNormal = hit.normal;
+            bulletController.Hit = true;
         }
         else
         {
-            bulletController.target = Camera.main.transform.position + Camera.main.transform.forward * bulletHitMissDistance;
-            bulletController.hit = true;
+            bulletController.Target = Camera.main.transform.position + Camera.main.transform.forward * bulletHitMissDistance;
+            bulletController.Hit = true;
         }
     }
 
