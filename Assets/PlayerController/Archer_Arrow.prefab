@@ -142,8 +142,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.2
-  m_Center: {x: 0, y: 0, z: 0.24}
+  m_Radius: 0.05
+  m_Center: {x: 0.01, y: 0.015, z: 0.36}
 --- !u!114 &2131830119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,5 +157,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrowDecal: {fileID: 5513020356613837314, guid: a8dca79665ebc2242ad543e7dde8258e, type: 3}
-  speed: 25
+  speed: 15
   timeToDestroy: 7
