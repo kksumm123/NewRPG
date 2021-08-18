@@ -5,6 +5,10 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] string parameterAttack = "FireStart";
+    [SerializeField] string parameterSpeed = "Speed";
+    [SerializeField] string parameterIsMoving = "IsMoving";
+
     public PlayerInput playerInput;
     InputAction moveAction;
     InputAction jumpAction;
@@ -39,7 +43,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject targetPosGo;
     void ShootAction_performed(InputAction.CallbackContext obj)
     {
-        animator.SetTrigger("FireStart");
+        animator.SetTrigger(parameterAttack);
         //GameObject bullet = Instantiate(bulletPrefab, barrelTransform.transform.position, Camera.main.transform.rotation, bulletParent);
         GameObject bullet = Instantiate(bulletPrefab, barrelTransform.transform.position
             , Quaternion.LookRotation(Camera.main.transform.forward), bulletParent);
@@ -95,7 +99,7 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat("DirX", dir.x);
             animator.SetFloat("DirY", dir.z);
         }
-        animator.SetFloat("Speed", move.sqrMagnitude);
+        animator.SetFloat(parameterSpeed, move.sqrMagnitude);
 
         // Changes the height position of the player..
         if (jumpAction.triggered && groundedPlayer)
