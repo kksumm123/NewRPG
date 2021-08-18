@@ -28,7 +28,8 @@ public class ArrowController : MonoBehaviour, IProjectile
     private void Update()
     {
         //transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
-        transform.forward = rigid.velocity.normalized;
+        if (rigid.velocity != Vector3.zero)
+            transform.forward = rigid.velocity.normalized;
         if (!hit && Vector3.Distance(transform.position, target) < 0.01f)
         {
             if (hit)
