@@ -1,9 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ArrowController : MonoBehaviour, IProjectile
 {
+    Rigidbody rigid;
+
     [SerializeField] GameObject arrowDecal = null;
     public float speed = 10f;
     [SerializeField] float timeToDestroy = 7f;
@@ -15,15 +18,17 @@ public class ArrowController : MonoBehaviour, IProjectile
     [HideInInspector] bool hit;
     [HideInInspector] Vector3 targetContactNormal;
 
-    private void OnEnable()
+    private void Start()
     {
         Destroy(gameObject, timeToDestroy);
+        rigid = GetComponent<Rigidbody>();
+        Vector3 toDirec = (target - transform.position).normalized;
+        rigid.AddForce(toDirec * speed, ForceMode.VelocityChange);
     }
     private void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
-        //transform.Translate(new Vector3(0, 0, speed * Time.deltaTime));
-        //Vector3 forward = 
+        //transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+        transform.forward = rigid.velocity.normalized;
         if (!hit && Vector3.Distance(transform.position, target) < 0.01f)
         {
             if (hit)
@@ -35,7 +40,6 @@ public class ArrowController : MonoBehaviour, IProjectile
             Destroy(gameObject);
         }
     }
-
     bool isHit = false;
     private void OnCollisionEnter(Collision other)
     {

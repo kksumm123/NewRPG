@@ -21,7 +21,7 @@ public class BulletController : MonoBehaviour, IProjectile
     [HideInInspector] bool hit;
     [HideInInspector] Vector3 targetContactNormal;
 
-    private void OnEnable()
+    private void Start()
     {
         Destroy(gameObject, timeToDestroy);
     }
