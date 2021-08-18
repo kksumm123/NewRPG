@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject barrelTransform;
     [SerializeField] Transform bulletParent;
     [SerializeField] float bulletHitMissDistance = 25f;
-    LayerMask mapLayer;
+    [SerializeField] LayerMask mapLayer;
     [SerializeField] GameObject targetPosGo;
     void ShootAction_performed(InputAction.CallbackContext obj)
     {
