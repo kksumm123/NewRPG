@@ -1371,8 +1371,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3729885709892649324}
-  m_LocalRotation: {x: 0.323266, y: -0, z: -0, w: 0.9463082}
-  m_LocalPosition: {x: 0.3857581, y: 3.1991365, z: -2.7809563}
+  m_LocalRotation: {x: 0.32326594, y: -0, z: -0, w: 0.94630814}
+  m_LocalPosition: {x: 0.38575545, y: 3.1991363, z: -2.7809541}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3729885709545076934}
@@ -2513,9 +2513,10 @@ GameObject:
   - component: {fileID: 6364062014487214357}
   - component: {fileID: 3779848828516095127}
   - component: {fileID: 5609192757934425958}
+  - component: {fileID: 1776929922}
   m_Layer: 6
   m_Name: Archer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2642,6 +2643,28 @@ MonoBehaviour:
       m_Groups: 
       m_Action: toggleKey
       m_Flags: 0
+--- !u!195 &1776929922
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6364062014487214359}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 0
+  m_Acceleration: 1e+13
+  avoidancePriority: 50
+  m_AngularSpeed: 1e+13
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &6364062015150933242
 GameObject:
   m_ObjectHideFlags: 0
@@ -3577,8 +3600,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8572205549933708497}
-  m_LocalRotation: {x: 0.323266, y: -0, z: -0, w: 0.9463082}
-  m_LocalPosition: {x: 0.14048311, y: 3.3224037, z: -2.685612}
+  m_LocalRotation: {x: 0.32326594, y: -0, z: -0, w: 0.94630814}
+  m_LocalPosition: {x: 0.14048174, y: 3.3224034, z: -2.6856093}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8572205549736050043}
