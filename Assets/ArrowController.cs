@@ -49,9 +49,8 @@ public class ArrowController : MonoBehaviour, IProjectile
             print(other.transform.name);
             isHit = true;
             var contact = other.GetContact(0);
-            Instantiate(arrowDecal, transform.position, transform.rotation);
-            Time.timeScale = 0;
-            //Destroy(gameObject);
+            Instantiate(arrowDecal, contact.point, transform.rotation);
+            Destroy(gameObject);
         }
     }
 }

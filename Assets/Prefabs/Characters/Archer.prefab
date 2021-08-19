@@ -1371,8 +1371,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3729885709892649324}
-  m_LocalRotation: {x: 0.32326594, y: -0, z: -0, w: 0.94630814}
-  m_LocalPosition: {x: 0.38575545, y: 3.1991363, z: -2.7809541}
+  m_LocalRotation: {x: 0.323266, y: -0, z: -0, w: 0.9463082}
+  m_LocalPosition: {x: 0.3857581, y: 3.1991365, z: -2.7809563}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3729885709545076934}
@@ -1429,7 +1429,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CollideAgainst:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 8
   m_IgnoreTag: 
   m_TransparentLayers:
     serializedVersion: 2
@@ -3600,8 +3600,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8572205549933708497}
-  m_LocalRotation: {x: 0.32326594, y: -0, z: -0, w: 0.94630814}
-  m_LocalPosition: {x: 0.14048174, y: 3.3224034, z: -2.6856093}
+  m_LocalRotation: {x: 0.323266, y: -0, z: -0, w: 0.9463082}
+  m_LocalPosition: {x: 0.14048313, y: 3.3224037, z: -2.685612}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8572205549736050043}
@@ -3658,7 +3658,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CollideAgainst:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 8
   m_IgnoreTag: 
   m_TransparentLayers:
     serializedVersion: 2
