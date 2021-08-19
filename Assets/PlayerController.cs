@@ -41,6 +41,8 @@ public class PlayerController : MonoBehaviour
 
         aimAction.performed += _ => projectileParabolaDrawer.gameObject.SetActive(true);
         aimAction.canceled += _ => projectileParabolaDrawer.gameObject.SetActive(false);
+
+        projectileParabolaDrawer.Speed = bulletPrefab.GetComponent<IProjectile>().Speed;
         mapLayer = 1 << LayerMask.NameToLayer("Environment");
     }
 
@@ -60,6 +62,7 @@ public class PlayerController : MonoBehaviour
             , Quaternion.LookRotation(Camera.main.transform.forward), bulletParent);
         var bulletController = bullet.GetComponent<IProjectile>();
         bulletController.CurrentAngle = projectileParabolaDrawer.currentAngle;
+        projectileParabolaDrawer.Speed = bulletController.Speed;
         bool isHit = Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit, Mathf.Infinity, mapLayer);
         if (isHit)
         {

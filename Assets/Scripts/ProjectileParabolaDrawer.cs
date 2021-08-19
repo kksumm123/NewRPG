@@ -9,7 +9,20 @@ public class ProjectileParabolaDrawer : MonoBehaviour
     [SerializeField] LayerMask mapLayer;
     [SerializeField] float bulletHitMissDistance = 25f;
 
+    public float Speed
+    {
+        get => speed;
+        set
+        {
+            if (speed == value)
+                return;
+            Debug.Log($"{speed} => {value}");
+
+            speed = value;
+        }
+    }
     public float speed = 20;
+
     void Start()
     {
         projectileArc = GetComponent<ProjectileParabola>();
@@ -38,7 +51,7 @@ public class ProjectileParabolaDrawer : MonoBehaviour
             targetPoint = Camera.main.transform.position
                     + Camera.main.transform.forward * bulletHitMissDistance;
         }
-        SetTargetWithSpeed(targetPoint, speed);
+        SetTargetWithSpeed(targetPoint, Speed);
     }
 
     public float currentAngle;

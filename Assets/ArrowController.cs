@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class ArrowController : MonoBehaviour, IProjectile
 {
@@ -16,6 +17,7 @@ public class ArrowController : MonoBehaviour, IProjectile
     public bool Hit { get => hit; set => hit = value; }
     public Vector3 TargetContactNormal { get => targetContactNormal; set => targetContactNormal = value; }
     public float CurrentAngle { get => currentAngle; set => currentAngle = value; }
+    public float Speed { get => speed; set => speed = value; }
     Vector3 target;
     bool hit;
     Vector3 targetContactNormal;
@@ -74,7 +76,9 @@ public class ArrowController : MonoBehaviour, IProjectile
             print(other.transform.name);
             isHit = true;
             var contact = other.GetContact(0);
-            Instantiate(arrowDecal, contact.point, transform.rotation);
+            var decalRotation = transform.rotation.eulerAngles
+                            + new Vector3(0, 0, Random.Range(-90, 90));
+            Instantiate(arrowDecal, contact.point, Quaternion.Euler(decalRotation));
             Destroy(gameObject);
         }
     }
