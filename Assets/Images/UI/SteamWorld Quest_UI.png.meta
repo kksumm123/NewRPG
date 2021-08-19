@@ -295,7 +295,7 @@ TextureImporter:
     second: SteamWorld Quest_UI_96
   - first:
       213: -2307647919702860006
-    second: SteamWorld Quest_UI_12324
+    second: SteamWorld Quest_UI_Selected
   - first:
       213: -8112397850508068522
     second: SteamWorld Quest_UI_98
@@ -388,7 +388,7 @@ TextureImporter:
     second: SteamWorld Quest_UI_127
   - first:
       213: 2151477545334031751
-    second: SteamWorld Quest_UI_128
+    second: SteamWorld Quest_UI_UnderLine
   - first:
       213: 7586136061993721962
     second: SteamWorld Quest_UI_129
@@ -2677,7 +2677,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SteamWorld Quest_UI_12324
+      name: SteamWorld Quest_UI_Selected
       rect:
         serializedVersion: 2
         x: 2250
@@ -3312,8 +3312,8 @@ TextureImporter:
         serializedVersion: 2
         x: 742
         y: 1199
-        width: 86
-        height: 30
+        width: 125
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3323,27 +3323,6 @@ TextureImporter:
       bones: []
       spriteID: 616c57ce34c2bb700800000000000000
       internalID: 557087649151960598
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_128
-      rect:
-        serializedVersion: 2
-        x: 820
-        y: 1199
-        width: 47
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7854ddfad659bdd10800000000000000
-      internalID: 2151477545334031751
       vertices: []
       indices: 
       edges: []
@@ -3499,7 +3478,7 @@ TextureImporter:
       name: SteamWorld Quest_UI_136
       rect:
         serializedVersion: 2
-        x: 755
+        x: 754
         y: 876
         width: 68
         height: 4
@@ -4310,6 +4289,27 @@ TextureImporter:
       bones: []
       spriteID: 1d36fd374ac5ad560800000000000000
       internalID: 7339280404142056401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SteamWorld Quest_UI_UnderLine
+      rect:
+        serializedVersion: 2
+        x: 2392
+        y: 1477
+        width: 449
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7854ddfad659bdd10800000000000000
+      internalID: 2151477545334031751
       vertices: []
       indices: 
       edges: []
