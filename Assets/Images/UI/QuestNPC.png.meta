@@ -1,0 +1,828 @@
+fileFormatVersion: 2
+guid: b9bc03be1ff14904595efb3662c4a7f3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5045484304902667008
+    second: QuestNPC_7
+  - first:
+      213: 106476344767080721
+    second: QuestNPC_8
+  - first:
+      213: 9163586950897241468
+    second: QuestNPC_9
+  - first:
+      213: 5521178226537735867
+    second: QuestNPC_15
+  - first:
+      213: -3024399079271524811
+    second: QuestNPC_16
+  - first:
+      213: -8186602344254529383
+    second: QuestNPC_17
+  - first:
+      213: -6830938194914885791
+    second: QuestNPC_18
+  - first:
+      213: 1695444316981607781
+    second: QuestNPC_19
+  - first:
+      213: 3859627347410558954
+    second: QuestNPC_20
+  - first:
+      213: 1816017752596724394
+    second: QuestNPC_21
+  - first:
+      213: 1747856118944525312
+    second: QuestNPC_22
+  - first:
+      213: 157513854255998105
+    second: QuestNPC_27
+  - first:
+      213: 4206978058048110603
+    second: QuestNPC_28
+  - first:
+      213: 5905603125715185930
+    second: QuestNPC_29
+  - first:
+      213: 6136587804522330384
+    second: QuestNPC_42
+  - first:
+      213: -4828475973449396342
+    second: QuestNPC_43
+  - first:
+      213: -324664269015456315
+    second: QuestNPC_44
+  - first:
+      213: -6182763283472486846
+    second: QuestNPC_63
+  - first:
+      213: 919822339491508711
+    second: QuestNPC_64
+  - first:
+      213: -8905290175027985048
+    second: QuestNPC_65
+  - first:
+      213: -196896039088836783
+    second: QuestNPC_74
+  - first:
+      213: 1722809166784135670
+    second: QuestNPC_92
+  - first:
+      213: 8229518565988324763
+    second: QuestNPC_93
+  - first:
+      213: 974564216100682408
+    second: QuestNPC_94
+  - first:
+      213: -5371986839000561401
+    second: QuestNPC_95
+  - first:
+      213: 6137121621796318343
+    second: QuestNPC_100
+  - first:
+      213: 8704698074392518071
+    second: QuestNPC_101
+  - first:
+      213: -8798158113634842821
+    second: QuestNPC_102
+  - first:
+      213: 6552156049575166951
+    second: QuestNPC_109
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: QuestNPC_7
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 7107
+        width: 440
+        height: 496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 005c77eb1c6daf9b0800000000000000
+      internalID: -5045484304902667008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestNPC_8
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 7107
+        width: 444
+        height: 504
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 119e2d2eba74a7100800000000000000
+      internalID: 106476344767080721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestNPC_9
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 7107
+        width: 428
+        height: 493
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7d82a4f7c99b2f70800000000000000
+      internalID: 9163586950897241468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestNPC_15
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 6622
+        width: 390
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb62766385a2f9c40800000000000000
+      internalID: 5521178226537735867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestNPC_16
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 6622
+        width: 421
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5369005bf0d2706d0800000000000000
+      internalID: -3024399079271524811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestNPC_17
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 6160
+        width: 355
+        height: 459
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9902459da88536e80800000000000000
+      internalID: -8186602344254529383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestNPC_18
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 6160
+        width: 355
+        height: 459
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16f337157e1a331a0800000000000000
+      internalID: -6830938194914885791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestNPC_19
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 5698
+        width: 391
+        height: 459
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56db42a9f9d678710800000000000000
+      internalID: 1695444316981607781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestNPC_20
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 5698
+        width: 391
+        height: 455
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aef1acf8f96209530800000000000000
+      internalID: 3859627347410558954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestNPC_21
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 5288
+        width: 379
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaab459368ac33910800000000000000
+      internalID: 1816017752596724394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestNPC_22
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 5288
+        width: 379
+        height: 407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00c6e2031e1a14810800000000000000
+      internalID: 1747856118944525312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestNPC_27
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 4750
+        width: 480
+        height: 498
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 994a122140a9f2200800000000000000
+      internalID: 157513854255998105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestNPC_28
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 4750
+        width: 468
+        height: 490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0002d71140326a30800000000000000
+      internalID: 4206978058048110603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestNPC_29
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 4750
+        width: 488
+        height: 498
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a01b0bce0cae4f150800000000000000
+      internalID: 5905603125715185930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestNPC_42
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 4114
+        width: 616
+        height: 599
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0193c8d581a892550800000000000000
+      internalID: 6136587804522330384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestNPC_43
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 4114
+        width: 616
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8f4a0c3faecdfcb0800000000000000
+      internalID: -4828475973449396342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestNPC_44
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 3415
+        width: 712
+        height: 696
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c56216419f8e7bf0800000000000000
+      internalID: -324664269015456315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestNPC_63
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 2852
+        width: 496
+        height: 518
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24e6b462d89623aa0800000000000000
+      internalID: -6182763283472486846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestNPC_64
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 2852
+        width: 500
+        height: 514
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e13cd95b8dd3cc00800000000000000
+      internalID: 919822339491508711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestNPC_65
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 2852
+        width: 496
+        height: 518
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8654eaf94cd0a6480800000000000000
+      internalID: -8905290175027985048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestNPC_74
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 2445
+        width: 544
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15fad6c781c744df0800000000000000
+      internalID: -196896039088836783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestNPC_92
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1829
+        width: 604
+        height: 571
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f184f13fc5a8e710800000000000000
+      internalID: 1722809166784135670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestNPC_93
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 1829
+        width: 556
+        height: 579
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b95573ea88f153270800000000000000
+      internalID: 8229518565988324763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestNPC_94
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1247
+        width: 578
+        height: 569
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aafc77bdf8568d00800000000000000
+      internalID: 974564216100682408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestNPC_95
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 1247
+        width: 650
+        height: 568
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7094c439e6ed275b0800000000000000
+      internalID: -5371986839000561401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestNPC_100
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 657
+        width: 511
+        height: 553
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78ce982699f6b2550800000000000000
+      internalID: 6137121621796318343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestNPC_101
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 657
+        width: 478
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bd513977cc4dc870800000000000000
+      internalID: 8704698074392518071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestNPC_102
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 657
+        width: 511
+        height: 553
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b37031f6fc9a6e580800000000000000
+      internalID: -8798158113634842821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuestNPC_109
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 4
+        width: 616
+        height: 616
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e3cad7563fedea50800000000000000
+      internalID: 6552156049575166951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 9f659ecb221749845b965fa46c6e55d7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
