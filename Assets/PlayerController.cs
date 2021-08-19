@@ -59,6 +59,7 @@ public class PlayerController : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, barrelTransform.transform.position
             , Quaternion.LookRotation(Camera.main.transform.forward), bulletParent);
         var bulletController = bullet.GetComponent<IProjectile>();
+        bulletController.CurrentAngle = projectileParabolaDrawer.currentAngle;
         bool isHit = Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit, Mathf.Infinity, mapLayer);
         if (isHit)
         {

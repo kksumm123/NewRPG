@@ -1114,8 +1114,8 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.048309326
-        value: 0.41666603
+        time: 0.04347992
+        value: 0.09523964
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -1763,7 +1763,7 @@ MonoBehaviour:
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
     m_Style: 1
-    m_Time: 2
+    m_Time: 0.3
     m_CustomCurve:
       serializedVersion: 2
       m_Curve: []
@@ -7064,7 +7064,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8572205549933708499, guid: 06be8f175242d084a9e278a7a4b08902, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.3224034
+      value: 3.322403
       objectReference: {fileID: 0}
     - target: {fileID: 8572205549933708499, guid: 06be8f175242d084a9e278a7a4b08902, type: 3}
       propertyPath: m_LocalPosition.z
