@@ -14,12 +14,19 @@ public class ProjectileParabolaDrawer : MonoBehaviour
     {
         projectileArc = GetComponent<ProjectileParabola>();
         firePoint = transform;
-        mapLayer = 1 << LayerMask.NameToLayer("Environment");
+        //mapLayer = 1 << LayerMask.NameToLayer("Environment");
+        mapLayer = int.MaxValue;
     }
+    Vector3 targetPoint;
     void Update()
     {
-        Vector3 targetPoint;
-        bool isHit = Physics.Raycast(Camera.main.transform.position
+        Vector3 rayStartPoint = Camera.main.transform.position;
+        Vector3 cameraPositionSameY = Camera.main.transform.position;
+        cameraPositionSameY.y = transform.position.y;
+        float playerDistance = Vector3.Distance(cameraPositionSameY, transform.position);
+        rayStartPoint += Camera.main.transform.forward * playerDistance;
+
+        bool isHit = Physics.Raycast(rayStartPoint
                 , Camera.main.transform.forward
                 , out RaycastHit hit, Mathf.Infinity, mapLayer);
         if (isHit)

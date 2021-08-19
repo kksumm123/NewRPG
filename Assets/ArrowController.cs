@@ -10,6 +10,7 @@ public class ArrowController : MonoBehaviour, IProjectile
     [SerializeField] GameObject arrowDecal = null;
     public float speed = 10f;
     [SerializeField] float timeToDestroy = 7f;
+    [SerializeField] float torqueValue = 100;
 
     public Vector3 Target { get => target; set => target = value; }
     public bool Hit { get => hit; set => hit = value; }
@@ -27,9 +28,12 @@ public class ArrowController : MonoBehaviour, IProjectile
     }
     private void Update()
     {
+
         //transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
         if (rigid.velocity != Vector3.zero)
             transform.forward = rigid.velocity.normalized;
+
+        rigid.AddTorque(transform.forward * torqueValue, ForceMode.Force);
         if (!hit && Vector3.Distance(transform.position, target) < 0.01f)
         {
             if (hit)

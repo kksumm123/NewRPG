@@ -13,7 +13,9 @@ public class PlayerController : MonoBehaviour
     InputAction moveAction;
     InputAction jumpAction;
     InputAction shootAction;
+    InputAction aimAction;
     Animator animator;
+    ProjectileParabolaDrawer projectileParabolaDrawer;
 
     private CharacterController controller;
     private Vector3 playerVelocity;
@@ -28,13 +30,22 @@ public class PlayerController : MonoBehaviour
     {
         controller = gameObject.GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
+        projectileParabolaDrawer = GetComponentInChildren<ProjectileParabolaDrawer>();
+        projectileParabolaDrawer.gameObject.SetActive(false);
+
         moveAction = playerInput.actions["Move"];
         jumpAction = playerInput.actions["Jump"];
         shootAction = playerInput.actions["Shoot"];
+        aimAction = playerInput.actions["Aim"];
         shootAction.performed += ShootAction_performed;
+
+        aimAction.performed += _ => projectileParabolaDrawer.gameObject.SetActive(true);
+        aimAction.canceled += _ => projectileParabolaDrawer.gameObject.SetActive(false);
         mapLayer = 1 << LayerMask.NameToLayer("Environment");
     }
 
+
+    #region ShootAction_performed
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] GameObject barrelTransform;
     [SerializeField] Transform bulletParent;
@@ -63,16 +74,7 @@ public class PlayerController : MonoBehaviour
             bulletController.Hit = true;
         }
     }
-
-    //private IEnumerator PointBulletTargetsPos(GameObject bullet, Vector3 point)
-    //{
-    //    var newGo = Instantiate(targetPosGo, point, Quaternion.identity);
-    //    while (bullet != null)
-    //        yield return null;
-
-    //    Destroy(newGo);
-    //}
-
+    #endregion ShootAction_performed
     void Update()
     {
         groundedPlayer = controller.isGrounded;
