@@ -15,6 +15,7 @@ public class QuestNPC : MonoBehaviour
     void QuestAcceptKey_performed(InputAction.CallbackContext obj)
     {
         print("퀘스트 목록 UI 표시하기");
+        QuestListUI.Instance.ShowQuestList();
     }
 
     private void OnTriggerEnter(Collider other)

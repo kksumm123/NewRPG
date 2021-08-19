@@ -1,18 +1,19 @@
+﻿using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class QuestListUI : MonoBehaviour
+public class QuestListUI : Singleton<QuestListUI>
 {
-    // Start is called before the first frame update
+    CanvasGroup canvasGroup;
     void Start()
     {
-        
+        canvasGroup = GetComponent<CanvasGroup>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ShowQuestList()
     {
-        
+        canvasGroup.alpha = 0;
+        canvasGroup.DOFade(1, 0.5f);
     }
 }
