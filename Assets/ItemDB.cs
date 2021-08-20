@@ -20,6 +20,8 @@ public class ItemInfo
 {
     public string name;
     public int id;
+    public string iconName;
+    public Sprite Sprite => Resources.Load<Sprite>($"Icons/{iconName}");
 }
 public class ItemDB : Singleton<ItemDB>
 {
