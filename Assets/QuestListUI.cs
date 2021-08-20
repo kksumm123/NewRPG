@@ -95,7 +95,7 @@ public class QuestListUI : Singleton<QuestListUI>
         baseRewardBox.LinkComponent();
         detailTitleText = transform.Find("QuestDetail/Title").GetComponentInChildren<Text>();
         detailContentText = transform.Find("QuestDetail/Content").GetComponentInChildren<Text>();
-        detailGoalText = transform.Find("QuestDetail/Goal/Text").GetComponent<Text>();
+        detailGoalText = transform.Find("QuestDetail/Goal/TextParent/Text").GetComponent<Text>();
         transform.Find("NPCTalkBox/Accept").GetComponent<Button>().onClick
                                            .AddListener(() => AcceptQuest());
         transform.Find("NPCTalkBox/Reject").GetComponent<Button>().onClick
