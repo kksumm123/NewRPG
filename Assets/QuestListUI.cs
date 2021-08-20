@@ -124,6 +124,7 @@ public class QuestListUI : Singleton<QuestListUI>
     private void ClearUI()
     {
         currentQuest = null;
+        npcTalkBoxCanvasGroup.alpha = 0;
         npcTalkBoxText.text = string.Empty;
         detailTitleText.text = string.Empty;
         detailContentText.text = string.Empty;
@@ -131,6 +132,8 @@ public class QuestListUI : Singleton<QuestListUI>
 
         rewardBoxs.ForEach(x => Destroy(x));
         rewardBoxs.Clear();
+
+        canvasGroup.DOFade(0, 0.5f);
     }
 
     QuestInfo currentQuest;
