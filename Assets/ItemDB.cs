@@ -35,20 +35,20 @@ public class ItemDB : Singleton<ItemDB>
         destinationMap = destinations.ToDictionary(x => x.id);
         itemMap = items.ToDictionary(x => x.id);
     }
-    internal static object GetMonsterInfo(int monsterID)
+    internal static MonsterInfo GetMonsterInfo(int monsterID)
     {
         if (Instance.monsterMap.TryGetValue(monsterID, out MonsterInfo result) == false)
             Debug.LogError($"{monsterID}가 없다");
         return result;
     }
 
-    internal static object GetDestinationInfo(int destinationID)
+    internal static DestinationInfo GetDestinationInfo(int destinationID)
     {
         if (Instance.destinationMap.TryGetValue(destinationID, out DestinationInfo result) == false)
             Debug.LogError($"{destinationID}가 없다");
         return result;
     }
-    internal static object GetItemInfo(int itemID)
+    internal static ItemInfo GetItemInfo(int itemID)
     {
         if (Instance.itemMap.TryGetValue(itemID, out ItemInfo result) == false)
             Debug.LogError($"{itemID}가 없다");
