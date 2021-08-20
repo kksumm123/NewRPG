@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -134,18 +135,41 @@ public class QuestListUI : Singleton<QuestListUI>
         questTitleBoxs.Clear();
 
         baseQuestTitleBox.gameObject.SetActive(true);
-        foreach (var item in quests)
-        {
-            var titleItem = Instantiate(baseQuestTitleBox, baseQuestTitleBox.transform.parent);
-            titleItem.Init(item);
-            titleItem.GetComponent<Button>().onClick
-                     .AddListener(() => OnClickTitleBox(item));
-            questTitleBoxs.Add(titleItem.gameObject);
-        }
-        baseQuestTitleBox.gameObject.SetActive(false);
 
-        // 첫번째 퀘스트 선택
-        OnClickTitleBox(quests[0]);
+        // 수락, 거절한 퀘스트 제거
+        List<int> exceptIDs = new List<int>();
+        exceptIDs.AddRange(UserData.Instance.QuestData.data.acceptIDs);
+        exceptIDs.AddRange(UserData.Instance.QuestData.data.rejectIDs);
+        var userQuestList = quests.Where(x => exceptIDs.Contains(x.goalId) == false).ToList();
+
+        if (userQuestList.Count > 0)
+        {
+            foreach (var item in userQuestList)
+            {
+                var titleItem = Instantiate(baseQuestTitleBox, baseQuestTitleBox.transform.parent);
+                titleItem.Init(item);
+                titleItem.GetComponent<Button>().onClick
+                         .AddListener(() => OnClickTitleBox(item));
+                questTitleBoxs.Add(titleItem.gameObject);
+            }
+            baseQuestTitleBox.gameObject.SetActive(false);
+
+            // 첫번째 퀘스트 선택
+            OnClickTitleBox(userQuestList[0]);
+        }
+        else
+            ClearUI();
+    }
+
+    private void ClearUI()
+    {
+        currentQuest = null;
+        detailTitleText.text = string.Empty;
+        detailContentText.text = string.Empty;
+        detailGoalText.text = string.Empty;
+
+        rewardBoxs.ForEach(x => Destroy(x));
+        rewardBoxs.Clear();
     }
 
     QuestInfo currentQuest;
