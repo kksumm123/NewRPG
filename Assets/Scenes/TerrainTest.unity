@@ -442,22 +442,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quests:
-  - questTitle: "\uB450\uBE44\uB450\uBC25"
-    detailExplain: "\uC124\uBA85\uC774\uB2E4"
+  - questTitle: "\uC2AC\uB77C\uC784 \uCC98\uCE58"
+    detailExplain: "\uC2AC\uB77C\uC784 \uCC98\uCE58\uD574\uC8FC\uC138\uC694"
     questType: 0
-    GoalId: 0
-    GoalCount: 0
+    goalId: 1
+    goalCount: 5
     rewards:
-    - itemID: 0
-      count: 0
-  - questTitle: "\uB77C\uB77C\uB77C\uB77C\uB77C\uB77C"
-    detailExplain: 2222222
-    questType: 0
-    GoalId: 0
-    GoalCount: 0
+    - itemID: 1
+      count: 500
+    - itemID: 11
+      count: 1
+  - questTitle: "\uB3CC \uC218\uC9D1"
+    detailExplain: "\uD22C\uBA85\uD558\uAC8C \uBE5B\uB098\uB294 \uC791\uC740 \uB3CC
+      \uAC00\uC838\uC640\uC8FC\uC138\uC694"
+    questType: 2
+    goalId: 14
+    goalCount: 5
     rewards:
-    - itemID: 0
-      count: 0
+    - itemID: 1
+      count: 800
 --- !u!1 &190761083
 GameObject:
   m_ObjectHideFlags: 0
@@ -1647,6 +1650,66 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &569521554
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 569521556}
+  - component: {fileID: 569521555}
+  m_Layer: 0
+  m_Name: ItemDB
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &569521555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569521554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b1eb44d7158c93419aaf529391f05c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - id: 1
+    name: "\uACE8\uB4DC"
+  - id: 11
+    name: "\uB098\uBB34\uCE7C"
+  - id: 12
+    name: "\uC791\uC740\uD3EC\uC158"
+  - id: 13
+    name: "\uBC29\uD328"
+  - id: 14
+    name: "\uD06C\uB9AC\uC2A4\uD0C8 \uC6D0\uC11D"
+  monsters:
+  - id: 1
+    name: "\uC2AC\uB77C\uC784"
+  destinations:
+  - id: 1
+    name: "\uCD0C\uC7A5\uC9D1"
+--- !u!4 &569521556
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569521554}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1198.8977, y: 750.7952, z: -59.45136}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &586622812
 GameObject:
   m_ObjectHideFlags: 0

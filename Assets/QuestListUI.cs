@@ -61,13 +61,13 @@ public class QuestInfo
         {
             case QuestType.KillMonster: // 슬라임 5마리 처치하세요
                 string monsterName = ItemDB.GetMonsterInfo(goalId).name;
-                return $"{monsterName}, {goalCount}마리 잡으세요";
+                return $"{monsterName}\n{goalCount}마리";
             case QuestType.GoToDestination: // 촌장님 댁으로 이동하세요
                 string destrinationName = ItemDB.GetDestinationInfo(goalId).name;
-                return $"{destrinationName} 위치로 이동하세요";
+                return $"{destrinationName}";
             case QuestType.ItemCollection: // 보석을 5개 수집하세요
                 string itemName = ItemDB.GetItemInfo(goalId).name;
-                return $"{itemName}, {goalCount}개 수집하세요";
+                return $"{itemName}\n{goalCount}개";
         }
         return "임시 작업해야함";
     }
