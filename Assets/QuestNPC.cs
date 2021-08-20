@@ -32,7 +32,7 @@ public class QuestNPC : MonoBehaviour
             return;
 
         questAcceptKey.Enable();
-        TalkAlertUI.Instance.ShowText("모험자야 멈춰봐!\n할 말이 있어(Q)");
+        CharacterTextBoxUI.Instance.ShowText("모험자야 멈춰봐!\n할 말이 있어(Q)");
     }
 
     private bool HaveUseableQuest()
@@ -50,6 +50,6 @@ public class QuestNPC : MonoBehaviour
             return;
 
         questAcceptKey.Disable();
-
+        CharacterTextBoxUI.Instance.Close();
     }
 }
