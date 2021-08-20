@@ -73,7 +73,6 @@ public class ArrowController : MonoBehaviour, IProjectile
     {
         if (isHit == false)
         {
-            print(other.transform.name);
             isHit = true;
             var contact = other.GetContact(0);
             var decalRotation = transform.rotation.eulerAngles

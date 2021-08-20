@@ -17,7 +17,6 @@ public class ToggleVisibleCursor : MonoBehaviour
 
     private void TogleButton_performed(InputAction.CallbackContext obj = default)
     {
-        print("탭 눌림");
         Cursor.lockState = Cursor.lockState == CursorLockMode.Locked ? CursorLockMode.None : CursorLockMode.Locked;
     }
 }

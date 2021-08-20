@@ -87,6 +87,9 @@ public class QuestListUI : Singleton<QuestListUI>
     Text detailContentText;
     Text detailGoalText;
 
+    CanvasGroup npcTalkBoxCanvasGroup;
+    Text npcTalkBoxText;
+
     void Start()
     {
         canvasGroup = GetComponent<CanvasGroup>();
@@ -98,6 +101,9 @@ public class QuestListUI : Singleton<QuestListUI>
         detailTitleText = transform.Find("QuestDetail/Title").GetComponentInChildren<Text>();
         detailContentText = transform.Find("QuestDetail/Content").GetComponentInChildren<Text>();
         detailGoalText = transform.Find("QuestDetail/Goal/TextParent/Text").GetComponent<Text>();
+        npcTalkBoxCanvasGroup = transform.Find("NPCTalkBox").GetComponent<CanvasGroup>();
+        npcTalkBoxCanvasGroup.alpha = 0;
+        npcTalkBoxText = transform.transform.Find("NPCTalkBox/Text").GetComponent<Text>();
         transform.Find("NPCTalkBox/Accept").GetComponent<Button>().onClick
                                            .AddListener(() => AcceptQuest());
         transform.Find("NPCTalkBox/Reject").GetComponent<Button>().onClick
@@ -109,7 +115,7 @@ public class QuestListUI : Singleton<QuestListUI>
     private void AcceptQuest()
     {
         print($"{currentQuest.questTitle} 퀘스트 수락함");
-        UserData.Instance.QuestData.data.acceptIDs.Add(currentQuest.questID);
+        UserData.Instance.questData.data.acceptIDs.Add(currentQuest.questID);
 
         ShowQuestList();
     }
@@ -117,7 +123,7 @@ public class QuestListUI : Singleton<QuestListUI>
     private void RejectQuest()
     {
         print($"{currentQuest.questTitle} 퀘스트 거절함");
-        UserData.Instance.QuestData.data.rejectIDs.Add(currentQuest.questID);
+        UserData.Instance.questData.data.rejectIDs.Add(currentQuest.questID);
     }
 
     private void CloseUI()
@@ -138,9 +144,9 @@ public class QuestListUI : Singleton<QuestListUI>
 
         // 수락, 거절한 퀘스트 제거
         List<int> exceptIDs = new List<int>();
-        exceptIDs.AddRange(UserData.Instance.QuestData.data.acceptIDs);
-        exceptIDs.AddRange(UserData.Instance.QuestData.data.rejectIDs);
-        var userQuestList = quests.Where(x => exceptIDs.Contains(x.goalId) == false).ToList();
+        exceptIDs.AddRange(UserData.Instance.questData.data.acceptIDs);
+        exceptIDs.AddRange(UserData.Instance.questData.data.rejectIDs);
+        var userQuestList = quests.Where(x => exceptIDs.Contains(x.questID) == false).ToList();
 
         if (userQuestList.Count > 0)
         {
@@ -152,18 +158,20 @@ public class QuestListUI : Singleton<QuestListUI>
                          .AddListener(() => OnClickTitleBox(item));
                 questTitleBoxs.Add(titleItem.gameObject);
             }
-            baseQuestTitleBox.gameObject.SetActive(false);
 
             // 첫번째 퀘스트 선택
             OnClickTitleBox(userQuestList[0]);
         }
         else
             ClearUI();
+
+        baseQuestTitleBox.gameObject.SetActive(false);
     }
 
     private void ClearUI()
     {
         currentQuest = null;
+        npcTalkBoxText.text = string.Empty;
         detailTitleText.text = string.Empty;
         detailContentText.text = string.Empty;
         detailGoalText.text = string.Empty;
@@ -176,6 +184,9 @@ public class QuestListUI : Singleton<QuestListUI>
     void OnClickTitleBox(QuestInfo item)
     {
         currentQuest = item;
+        npcTalkBoxText.text = $"{item.questTitle} 퀘스트 수락할래?";
+        npcTalkBoxCanvasGroup.alpha = 0;
+        npcTalkBoxCanvasGroup.DOFade(1, 0.5f);
         detailTitleText.text = item.questTitle;
         detailContentText.text = item.detailExplain;
         detailGoalText.text = item.GetGoalString();
