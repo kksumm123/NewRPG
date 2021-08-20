@@ -76,12 +76,7 @@ public class ItemInfo
 }
 public class ItemDB : Singleton<ItemDB>
 {
-    [ContextMenu("퀘스트옮기기")]
-    void CopyQuest()
-    {
-        quests = FindObjectOfType<QuestListUI>().quests;
-    }
-    [SerializeField] List<QuestInfo> quests;
+    public List<QuestInfo> quests;
     [SerializeField] List<ItemInfo> items;
     [SerializeField] List<MonsterInfo> monsters;
     [SerializeField] List<DestinationInfo> destinations;
@@ -103,6 +98,18 @@ public class ItemDB : Singleton<ItemDB>
             Debug.LogError($"{questID}가 없다");
         return result;
     }
+
+    internal List<QuestInfo> GetQuestInfo(List<int> questIDs)
+    {
+        //List<QuestInfo> result = new List<QuestInfo>(questIDs.Count);
+        //foreach (var item in questIDs)
+        //{
+        //    result.Add(GetQuestInfo(item));
+        //}
+        //return result;
+        return quests.Where(x => questIDs.Contains(x.id)).ToList();
+    }
+
     internal static MonsterInfo GetMonsterInfo(int monsterID)
     {
         if (Instance.monsterMap.TryGetValue(monsterID, out MonsterInfo result) == false)

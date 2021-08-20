@@ -26,7 +26,7 @@ Count
 
 public class QuestListUI : Singleton<QuestListUI>
 {
-    public List<QuestInfo> quests;
+    List<QuestInfo> quests;
     CanvasGroup canvasGroup;
     QuestTitleBox baseQuestTitleBox;
     RewardBox baseRewardBox;
@@ -81,8 +81,11 @@ public class QuestListUI : Singleton<QuestListUI>
         canvasGroup.DOFade(0, 0.5f);
     }
 
-    public void ShowQuestList()
+    public void ShowQuestList(List<int> questIDs = null)
     {
+        if (questIDs != null)
+            quests = ItemDB.Instance.GetQuestInfo(questIDs);
+
         canvasGroup.alpha = 0;
         canvasGroup.DOFade(1, 0.5f);
 
