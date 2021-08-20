@@ -1,19 +1,22 @@
 ﻿using DG.Tweening;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
 /*
 퀘스트 이름 : questTitle
 상세내용 : detailExplain
 목표 Type : enum QuestType
- KillMonster,      // 몬스터 처치.
- GoToDestination,  // 목적지 도착
- ItemCollection, // 아이템 수집
- 
+KillMonster,      // 몬스터 처치.
+GoToDestination,  // 목적지 도착
+ItemCollection, // 아이템 수집
+
 GoalCount : 
-	몬스터 처치시는 몬스터 처치수
-	아이템 수집시는 아이템 수집수,
-	
+몬스터 처치시는 몬스터 처치수
+아이템 수집시는 아이템 수집수,
+
 class Reward
 {
 ItemID
@@ -51,6 +54,20 @@ public class QuestInfo
     public int GoalCount;
 
     public List<RewardInfo> rewards;
+
+    internal string GetGoalString()
+    {
+        switch (questType)
+        {
+            case QuestType.KillMonster: // 슬라임 5마리 처치하세요
+                break;
+            case QuestType.GoToDestination: // 촌장님 댁으로 이동하세요
+                break;
+            case QuestType.ItemCollection: // 보석을 5개 수집하세요
+                break;
+        }
+        return "임시 작업해야함";
+    }
 }
 public class QuestListUI : Singleton<QuestListUI>
 {
@@ -58,6 +75,10 @@ public class QuestListUI : Singleton<QuestListUI>
     public List<QuestInfo> quests;
     QuestTitleBox baseQuestTitleBox;
     RewardBox baseRewardBox;
+
+    Text detailTitleText;
+    Text detailContentText;
+    Text detailGoalText;
     void Start()
     {
         canvasGroup = GetComponent<CanvasGroup>();
@@ -66,6 +87,9 @@ public class QuestListUI : Singleton<QuestListUI>
         baseRewardBox = GetComponentInChildren<RewardBox>();
         baseQuestTitleBox.Init();
         baseRewardBox.Init();
+        detailTitleText = transform.Find("QuestDetail/Title").GetComponentInChildren<Text>();
+        detailContentText = transform.Find("QuestDetail/Content").GetComponentInChildren<Text>();
+        detailGoalText = transform.Find("QuestDetail/Goal/Text").GetComponent<Text>();
     }
 
     public void ShowQuestList()
@@ -78,7 +102,18 @@ public class QuestListUI : Singleton<QuestListUI>
         {
             var titleItem = Instantiate(baseQuestTitleBox, baseQuestTitleBox.transform.parent);
             titleItem.Init(item);
+            titleItem.GetComponent<Button>().onClick
+                     .AddListener(() => OnClickTitleBox(item));
         }
         baseQuestTitleBox.gameObject.SetActive(false);
+
+        OnClickTitleBox(quests[0]);
+    }
+
+    void OnClickTitleBox(QuestInfo item)
+    {
+        detailTitleText.text = item.questTitle;
+        detailContentText.text = item.detailExplain;
+        detailGoalText.text = item.GetGoalString();
     }
 }
