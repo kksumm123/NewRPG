@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class QuestTitleBox : MonoBehaviour
 {
-    public Text titleText;
-    public void Init()
+    [SerializeField] Text titleText;
+    public void LinkComponent()
     {
         titleText = transform.Find("Text").GetComponent<Text>();
     }

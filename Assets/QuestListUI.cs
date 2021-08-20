@@ -90,8 +90,8 @@ public class QuestListUI : Singleton<QuestListUI>
         canvasGroup.alpha = 0;
         baseQuestTitleBox = GetComponentInChildren<QuestTitleBox>();
         baseRewardBox = GetComponentInChildren<RewardBox>();
-        baseQuestTitleBox.Init();
-        baseRewardBox.Init();
+        baseQuestTitleBox.LinkComponent();
+        baseRewardBox.LinkComponent();
         detailTitleText = transform.Find("QuestDetail/Title").GetComponentInChildren<Text>();
         detailContentText = transform.Find("QuestDetail/Content").GetComponentInChildren<Text>();
         detailGoalText = transform.Find("QuestDetail/Goal/Text").GetComponent<Text>();

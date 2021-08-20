@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class RewardBox : MonoBehaviour
 {
-    Image icon;
-    Text count;
-    public void Init()
+    [SerializeField] Image icon;
+    [SerializeField] Text count;
+    public void LinkComponent()
     {
         icon = transform.Find("Icon").GetComponent<Image>();
         count = transform.Find("Text").GetComponent<Text>();

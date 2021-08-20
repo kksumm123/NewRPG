@@ -47,18 +47,18 @@ MonoBehaviour:
   - name: "\uACE8\uB4DC"
     id: 1
     iconName: Gold
-  - name: "\uB098\uBB34\uCE7C"
+  - name: "\uD55C\uC190\uAC80"
     id: 11
-    iconName: 
+    iconName: Sword
   - name: "\uC791\uC740\uD3EC\uC158"
     id: 12
-    iconName: 
+    iconName: Potion_Low
   - name: "\uBC29\uD328"
     id: 13
-    iconName: 
+    iconName: Shield
   - name: "\uD06C\uB9AC\uC2A4\uD0C8 \uC6D0\uC11D"
     id: 14
-    iconName: 
+    iconName: Crystal_Stone
   monsters:
   - name: "\uC2AC\uB77C\uC784"
     id: 1
