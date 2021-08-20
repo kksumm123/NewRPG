@@ -24,60 +24,10 @@ ItemID
 Count 
 }*/
 
-public enum QuestType
-{
-    KillMonster,      // 몬스터 처치.
-    GoToDestination,  // 목적지 도착
-    ItemCollection, // 아이템 수집
-}
-[System.Serializable]
-public class RewardInfo
-{
-    public int itemID;
-    public int count;
-}
-
-[System.Serializable]
-public class QuestInfo
-{
-    public string questTitle;
-    public int questID;
-    [TextArea]
-    public string detailExplain;
-    public QuestType questType;
-
-    /// <summary>
-    /// 몬스터 처치시는 몬스터 ID
-    /// 아이템 수집시는 아이템 ID,</summary>
-    public int goalId;
-    /// <summary>
-    /// 몬스터 처치시는 몬스터 처치수
-    /// 아이템 수집시는 아이템 수집수,</summary>
-    public int goalCount;
-
-    public List<RewardInfo> rewards;
-
-    internal string GetGoalString()
-    {
-        switch (questType)
-        {
-            case QuestType.KillMonster: // 슬라임 5마리 처치하세요
-                string monsterName = ItemDB.GetMonsterInfo(goalId).name;
-                return $"{monsterName}\n{goalCount}마리";
-            case QuestType.GoToDestination: // 촌장님 댁으로 이동하세요
-                string destrinationName = ItemDB.GetDestinationInfo(goalId).name;
-                return $"{destrinationName}";
-            case QuestType.ItemCollection: // 보석을 5개 수집하세요
-                string itemName = ItemDB.GetItemInfo(goalId).name;
-                return $"{itemName}\n{goalCount}개";
-        }
-        return "임시 작업해야함";
-    }
-}
 public class QuestListUI : Singleton<QuestListUI>
 {
-    CanvasGroup canvasGroup;
     public List<QuestInfo> quests;
+    CanvasGroup canvasGroup;
     QuestTitleBox baseQuestTitleBox;
     RewardBox baseRewardBox;
     List<GameObject> questTitleBoxs = new List<GameObject>();
@@ -115,7 +65,7 @@ public class QuestListUI : Singleton<QuestListUI>
     private void AcceptQuest()
     {
         print($"{currentQuest.questTitle} 퀘스트 수락함");
-        UserData.Instance.questData.data.acceptIDs.Add(currentQuest.questID);
+        UserData.Instance.questData.data.acceptIDs.Add(currentQuest.id);
 
         ShowQuestList();
     }
@@ -123,7 +73,7 @@ public class QuestListUI : Singleton<QuestListUI>
     private void RejectQuest()
     {
         print($"{currentQuest.questTitle} 퀘스트 거절함");
-        UserData.Instance.questData.data.rejectIDs.Add(currentQuest.questID);
+        UserData.Instance.questData.data.rejectIDs.Add(currentQuest.id);
     }
 
     private void CloseUI()
@@ -146,7 +96,7 @@ public class QuestListUI : Singleton<QuestListUI>
         List<int> exceptIDs = new List<int>();
         exceptIDs.AddRange(UserData.Instance.questData.data.acceptIDs);
         exceptIDs.AddRange(UserData.Instance.questData.data.rejectIDs);
-        var userQuestList = quests.Where(x => exceptIDs.Contains(x.questID) == false).ToList();
+        var userQuestList = quests.Where(x => exceptIDs.Contains(x.id) == false).ToList();
 
         if (userQuestList.Count > 0)
         {
