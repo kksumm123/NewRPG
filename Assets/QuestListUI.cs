@@ -40,6 +40,7 @@ public class RewardInfo
 public class QuestInfo
 {
     public string questTitle;
+    public int questID;
     [TextArea]
     public string detailExplain;
     public QuestType questType;
@@ -107,11 +108,15 @@ public class QuestListUI : Singleton<QuestListUI>
     private void AcceptQuest()
     {
         print($"{currentQuest.questTitle} 퀘스트 수락함");
+        UserData.Instance.QuestData.data.acceptIDs.Add(currentQuest.questID);
+
+        ShowQuestList();
     }
 
     private void RejectQuest()
     {
         print($"{currentQuest.questTitle} 퀘스트 거절함");
+        UserData.Instance.QuestData.data.rejectIDs.Add(currentQuest.questID);
     }
 
     private void CloseUI()
