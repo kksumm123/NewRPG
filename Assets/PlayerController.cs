@@ -43,7 +43,9 @@ public class PlayerController : MonoBehaviour
         aimAction.canceled += _ => projectileParabolaDrawer.gameObject.SetActive(false);
 
         projectileParabolaDrawer.Speed = bulletPrefab.GetComponent<IProjectile>().Speed;
-        mapLayer = 1 << LayerMask.NameToLayer("Environment");
+        mapLayer = int.MaxValue;
+        mapLayer &= ~(1 << LayerMask.NameToLayer("Defalt"));
+        mapLayer &= ~(1 << LayerMask.NameToLayer("NPC"));
     }
 
 
@@ -63,7 +65,8 @@ public class PlayerController : MonoBehaviour
         var bulletController = bullet.GetComponent<IProjectile>();
         bulletController.CurrentAngle = projectileParabolaDrawer.currentAngle;
         projectileParabolaDrawer.Speed = bulletController.Speed;
-        bool isHit = Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit, Mathf.Infinity, mapLayer);
+        Vector3 rayStartPoint = ProjectileParabolaDrawer.GetRayStartPointFromPlayer(Camera.main.transform, transform);
+        bool isHit = Physics.Raycast(rayStartPoint, Camera.main.transform.forward, out RaycastHit hit, Mathf.Infinity, mapLayer);
         if (isHit)
         {
             bullet.transform.LookAt(hit.point);
@@ -78,6 +81,8 @@ public class PlayerController : MonoBehaviour
             bulletController.Hit = true;
         }
     }
+
+    
     #endregion ShootAction_performed
     void Update()
     {

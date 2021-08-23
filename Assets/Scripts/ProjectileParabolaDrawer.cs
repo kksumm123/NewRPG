@@ -33,11 +33,7 @@ public class ProjectileParabolaDrawer : MonoBehaviour
     Vector3 targetPoint;
     void Update()
     {
-        Vector3 rayStartPoint = Camera.main.transform.position;
-        Vector3 cameraPositionSameY = Camera.main.transform.position;
-        cameraPositionSameY.y = transform.position.y;
-        float playerDistance = Vector3.Distance(cameraPositionSameY, transform.position);
-        rayStartPoint += Camera.main.transform.forward * playerDistance;
+        Vector3 rayStartPoint = GetRayStartPointFromPlayer(Camera.main.transform, transform.root);
 
         bool isHit = Physics.Raycast(rayStartPoint
                 , Camera.main.transform.forward
@@ -52,6 +48,16 @@ public class ProjectileParabolaDrawer : MonoBehaviour
                     + Camera.main.transform.forward * bulletHitMissDistance;
         }
         SetTargetWithSpeed(targetPoint, Speed);
+    }
+
+    public static Vector3 GetRayStartPointFromPlayer(Transform cameraTransform, Transform playerTransform)
+    {
+        Vector3 rayStartPoint = cameraTransform.position;
+        Vector3 cameraPositionSameY = cameraTransform.position;
+        cameraPositionSameY.y = playerTransform.position.y;
+        float playerDistance = Vector3.Distance(cameraPositionSameY, playerTransform.position);
+        rayStartPoint += cameraTransform.forward * playerDistance;
+        return rayStartPoint;
     }
 
     public float currentAngle;
