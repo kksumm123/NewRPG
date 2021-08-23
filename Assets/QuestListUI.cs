@@ -60,6 +60,7 @@ public class QuestListUI : Singleton<QuestListUI>
                                            .AddListener(() => RejectQuest());
         transform.Find("CloseButton/Button").GetComponent<Button>().onClick
                                            .AddListener(() => CloseUI());
+        gameObject.SetActive(false);
     }
 
     private void AcceptQuest()
@@ -79,11 +80,18 @@ public class QuestListUI : Singleton<QuestListUI>
     private void CloseUI()
     {
         canvasGroup.DOFade(0, 0.5f).SetUpdate(true)
-                   .OnComplete(() => StageManager.GameState = GameStateType.Play);
+                   .OnComplete(() =>
+                   {
+                       StageManager.GameState = GameStateType.Play;
+                       gameObject.SetActive(false);
+                       });
     }
 
     public void ShowQuestList(List<int> questIDs = null)
     {
+        if (gameObject.activeSelf)
+            return;
+        gameObject.SetActive(true);
         StageManager.GameState = GameStateType.Menu;
 
         if (questIDs != null)
