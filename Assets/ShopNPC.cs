@@ -1,18 +1,11 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShopNPC : MonoBehaviour
+public class ShopNPC : NPC
 {
-    // Start is called before the first frame update
-    void Start()
+    protected override void ShowUI()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        print("상점 UI 표시하자");
     }
 }

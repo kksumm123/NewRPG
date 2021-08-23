@@ -4,22 +4,28 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
-public class QuestNPC : MonoBehaviour
+public class NPC : MonoBehaviour
 {
-    [SerializeField] InputAction questAcceptKey;
-    [SerializeField] List<int> questIDs = new List<int>();
+    [SerializeField] InputAction showUIKey;
+    [SerializeField] string speechString = "모험자야 멈춰봐!\n할 말이 있어(Q)";
+    [SerializeField] string npcName = "NPC";
+    [SerializeField] string npcSpriteName = "NPC1";
 
     void Awake()
     {
-        questAcceptKey.performed += QuestAcceptKey_performed;
+        showUIKey.performed += ShowYiKey_performed;
     }
 
-    void QuestAcceptKey_performed(InputAction.CallbackContext obj)
+    void ShowYiKey_performed(InputAction.CallbackContext obj)
     {
-        print("퀘스트 목록 UI 표시하기");
+        print("UI 표시하기");
         CharacterTextBoxUI.Instance.Close();
-        QuestListUI.Instance.ShowQuestList(questIDs);
+        ShowUI();
+    }
+
+    protected virtual void ShowUI()
+    {
+        Debug.LogError("이거 표시되면 안됨, 자식에서 오버라이드 필수");
     }
 
     private void OnTriggerEnter(Collider other)
@@ -29,14 +35,33 @@ public class QuestNPC : MonoBehaviour
 
         // 유저에게 보여줄 퀘스트가 있을 때만 진행하자
         // 보여줄 퀘스트 : 수락/완료/거절한 퀘스트 제외
-        if (HaveUseableQuest() == false)
+        if (IsUseableMenu() == false)
             return;
 
-        questAcceptKey.Enable();
-        CharacterTextBoxUI.Instance.ShowText("모험자야 멈춰봐!\n할 말이 있어(Q)");
+        showUIKey.Enable();
+        CharacterTextBoxUI.Instance.ShowText(speechString);
     }
 
-    private bool HaveUseableQuest()
+    protected virtual bool IsUseableMenu()
+    {
+        Debug.LogError("이거 표시되면 안됨, 자식에서 오버라이드 필수");
+        return true;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player") == false)
+            return;
+
+        showUIKey.Disable();
+        CharacterTextBoxUI.Instance.Close();
+    }
+}
+public class QuestNPC : NPC
+{
+    [SerializeField] List<int> questIDs = new List<int>();
+
+    protected override bool IsUseableMenu()
     {
         List<int> ignoreIDs = new List<int>();
 
@@ -45,12 +70,8 @@ public class QuestNPC : MonoBehaviour
         return questIDs.Where(x => ignoreIDs.Contains(x) == false).Count() > 0;
     }
 
-    private void OnTriggerExit(Collider other)
+    protected override void ShowUI()
     {
-        if (other.CompareTag("Player") == false)
-            return;
-
-        questAcceptKey.Disable();
-        CharacterTextBoxUI.Instance.Close();
+        QuestListUI.Instance.ShowQuestList(questIDs);
     }
 }
