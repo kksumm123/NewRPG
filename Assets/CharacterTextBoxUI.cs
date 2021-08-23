@@ -34,6 +34,7 @@ public class CharacterTextBoxUI : Singleton<CharacterTextBoxUI>
 
     public void Close()
     {
-        canvasGroup.DOFade(0, 0.5f);
+        canvasGroup.DOFade(0, 0.5f)
+                   .OnComplete(() => gameObject.SetActive(false));
     }
 }
