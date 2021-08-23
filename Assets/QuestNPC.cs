@@ -4,12 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
-public class NPC : MonoBehaviour
+public abstract class NPC : MonoBehaviour
 {
-    [SerializeField] InputAction showUIKey;
-    [SerializeField] string speechString = "모험자야 멈춰봐!\n할 말이 있어(Q)";
-    [SerializeField] string npcName = "NPC";
-    [SerializeField] string npcSpriteName = "NPC1";
+    [SerializeField] InputAction showUIKey = 
+        new InputAction("Key", InputActionType.Button, "<Keyboard>/q");
+    [SerializeField] protected string speechString = "모험자야 멈춰봐!\n할 말이 있어(Q)";
+    [SerializeField] protected string npcName = "NPC";
+    [SerializeField] protected string npcSpriteName = "NPC1";
 
     void Awake()
     {
@@ -23,10 +24,7 @@ public class NPC : MonoBehaviour
         ShowUI();
     }
 
-    protected virtual void ShowUI()
-    {
-        Debug.LogError("이거 표시되면 안됨, 자식에서 오버라이드 필수");
-    }
+    protected abstract void ShowUI();
 
     private void OnTriggerEnter(Collider other)
     {
@@ -39,7 +37,7 @@ public class NPC : MonoBehaviour
             return;
 
         showUIKey.Enable();
-        CharacterTextBoxUI.Instance.ShowText(speechString);
+        CharacterTextBoxUI.Instance.ShowText(speechString, 3, npcName, npcSpriteName);
     }
 
     protected virtual bool IsUseableMenu()
