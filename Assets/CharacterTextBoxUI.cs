@@ -28,22 +28,23 @@ public class CharacterTextBoxUI : Singleton<CharacterTextBoxUI>
         canvasGroup.DOKill();
 
         canvasGroup.alpha = 0;
-        canvasGroup.DOFade(1, 0.5f);
+        canvasGroup.DOFade(1, 0.5f).SetUpdate(true);
 
         // 모든 텍스트 띄우기
         //contentsText.text = _text;
         // 한 글자씩 말하듯이 띄우기
         contentsText.text = "";
-        contentsText.DOText(_text, _text.Length / speechSpeed).SetDelay(0.3f);
+        contentsText.DOText(_text, _text.Length / speechSpeed).SetDelay(0.3f).SetUpdate(true);
         nameText.text = _name;
         portrait.sprite = Resources.Load<Sprite>("NPCs/" + portraitSpriteName);
 
-        canvasGroup.DOFade(0, 0.5f).SetDelay(visibleTime);
+        canvasGroup.DOFade(0, 0.5f).SetDelay(visibleTime).SetUpdate(true);
     }
 
     public void Close()
     {
         canvasGroup.DOFade(0, 0.5f)
+                   .SetUpdate(true)
                    .OnComplete(() => gameObject.SetActive(false));
     }
 }

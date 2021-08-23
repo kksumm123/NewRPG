@@ -78,7 +78,7 @@ public class QuestListUI : Singleton<QuestListUI>
 
     private void CloseUI()
     {
-        canvasGroup.DOFade(0, 0.5f);
+        canvasGroup.DOFade(0, 0.5f).SetUpdate(true);
     }
 
     public void ShowQuestList(List<int> questIDs = null)
@@ -87,7 +87,7 @@ public class QuestListUI : Singleton<QuestListUI>
             quests = ItemDB.Instance.GetQuestInfo(questIDs);
 
         canvasGroup.alpha = 0;
-        canvasGroup.DOFade(1, 0.5f);
+        canvasGroup.DOFade(1, 0.5f).SetUpdate(true);
 
         // 퀘스트 목록
         questTitleBoxs.ForEach(x => Destroy(x));
@@ -133,7 +133,7 @@ public class QuestListUI : Singleton<QuestListUI>
         rewardBoxs.ForEach(x => Destroy(x));
         rewardBoxs.Clear();
 
-        canvasGroup.DOFade(0, 0.5f);
+        canvasGroup.DOFade(0, 0.5f).SetUpdate(true);
     }
 
     QuestInfo currentQuest;
@@ -142,7 +142,7 @@ public class QuestListUI : Singleton<QuestListUI>
         currentQuest = item;
         npcTalkBoxText.text = $"{item.questTitle} 퀘스트 수락할래?";
         npcTalkBoxCanvasGroup.alpha = 0;
-        npcTalkBoxCanvasGroup.DOFade(1, 0.5f);
+        npcTalkBoxCanvasGroup.DOFade(1, 0.5f).SetUpdate(true);
         detailTitleText.text = item.questTitle;
         detailContentText.text = item.detailExplain;
         detailGoalText.text = item.GetGoalString();
