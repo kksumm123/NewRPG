@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour
         projectileParabolaDrawer.Speed = bulletPrefab.GetComponent<IProjectile>().Speed;
         mapLayer = int.MaxValue;
         mapLayer &= ~(1 << LayerMask.NameToLayer("Defalt"));
+        mapLayer &= ~(1 << LayerMask.NameToLayer("Player"));
         mapLayer &= ~(1 << LayerMask.NameToLayer("NPC"));
     }
 

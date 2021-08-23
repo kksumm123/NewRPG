@@ -78,11 +78,14 @@ public class QuestListUI : Singleton<QuestListUI>
 
     private void CloseUI()
     {
-        canvasGroup.DOFade(0, 0.5f).SetUpdate(true);
+        canvasGroup.DOFade(0, 0.5f).SetUpdate(true)
+                   .OnComplete(() => StageManager.GameState = GameStateType.Play);
     }
 
     public void ShowQuestList(List<int> questIDs = null)
     {
+        StageManager.GameState = GameStateType.Menu;
+
         if (questIDs != null)
             quests = ItemDB.Instance.GetQuestInfo(questIDs);
 
