@@ -11,5 +11,6 @@ public class ShopNPC : NPC
     protected override void ShowUI()
     {
         print("상점 UI 표시하자");
+        ShopUI.Instance.ShowUI();
     }
 }
