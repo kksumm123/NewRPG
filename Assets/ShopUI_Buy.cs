@@ -46,6 +46,7 @@ public partial class ShopUI : Singleton<ShopUI>
                 newButton.button.onClick.AddListener(item.Item2);
                 buyBaseBoxs.Add(newButton.gameObject);
             }
+            ShowBuyList(ItemType.Weapon);
             buyBaseBox.gameObject.SetActive(false);
         }
 
