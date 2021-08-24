@@ -40,7 +40,7 @@ public class QuestListUI : Singleton<QuestListUI>
     CanvasGroup npcTalkBoxCanvasGroup;
     Text npcTalkBoxText;
 
-    void Start()
+    void Awake()
     {
         canvasGroup = GetComponent<CanvasGroup>();
         canvasGroup.alpha = 0;
