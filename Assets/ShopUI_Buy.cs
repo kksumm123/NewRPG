@@ -8,10 +8,12 @@ using UnityEngine.UI;
 public partial class ShopUI : Singleton<ShopUI>
 {
     Text selectedItemTypeTitle;
-
-    void InitBuyTitle()
+    ShopItemBaseBox baseShopItemBaseBox;
+    void InitBuyUI()
     {
         selectedItemTypeTitle = transform.Find("SubCategory/TypeDetail/Title/Title/TextParent/Text").GetComponent<Text>();
+        baseShopItemBaseBox = transform.Find("SubCategory/TypeDetail/Scroll View/Viewport/ItemList/ItemBaseBox").GetComponent<ShopItemBaseBox>();
+        baseShopItemBaseBox.LinkComponent();
     }
     TextButtonBox buyBaseBox;
     List<GameObject> buyBaseBoxs = new List<GameObject>();
@@ -46,12 +48,20 @@ public partial class ShopUI : Singleton<ShopUI>
             }
             buyBaseBox.gameObject.SetActive(false);
         }
-    }
-    void ShowBuyList(ItemType itemType)
-    {
-        print(itemType.ToString());
-        selectedItemTypeTitle.text = GetItemTypeString(itemType);
-      
+
+        void ShowBuyList(ItemType itemType)
+        {
+            selectedItemTypeTitle.text = GetItemTypeString(itemType);
+
+            // 리스트 표시
+            List<ItemInfo> showItemList = ItemDB.Instance.GetItems(itemType);
+            baseShopItemBaseBox.gameObject.SetActive(true);
+            foreach (var item in showItemList)
+            {
+                var newBox = Instantiate(baseShopItemBaseBox, baseShopItemBaseBox.transform.parent);
+                newBox.Init(item);
+            }
+        }
     }
 
     string GetItemTypeString(ItemType itemType)

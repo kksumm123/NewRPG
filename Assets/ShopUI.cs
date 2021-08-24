@@ -24,7 +24,7 @@ public partial class ShopUI : Singleton<ShopUI>
         npcTalkBoxText.text = "";
         transform.Find("CloseButton/Button").GetComponent<Button>().onClick
                                             .AddListener(() => CloseUI());
-        InitBuyTitle();
+        InitBuyUI();
 
         // Buy, Sell, Craft, Exit
         categoryBaseBox = transform.Find("ShopMenu/Category/BaseBox")
@@ -56,15 +56,11 @@ public partial class ShopUI : Singleton<ShopUI>
         }
     }
 
-
     void SwitchShopMenuAndSubCategory()
     {
         shopMenu.SetActive(false);
         subCategory.SetActive(true);
     }
-
-    
-
 
     void ShowSellUI()
     {

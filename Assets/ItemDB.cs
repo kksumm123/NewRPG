@@ -143,4 +143,8 @@ public class ItemDB : Singleton<ItemDB>
         return result;
     }
 
+    internal List<ItemInfo> GetItems(ItemType itemType)
+    {
+        return items.Where(x => x.itemType == itemType).ToList();
+    }
 }
