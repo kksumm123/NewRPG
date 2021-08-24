@@ -6,12 +6,14 @@ using UnityEngine.UI;
 
 public class ShopItemBaseBox : MonoBehaviour
 {
+    public Button button;
     [SerializeField] Text itemName;
     [SerializeField] Text price;
     [SerializeField] Image icon;
 
     public void LinkComponent()
     {
+        button = GetComponent<Button>();
         itemName = transform.Find("ItemName").GetComponent<Text>();
         price = transform.Find("Price").GetComponent<Text>();
         icon = transform.Find("Icon").GetComponent<Image>();

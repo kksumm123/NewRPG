@@ -9,11 +9,13 @@ public partial class ShopUI : Singleton<ShopUI>
 {
     Text selectedItemTypeTitle;
     ShopItemBaseBox baseShopItemBaseBox;
+    Button npcTalkBoxOKButton;
     void InitBuyUI()
     {
         selectedItemTypeTitle = transform.Find("SubCategory/TypeDetail/Title/Title/TextParent/Text").GetComponent<Text>();
         baseShopItemBaseBox = transform.Find("SubCategory/TypeDetail/Scroll View/Viewport/ItemList/ItemBaseBox").GetComponent<ShopItemBaseBox>();
         baseShopItemBaseBox.LinkComponent();
+        npcTalkBoxOKButton = transform.Find("NPCTalkBox/OKButton").GetComponent<Button>();
     }
     TextButtonBox itemTypeBaseBox;
     List<GameObject> itemTypeBaseBoxs = new List<GameObject>();
@@ -64,11 +66,24 @@ public partial class ShopUI : Singleton<ShopUI>
             {
                 var newItemBox = Instantiate(baseShopItemBaseBox, baseShopItemBaseBox.transform.parent);
                 newItemBox.Init(item);
+                newItemBox.button.onClick.AddListener(() => OnClick(item));
                 shopItemBaseBoxs.Add(newItemBox.gameObject);
             }
             baseShopItemBaseBox.gameObject.SetActive(false);
+            void OnClick(ItemInfo item)
+            {
+                print(item.name);
+                SetNPCTalkBoxText($"{item.name}, 이거 구매할래?"
+                    , () =>
+                    {
+                        print($"{item.name} 구매 확인 클릭");
+                    });
+
+                //버튼 표시.
+            }
         }
     }
+
 
     string GetItemTypeString(ItemType itemType)
     {
