@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class ShopUI : Singleton<ShopUI>
@@ -11,6 +12,8 @@ public class ShopUI : Singleton<ShopUI>
     GameObject shopMenu;
     GameObject subCategory;
     Text npcTalkBoxText;
+
+    TextButtonBox categoryBaseBox;
     void Awake()
     {
         canvasGroup = GetComponent<CanvasGroup>();
@@ -21,8 +24,52 @@ public class ShopUI : Singleton<ShopUI>
         npcTalkBoxText.text = "";
         transform.Find("CloseButton/Button").GetComponent<Button>().onClick
                                             .AddListener(() => CloseUI());
+
+        // Buy, Sell, Craft, Exit
+        categoryBaseBox = transform.Find("ShopMenu/Category/BaseBox")
+                           .GetComponent<TextButtonBox>();
+        InitCategory();
+
+        void InitCategory()
+        {
+            // tuple 구조를 안쓰면
+            //List<TempClases> cmdList = new List<TempClases>();
+            //cmdList.Add(new TempClases() { str = "Buy", fn = ShowBuyUI });
+
+            List<Tuple<string, UnityAction>> cmdList = new List<Tuple<string, UnityAction>>();
+            cmdList.Add(new Tuple<string, UnityAction>("Buy", ShowBuyUI));
+            cmdList.Add(new Tuple<string, UnityAction>("Sell", ShowSellUI));
+            cmdList.Add(new Tuple<string, UnityAction>("Craft", ShowCraftUI));
+            cmdList.Add(new Tuple<string, UnityAction>("Exit", CloseUI));
+
+            categoryBaseBox.LinkComponent();
+
+            categoryBaseBox.gameObject.SetActive(true);
+            foreach (var item in cmdList)
+            {
+                var newButton = Instantiate(categoryBaseBox, categoryBaseBox.transform.parent);
+                newButton.text.text = item.Item1;
+                newButton.button.onClick.AddListener(item.Item2);
+            }
+            categoryBaseBox.gameObject.SetActive(false);
+        }
     }
 
+
+    void ShowBuyUI()
+    {
+        throw new NotImplementedException();
+    }
+
+    void ShowSellUI()
+    {
+        throw new NotImplementedException();
+    }
+
+    void ShowCraftUI()
+    {
+        throw new NotImplementedException();
+    }
     private void OnEnable()
     {
         StageManager.GameState = GameStateType.Menu;
@@ -30,7 +77,7 @@ public class ShopUI : Singleton<ShopUI>
     private void OnDisable()
     {
         //if (Application. == true)
-            //return;
+        //return;
         StageManager.GameState = GameStateType.Play;
     }
 
