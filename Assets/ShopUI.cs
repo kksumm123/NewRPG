@@ -58,7 +58,7 @@ public class ShopUI : Singleton<ShopUI>
 
     void ShowBuyUI()
     {
-        throw new NotImplementedException();
+
     }
 
     void ShowSellUI()
@@ -90,7 +90,7 @@ public class ShopUI : Singleton<ShopUI>
         canvasGroup.alpha = 0;
         canvasGroup.DOFade(1, 0.5f).SetUpdate(true);
 
-        NPCTalkBoxText("무엇을 구매할거야?");
+        NPCTalkBoxText("안녕, 반가워. 무엇을 할래?");
     }
 
     float speechSpeed = 20f;

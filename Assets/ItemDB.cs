@@ -73,6 +73,20 @@ public class ItemInfo
     public int id;
     public string iconName;
     public Sprite Sprite => Resources.Load<Sprite>($"Icons/{iconName}");
+    public int sellPrice; // 상점에 팔 때
+    public int buyPrice; // 상점에서 구입할 때
+    public bool registAtShop; // 상점에 등록할 지, 말 지
+    public ItemType itemType;
+}
+public enum ItemType
+{
+    Money,      // 재화       id : 0 ~ 10
+    Weapon,     // 무기       id : 1001 ~ 2000
+    Armor,      // 방어구     id : 2001 ~ 3000
+    Accessory,  // 장신구     id : 3001 ~ 4000
+    Consume,    // 소비아이템  id : 4001 ~ 5000
+    Material,   // 재료       id : 5001 ~ 5000
+    Etc,        // 기타       id : 6001 ~ 6000
 }
 public class ItemDB : Singleton<ItemDB>
 {

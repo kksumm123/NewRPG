@@ -43,22 +43,64 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b1eb44d7158c93419aaf529391f05c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quests:
+  - questTitle: "\uC2AC\uB77C\uC784 \uCC98\uCE58"
+    id: 1
+    detailExplain: "\uC2AC\uB77C\uC784 \uCC98\uCE58\uD574\uC8FC\uC138\uC694"
+    questType: 0
+    goalId: 1
+    goalCount: 5
+    rewards:
+    - itemID: 1
+      count: 500
+    - itemID: 11
+      count: 1
+  - questTitle: "\uB3CC \uC218\uC9D1"
+    id: 2
+    detailExplain: "\uD22C\uBA85\uD558\uAC8C \uBE5B\uB098\uB294 \uC791\uC740 \uB3CC
+      \uAC00\uC838\uC640\uC8FC\uC138\uC694"
+    questType: 2
+    goalId: 14
+    goalCount: 5
+    rewards:
+    - itemID: 1
+      count: 800
   items:
   - name: "\uACE8\uB4DC"
     id: 1
     iconName: Gold
+    sellPrice: 0
+    buyPrice: 0
+    registAtShop: 0
+    itemType: 0
   - name: "\uD55C\uC190\uAC80"
-    id: 11
+    id: 1001
     iconName: Sword
-  - name: "\uC791\uC740\uD3EC\uC158"
-    id: 12
-    iconName: Potion_Low
+    sellPrice: 50
+    buyPrice: 100
+    registAtShop: 1
+    itemType: 1
   - name: "\uBC29\uD328"
-    id: 13
+    id: 2001
     iconName: Shield
+    sellPrice: 60
+    buyPrice: 120
+    registAtShop: 1
+    itemType: 2
+  - name: "\uC791\uC740\uD3EC\uC158"
+    id: 4001
+    iconName: Potion_Low
+    sellPrice: 20
+    buyPrice: 40
+    registAtShop: 1
+    itemType: 4
   - name: "\uD06C\uB9AC\uC2A4\uD0C8 \uC6D0\uC11D"
-    id: 14
+    id: 5001
     iconName: Crystal_Stone
+    sellPrice: 20
+    buyPrice: 40
+    registAtShop: 1
+    itemType: 5
   monsters:
   - name: "\uC2AC\uB77C\uC784"
     id: 1
