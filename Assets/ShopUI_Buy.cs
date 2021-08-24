@@ -61,6 +61,7 @@ public partial class ShopUI : Singleton<ShopUI>
                 var newBox = Instantiate(baseShopItemBaseBox, baseShopItemBaseBox.transform.parent);
                 newBox.Init(item);
             }
+            baseShopItemBaseBox.gameObject.SetActive(false);
         }
     }
 
