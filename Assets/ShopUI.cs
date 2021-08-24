@@ -55,11 +55,47 @@ public class ShopUI : Singleton<ShopUI>
         }
     }
 
-
+    void SwitchShopMenuAndSubCategory()
+    {
+        shopMenu.SetActive(false);
+        subCategory.SetActive(true);
+    }
+    TextButtonBox buyBaseBox;
     void ShowBuyUI()
     {
+        SwitchShopMenuAndSubCategory();
 
+        buyBaseBox = transform.Find("SubCategory/Buy/ItemType/ItemTypeList/BaseBox")
+                           .GetComponent<TextButtonBox>();
+        InitCategory();
+
+        void InitCategory()
+        {
+            List<Tuple<string, UnityAction>> cmdList = new List<Tuple<string, UnityAction>>();
+            cmdList.Add(new Tuple<string, UnityAction>("무기", () => ShowBuyList(ItemType.Weapon)));
+            cmdList.Add(new Tuple<string, UnityAction>("방어구", () => ShowBuyList(ItemType.Armor)));
+            cmdList.Add(new Tuple<string, UnityAction>("악세서리", () => ShowBuyList(ItemType.Accessory)));
+            cmdList.Add(new Tuple<string, UnityAction>("소비아이템", () => ShowBuyList(ItemType.Consume)));
+            cmdList.Add(new Tuple<string, UnityAction>("재료", () => ShowBuyList(ItemType.Material)));
+
+            buyBaseBox.LinkComponent();
+
+            buyBaseBox.gameObject.SetActive(true);
+            foreach (var item in cmdList)
+            {
+                var newButton = Instantiate(buyBaseBox, buyBaseBox.transform.parent);
+                newButton.text.text = item.Item1;
+                newButton.button.onClick.AddListener(item.Item2);
+            }
+            buyBaseBox.gameObject.SetActive(false);
+
+        }
     }
+    void ShowBuyList(ItemType itemType)
+    {
+        print(itemType.ToString());
+    }
+
 
     void ShowSellUI()
     {
