@@ -77,6 +77,9 @@ public partial class ShopUI : Singleton<ShopUI>
                     , () =>
                     {
                         print($"{item.name} 구매 확인 클릭");
+                        // 유저에게 아이템 데이터 넘겨주자
+                        var newItem = new InventoryItemInfo();
+                        UserData.Instance.itemData.data.item.Add(newItem);
                     });
 
                 //버튼 표시.
