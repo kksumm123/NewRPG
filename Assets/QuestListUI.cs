@@ -68,13 +68,15 @@ public class QuestListUI : Singleton<QuestListUI>
         print($"{currentQuest.questTitle} 퀘스트 수락함");
         UserData.Instance.questData.data.acceptIDs.Add(currentQuest.id);
 
-        ShowQuestList();
+        RefreshQuestList();
     }
 
     private void RejectQuest()
     {
         print($"{currentQuest.questTitle} 퀘스트 거절함");
         UserData.Instance.questData.data.rejectIDs.Add(currentQuest.id);
+
+        RefreshQuestList();
     }
 
     private void CloseUI()
@@ -91,6 +93,7 @@ public class QuestListUI : Singleton<QuestListUI>
     {
         if (gameObject.activeSelf)
             return;
+
         gameObject.SetActive(true);
         StageManager.GameState = GameStateType.Menu;
 
@@ -100,6 +103,11 @@ public class QuestListUI : Singleton<QuestListUI>
         canvasGroup.alpha = 0;
         canvasGroup.DOFade(1, 0.5f).SetUpdate(true);
 
+        RefreshQuestList();
+    }
+
+    void RefreshQuestList()
+    {
         // 퀘스트 목록
         questTitleBoxs.ForEach(x => Destroy(x));
         questTitleBoxs.Clear();
@@ -144,7 +152,8 @@ public class QuestListUI : Singleton<QuestListUI>
         rewardBoxs.ForEach(x => Destroy(x));
         rewardBoxs.Clear();
 
-        canvasGroup.DOFade(0, 0.5f).SetUpdate(true);
+        baseQuestTitleBox.gameObject.SetActive(false);
+        CloseUI();
     }
 
     QuestInfo currentQuest;
