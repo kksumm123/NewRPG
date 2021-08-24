@@ -15,13 +15,14 @@ public partial class ShopUI : Singleton<ShopUI>
         baseShopItemBaseBox = transform.Find("SubCategory/TypeDetail/Scroll View/Viewport/ItemList/ItemBaseBox").GetComponent<ShopItemBaseBox>();
         baseShopItemBaseBox.LinkComponent();
     }
-    TextButtonBox buyBaseBox;
-    List<GameObject> buyBaseBoxs = new List<GameObject>();
+    TextButtonBox itemTypeBaseBox;
+    List<GameObject> itemTypeBaseBoxs = new List<GameObject>();
+    List<GameObject> shopItemBaseBoxs = new List<GameObject>();
     void ShowBuyUI()
     {
         SwitchShopMenuAndSubCategory();
 
-        buyBaseBox = transform.Find("SubCategory/Buy/ItemType/ItemTypeList/BaseBox")
+        itemTypeBaseBox = transform.Find("SubCategory/Buy/ItemType/ItemTypeList/BaseBox")
                            .GetComponent<TextButtonBox>();
         InitCategory();
 
@@ -34,33 +35,36 @@ public partial class ShopUI : Singleton<ShopUI>
             cmdList.Add(new Tuple<string, UnityAction>(GetItemTypeString(ItemType.Consume), () => ShowBuyList(ItemType.Consume)));
             cmdList.Add(new Tuple<string, UnityAction>(GetItemTypeString(ItemType.Material), () => ShowBuyList(ItemType.Material)));
 
-            buyBaseBoxs.ForEach(x => Destroy(x));
-            buyBaseBoxs.Clear();
+            itemTypeBaseBoxs.ForEach(x => Destroy(x));
+            itemTypeBaseBoxs.Clear();
 
-            buyBaseBox.LinkComponent();
-            buyBaseBox.gameObject.SetActive(true);
+            itemTypeBaseBox.LinkComponent();
+            itemTypeBaseBox.gameObject.SetActive(true);
             foreach (var item in cmdList)
             {
-                var newButton = Instantiate(buyBaseBox, buyBaseBox.transform.parent);
+                var newButton = Instantiate(itemTypeBaseBox, itemTypeBaseBox.transform.parent);
                 newButton.text.text = item.Item1;
                 newButton.button.onClick.AddListener(item.Item2);
-                buyBaseBoxs.Add(newButton.gameObject);
+                itemTypeBaseBoxs.Add(newButton.gameObject);
             }
             ShowBuyList(ItemType.Weapon);
-            buyBaseBox.gameObject.SetActive(false);
+            itemTypeBaseBox.gameObject.SetActive(false);
         }
 
         void ShowBuyList(ItemType itemType)
         {
             selectedItemTypeTitle.text = GetItemTypeString(itemType);
 
+            shopItemBaseBoxs.ForEach(x => Destroy(x));
+            shopItemBaseBoxs.Clear();
             // 리스트 표시
             List<ItemInfo> showItemList = ItemDB.Instance.GetItems(itemType);
             baseShopItemBaseBox.gameObject.SetActive(true);
             foreach (var item in showItemList)
             {
-                var newBox = Instantiate(baseShopItemBaseBox, baseShopItemBaseBox.transform.parent);
-                newBox.Init(item);
+                var newItemBox = Instantiate(baseShopItemBaseBox, baseShopItemBaseBox.transform.parent);
+                newItemBox.Init(item);
+                shopItemBaseBoxs.Add(newItemBox.gameObject);
             }
             baseShopItemBaseBox.gameObject.SetActive(false);
         }
