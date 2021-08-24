@@ -135,7 +135,10 @@ public class QuestListUI : Singleton<QuestListUI>
             OnClickTitleBox(userQuestList[0]);
         }
         else
+        {
             ClearUI();
+            CloseUI();
+        }
 
         baseQuestTitleBox.gameObject.SetActive(false);
     }
@@ -153,7 +156,6 @@ public class QuestListUI : Singleton<QuestListUI>
         rewardBoxs.Clear();
 
         baseQuestTitleBox.gameObject.SetActive(false);
-        CloseUI();
     }
 
     QuestInfo currentQuest;

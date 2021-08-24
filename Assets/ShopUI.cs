@@ -19,6 +19,8 @@ public class ShopUI : Singleton<ShopUI>
         subCategory = transform.Find("SubCategory").gameObject;
         npcTalkBoxText = transform.Find("NPCTalkBox/Text").GetComponent<Text>();
         npcTalkBoxText.text = "";
+        transform.Find("CloseButton/Button").GetComponent<Button>().onClick
+                                            .AddListener(() => CloseUI());
     }
 
     private void OnEnable()
