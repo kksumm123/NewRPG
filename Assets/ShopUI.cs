@@ -60,7 +60,9 @@ public class ShopUI : Singleton<ShopUI>
         shopMenu.SetActive(false);
         subCategory.SetActive(true);
     }
+
     TextButtonBox buyBaseBox;
+    List<GameObject> buyBaseBoxs = new List<GameObject>();
     void ShowBuyUI()
     {
         SwitchShopMenuAndSubCategory();
@@ -78,6 +80,9 @@ public class ShopUI : Singleton<ShopUI>
             cmdList.Add(new Tuple<string, UnityAction>("소비아이템", () => ShowBuyList(ItemType.Consume)));
             cmdList.Add(new Tuple<string, UnityAction>("재료", () => ShowBuyList(ItemType.Material)));
 
+            buyBaseBoxs.ForEach(x => Destroy(x));
+            buyBaseBoxs.Clear();
+
             buyBaseBox.LinkComponent();
 
             buyBaseBox.gameObject.SetActive(true);
@@ -86,6 +91,7 @@ public class ShopUI : Singleton<ShopUI>
                 var newButton = Instantiate(buyBaseBox, buyBaseBox.transform.parent);
                 newButton.text.text = item.Item1;
                 newButton.button.onClick.AddListener(item.Item2);
+                buyBaseBoxs.Add(newButton.gameObject);
             }
             buyBaseBox.gameObject.SetActive(false);
 
