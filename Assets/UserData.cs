@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 [System.Serializable]
 public class UserQuestData
@@ -11,6 +12,7 @@ public class UserQuestData
 [System.Serializable]
 public class UserItemData
 {
+    public int lastUID;
     public List<InventoryItemInfo> item = new List<InventoryItemInfo>();
 }
 [System.Serializable]
@@ -70,7 +72,21 @@ public class UserData : Singleton<UserData>
 
     private void InsertItem(ItemInfo item)
     {
-        throw new NotImplementedException();
+        var existItem = itemData.data.item
+                        .Where(x => x.id == item.id && x.count < item.maxStackCount)
+                        .FirstOrDefault();
+        if (existItem != null)
+        {
+            existItem.count++;
+        }
+        else
+        {
+            InventoryItemInfo newItem = new InventoryItemInfo();
+            newItem.id = item.id;
+            newItem.count = 1;
+            newItem.uid = ++itemData.data.lastUID;
+            itemData.data.item.Add(newItem);
+        }
     }
 
     private void AddGold(int addGold)
