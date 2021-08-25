@@ -60,7 +60,7 @@ MonoBehaviour:
     detailExplain: "\uD22C\uBA85\uD558\uAC8C \uBE5B\uB098\uB294 \uC791\uC740 \uB3CC
       \uAC00\uC838\uC640\uC8FC\uC138\uC694"
     questType: 2
-    goalId: 14
+    goalId: 5001
     goalCount: 5
     rewards:
     - itemID: 1

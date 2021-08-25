@@ -67,6 +67,7 @@ public class QuestListUI : Singleton<QuestListUI>
         print($"{currentQuest.questTitle} 퀘스트 수락함");
         UserData.Instance.questData.data.acceptIDs.Add(currentQuest.id);
 
+        ActiveQuestUI.Instance.RefreshQuestList();
         RefreshQuestList();
     }
 
