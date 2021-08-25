@@ -79,6 +79,9 @@ public partial class ShopUI : Singleton<ShopUI>
 
     internal void ShowUI()
     {
+        if (gameObject.activeSelf)
+            return;
+
         shopMenu.SetActive(true);
         subCategory.SetActive(false);
         gameObject.SetActive(true);
