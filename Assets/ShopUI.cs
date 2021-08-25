@@ -60,8 +60,16 @@ public partial class ShopUI : Singleton<ShopUI>
 
     void SwitchShopMenuAndSubCategory()
     {
-        shopMenu.SetActive(false);
+        shopMenu.GetComponent<CanvasGroup>().alpha = 1;
+        shopMenu.GetComponent<CanvasGroup>().DOFade(0, 0.5f)
+                            .SetUpdate(true)
+                            .OnComplete(() => shopMenu.SetActive(false))
+                            .SetLink(gameObject);
         subCategory.SetActive(true);
+        subCategory.GetComponent<CanvasGroup>().alpha = 0;
+        subCategory.GetComponent<CanvasGroup>().DOFade(1, 0.5f)
+                            .SetUpdate(true)
+                            .SetLink(gameObject);
     }
 
     void ShowCraftUI()
@@ -86,6 +94,7 @@ public partial class ShopUI : Singleton<ShopUI>
 
         gameObject.SetActive(true);
 
+        shopMenu.GetComponent<CanvasGroup>().alpha = 1;
         shopMenu.SetActive(true);
         subCategory.SetActive(false);
 
