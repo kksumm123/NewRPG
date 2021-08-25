@@ -84,9 +84,10 @@ public partial class ShopUI : Singleton<ShopUI>
         if (gameObject.activeSelf)
             return;
 
+        gameObject.SetActive(true);
+
         shopMenu.SetActive(true);
         subCategory.SetActive(false);
-        gameObject.SetActive(true);
 
         canvasGroup.alpha = 0;
         canvasGroup.DOFade(1, 0.5f).SetUpdate(true);

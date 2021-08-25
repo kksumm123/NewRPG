@@ -32,6 +32,7 @@ public class UserData : Singleton<UserData>
 
     // 계정 정보
     public PlayerPrefsData<AccountData> accountData;
+    internal Action<int, int> onChangedGold;
 
     private void Awake()
     {
@@ -62,7 +63,7 @@ public class UserData : Singleton<UserData>
         // 소지금 - 가격
         SubGold(totalGold);
 
-        return $"{item.name}, {count} 구매 해따";
+        return $"{item.name}, {count}개 구매 해따";
     }
 
     private bool IsEnoughGold(int needGold)
@@ -91,11 +92,15 @@ public class UserData : Singleton<UserData>
 
     private void AddGold(int addGold)
     {
+        int oldValue = accountData.data.gold;
         accountData.data.gold += addGold;
+        onChangedGold?.Invoke(oldValue, accountData.data.gold);
     }
     private void SubGold(int subGold)
     {
+        int oldValue = accountData.data.gold;
         accountData.data.gold -= subGold;
+        onChangedGold?.Invoke(oldValue, accountData.data.gold);
     }
 
     internal List<InventoryItemInfo> GetItems(ItemType itemType)
@@ -115,7 +120,7 @@ public class UserData : Singleton<UserData>
         // 돈 추가
         AddGold(totalGold);
 
-        return $"{item.ItemInfo.name}, {count} 구매 해따";
+        return $"{item.ItemInfo.name}, {count}개 구매 해따";
     }
 
     private void RemoveItem(InventoryItemInfo item, int removeCount)

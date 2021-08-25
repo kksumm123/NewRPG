@@ -94,7 +94,6 @@ public partial class ShopUI : Singleton<ShopUI>
             SetNPCTalkBoxText($"{item.name}, 이거 구매할래?"
                 , () =>
                 {
-                    print($"{item.name} 구매 확인 클릭");
                     // 유저에게 아이템 데이터 넘겨주자
                     var newItem = new InventoryItemInfo();
                     string result = UserData.Instance.ProcessBuy(item, 1);
@@ -129,7 +128,6 @@ public partial class ShopUI : Singleton<ShopUI>
             SetNPCTalkBoxText($"{itemName}, 이거 판매할래?"
                 , () =>
                 {
-                    print($"{itemName} 판매 확인 클릭");
                     // 유저에게 아이템 데이터 넘겨주자
                     var newItem = new InventoryItemInfo();
                     string result = UserData.Instance.ProcessSell(item, 1);
