@@ -72,42 +72,6 @@ public partial class ShopUI : Singleton<ShopUI>
         shopItemBaseBoxs.ForEach(x => Destroy(x));
         shopItemBaseBoxs.Clear();
         // 리스트 표시
-        List<InventoryItemInfo> showItemList = UserData.Instance.GetItems(itemType);
-
-        baseShopItemBaseBox.gameObject.SetActive(true);
-        foreach (var item in showItemList)
-        {
-            var newItemBox = Instantiate(baseShopItemBaseBox, baseShopItemBaseBox.transform.parent);
-            newItemBox.Init(item);
-            newItemBox.button.onClick.AddListener(() => OnClick(item));
-            shopItemBaseBoxs.Add(newItemBox.gameObject);
-        }
-        baseShopItemBaseBox.gameObject.SetActive(false);
-
-        void OnClick(ItemInfo item)
-        {
-            print(item.name);
-            SetNPCTalkBoxText($"{item.name}, 이거 구매할래?"
-                , () =>
-                {
-                    print($"{item.name} 구매 확인 클릭");
-                        // 유저에게 아이템 데이터 넘겨주자
-                        var newItem = new InventoryItemInfo();
-                    string result = UserData.Instance.ProcessBuy(item, 1);
-                    SetNPCTalkBoxText(result);
-                        //UserData.Instance.itemData.data.item.Add(newItem);
-                    });
-
-            //버튼 표시.
-        }
-    }
-    void ShowSellList(ItemType itemType)
-    {
-        selectedItemTypeTitle.text = GetItemTypeString(itemType);
-
-        shopItemBaseBoxs.ForEach(x => Destroy(x));
-        shopItemBaseBoxs.Clear();
-        // 리스트 표시
         List<ItemInfo> showItemList = ItemDB.Instance.GetItems(itemType);
         baseShopItemBaseBox.gameObject.SetActive(true);
         foreach (var item in showItemList)
@@ -129,10 +93,41 @@ public partial class ShopUI : Singleton<ShopUI>
                     var newItem = new InventoryItemInfo();
                     string result = UserData.Instance.ProcessBuy(item, 1);
                     SetNPCTalkBoxText(result);
-                    //UserData.Instance.itemData.data.item.Add(newItem);
                 });
+        }
+    }
+    void ShowSellList(ItemType itemType)
+    {
+        selectedItemTypeTitle.text = GetItemTypeString(itemType);
 
-            //버튼 표시.
+        shopItemBaseBoxs.ForEach(x => Destroy(x));
+        shopItemBaseBoxs.Clear();
+        // 리스트 표시
+        List<InventoryItemInfo> showItemList = UserData.Instance.GetItems(itemType);
+
+        baseShopItemBaseBox.gameObject.SetActive(true);
+        foreach (var item in showItemList)
+        {
+            var newItemBox = Instantiate(baseShopItemBaseBox, baseShopItemBaseBox.transform.parent);
+            newItemBox.Init(item.ItemInfo);
+            newItemBox.button.onClick.AddListener(() => OnClick(item));
+            shopItemBaseBoxs.Add(newItemBox.gameObject);
+        }
+        baseShopItemBaseBox.gameObject.SetActive(false);
+
+        void OnClick(InventoryItemInfo item)
+        {
+            string itemName = item.ItemInfo.name;
+            print(itemName);
+            SetNPCTalkBoxText($"{itemName}, 이거 판매할래?"
+                , () =>
+                {
+                    print($"{itemName} 판매 확인 클릭");
+                    // 유저에게 아이템 데이터 넘겨주자
+                    var newItem = new InventoryItemInfo();
+                    string result = UserData.Instance.ProcessSell(item, 1);
+                    SetNPCTalkBoxText(result);
+                });
         }
     }
 

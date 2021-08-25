@@ -100,6 +100,28 @@ public class UserData : Singleton<UserData>
 
     internal List<InventoryItemInfo> GetItems(ItemType itemType)
     {
-        throw new NotImplementedException();
+        return Instance.itemData.data.item
+                       .Where(x => x.ItemInfo.itemType == itemType)
+                       .ToList();
+    }
+
+    internal string ProcessSell(InventoryItemInfo item, int count)
+    {
+        int totalGold = item.ItemInfo.sellPrice * count;
+        // 아이템 삭제
+        for (int i = 0; i < count; i++)
+        {
+            RemoveItem(item);
+        }
+
+        // 돈 추가
+        AddGold(totalGold);
+
+        return $"{item.ItemInfo.name}, {count} 구매 해따";
+    }
+
+    private void RemoveItem(InventoryItemInfo item)
+    {
+
     }
 }
