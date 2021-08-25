@@ -17,7 +17,6 @@ public class CharacterTextBoxUI : Singleton<CharacterTextBoxUI>
         nameText = transform.Find("Name/TextParent/Text").GetComponent<Text>();
         contentsText = transform.Find("TextParent/Text").GetComponent<Text>();
         canvasGroup = GetComponent<CanvasGroup>();
-        gameObject.SetActive(false);
     }
 
     float speechSpeed = 20;

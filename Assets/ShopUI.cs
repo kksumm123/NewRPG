@@ -31,8 +31,6 @@ public partial class ShopUI : Singleton<ShopUI>
                            .GetComponent<TextButtonBox>();
         InitCategory();
 
-        gameObject.SetActive(false);
-
         void InitCategory()
         {
             // tuple 구조를 안쓰면

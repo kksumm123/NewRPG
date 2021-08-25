@@ -60,7 +60,6 @@ public class QuestListUI : Singleton<QuestListUI>
                                            .AddListener(() => RejectQuest());
         transform.Find("CloseButton/Button").GetComponent<Button>().onClick
                                            .AddListener(() => CloseUI());
-        gameObject.SetActive(false);
     }
 
     private void AcceptQuest()
