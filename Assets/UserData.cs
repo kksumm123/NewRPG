@@ -97,4 +97,9 @@ public class UserData : Singleton<UserData>
     {
         accountData.data.gold -= subGold;
     }
+
+    internal List<InventoryItemInfo> GetItems(ItemType itemType)
+    {
+        throw new NotImplementedException();
+    }
 }

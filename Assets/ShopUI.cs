@@ -38,7 +38,7 @@ public partial class ShopUI : Singleton<ShopUI>
             //cmdList.Add(new TempClases() { str = "Buy", fn = ShowBuyUI });
 
             List<Tuple<string, UnityAction>> cmdList = new List<Tuple<string, UnityAction>>();
-            cmdList.Add(new Tuple<string, UnityAction>("Buy", ShowBuyUI));
+            cmdList.Add(new Tuple<string, UnityAction>("Buy", ShowBuyAndSellUI));
             cmdList.Add(new Tuple<string, UnityAction>("Sell", ShowSellUI));
             cmdList.Add(new Tuple<string, UnityAction>("Craft", ShowCraftUI));
             cmdList.Add(new Tuple<string, UnityAction>("Exit", CloseUI));
@@ -60,11 +60,6 @@ public partial class ShopUI : Singleton<ShopUI>
     {
         shopMenu.SetActive(false);
         subCategory.SetActive(true);
-    }
-
-    void ShowSellUI()
-    {
-        throw new NotImplementedException();
     }
 
     void ShowCraftUI()

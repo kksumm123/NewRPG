@@ -3945,6 +3945,17 @@ MonoBehaviour:
       acceptIDs: 
       rejectIDs: 
     useDebug: 0
+  itemData:
+    data:
+      lastUID: 0
+      item: []
+    useDebug: 0
+  accountData:
+    data:
+      gold: 0
+      crystal: 0
+      username: 
+    useDebug: 0
 --- !u!4 &649555911
 Transform:
   m_ObjectHideFlags: 0
@@ -13596,7 +13607,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8572205549933708499, guid: 06be8f175242d084a9e278a7a4b08902, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.3224034
+      value: 3.322403
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06be8f175242d084a9e278a7a4b08902, type: 3}

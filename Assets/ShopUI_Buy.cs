@@ -20,7 +20,18 @@ public partial class ShopUI : Singleton<ShopUI>
     TextButtonBox itemTypeBaseBox;
     List<GameObject> itemTypeBaseBoxs = new List<GameObject>();
     List<GameObject> shopItemBaseBoxs = new List<GameObject>();
+
     void ShowBuyUI()
+    {
+        ShowBuyAndSellUI(ShowBuyList);
+        ShowBuyList(ItemType.Weapon);
+    }
+    void ShowSellUI()
+    {
+        ShowBuyAndSellUI(ShowSellList);
+        ShowSellList(ItemType.Weapon);
+    }
+    void ShowBuyAndSellUI(Action<ItemType> action)
     {
         SwitchShopMenuAndSubCategory();
 
@@ -31,11 +42,11 @@ public partial class ShopUI : Singleton<ShopUI>
         void InitCategory()
         {
             List<Tuple<string, UnityAction>> cmdList = new List<Tuple<string, UnityAction>>();
-            cmdList.Add(new Tuple<string, UnityAction>(GetItemTypeString(ItemType.Weapon), () => ShowBuyList(ItemType.Weapon)));
-            cmdList.Add(new Tuple<string, UnityAction>(GetItemTypeString(ItemType.Armor), () => ShowBuyList(ItemType.Armor)));
-            cmdList.Add(new Tuple<string, UnityAction>(GetItemTypeString(ItemType.Accessory), () => ShowBuyList(ItemType.Accessory)));
-            cmdList.Add(new Tuple<string, UnityAction>(GetItemTypeString(ItemType.Consume), () => ShowBuyList(ItemType.Consume)));
-            cmdList.Add(new Tuple<string, UnityAction>(GetItemTypeString(ItemType.Material), () => ShowBuyList(ItemType.Material)));
+            cmdList.Add(new Tuple<string, UnityAction>(GetItemTypeString(ItemType.Weapon), () => action(ItemType.Weapon)));
+            cmdList.Add(new Tuple<string, UnityAction>(GetItemTypeString(ItemType.Armor), () => action(ItemType.Armor)));
+            cmdList.Add(new Tuple<string, UnityAction>(GetItemTypeString(ItemType.Accessory), () => action(ItemType.Accessory)));
+            cmdList.Add(new Tuple<string, UnityAction>(GetItemTypeString(ItemType.Consume), () => action(ItemType.Consume)));
+            cmdList.Add(new Tuple<string, UnityAction>(GetItemTypeString(ItemType.Material), () => action(ItemType.Material)));
 
             itemTypeBaseBoxs.ForEach(x => Destroy(x));
             itemTypeBaseBoxs.Clear();
@@ -53,42 +64,77 @@ public partial class ShopUI : Singleton<ShopUI>
             itemTypeBaseBox.gameObject.SetActive(false);
         }
 
-        void ShowBuyList(ItemType itemType)
-        {
-            selectedItemTypeTitle.text = GetItemTypeString(itemType);
+    }
+    void ShowBuyList(ItemType itemType)
+    {
+        selectedItemTypeTitle.text = GetItemTypeString(itemType);
 
-            shopItemBaseBoxs.ForEach(x => Destroy(x));
-            shopItemBaseBoxs.Clear();
-            // 리스트 표시
-            List<ItemInfo> showItemList = ItemDB.Instance.GetItems(itemType);
-            baseShopItemBaseBox.gameObject.SetActive(true);
-            foreach (var item in showItemList)
-            {
-                var newItemBox = Instantiate(baseShopItemBaseBox, baseShopItemBaseBox.transform.parent);
-                newItemBox.Init(item);
-                newItemBox.button.onClick.AddListener(() => OnClick(item));
-                shopItemBaseBoxs.Add(newItemBox.gameObject);
-            }
-            baseShopItemBaseBox.gameObject.SetActive(false);
-            void OnClick(ItemInfo item)
-            {
-                print(item.name);
-                SetNPCTalkBoxText($"{item.name}, 이거 구매할래?"
-                    , () =>
-                    {
-                        print($"{item.name} 구매 확인 클릭");
+        shopItemBaseBoxs.ForEach(x => Destroy(x));
+        shopItemBaseBoxs.Clear();
+        // 리스트 표시
+        List<InventoryItemInfo> showItemList = UserData.Instance.GetItems(itemType);
+
+        baseShopItemBaseBox.gameObject.SetActive(true);
+        foreach (var item in showItemList)
+        {
+            var newItemBox = Instantiate(baseShopItemBaseBox, baseShopItemBaseBox.transform.parent);
+            newItemBox.Init(item);
+            newItemBox.button.onClick.AddListener(() => OnClick(item));
+            shopItemBaseBoxs.Add(newItemBox.gameObject);
+        }
+        baseShopItemBaseBox.gameObject.SetActive(false);
+
+        void OnClick(ItemInfo item)
+        {
+            print(item.name);
+            SetNPCTalkBoxText($"{item.name}, 이거 구매할래?"
+                , () =>
+                {
+                    print($"{item.name} 구매 확인 클릭");
                         // 유저에게 아이템 데이터 넘겨주자
                         var newItem = new InventoryItemInfo();
-                        string result = UserData.Instance.ProcessBuy(item, 1);
-                        SetNPCTalkBoxText(result);
+                    string result = UserData.Instance.ProcessBuy(item, 1);
+                    SetNPCTalkBoxText(result);
                         //UserData.Instance.itemData.data.item.Add(newItem);
                     });
 
-                //버튼 표시.
-            }
+            //버튼 표시.
         }
     }
+    void ShowSellList(ItemType itemType)
+    {
+        selectedItemTypeTitle.text = GetItemTypeString(itemType);
 
+        shopItemBaseBoxs.ForEach(x => Destroy(x));
+        shopItemBaseBoxs.Clear();
+        // 리스트 표시
+        List<ItemInfo> showItemList = ItemDB.Instance.GetItems(itemType);
+        baseShopItemBaseBox.gameObject.SetActive(true);
+        foreach (var item in showItemList)
+        {
+            var newItemBox = Instantiate(baseShopItemBaseBox, baseShopItemBaseBox.transform.parent);
+            newItemBox.Init(item);
+            newItemBox.button.onClick.AddListener(() => OnClick(item));
+            shopItemBaseBoxs.Add(newItemBox.gameObject);
+        }
+        baseShopItemBaseBox.gameObject.SetActive(false);
+        void OnClick(ItemInfo item)
+        {
+            print(item.name);
+            SetNPCTalkBoxText($"{item.name}, 이거 구매할래?"
+                , () =>
+                {
+                    print($"{item.name} 구매 확인 클릭");
+                    // 유저에게 아이템 데이터 넘겨주자
+                    var newItem = new InventoryItemInfo();
+                    string result = UserData.Instance.ProcessBuy(item, 1);
+                    SetNPCTalkBoxText(result);
+                    //UserData.Instance.itemData.data.item.Add(newItem);
+                });
+
+            //버튼 표시.
+        }
+    }
 
     string GetItemTypeString(ItemType itemType)
     {
