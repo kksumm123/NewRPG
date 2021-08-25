@@ -90,13 +90,13 @@ public class InventoryItemInfo
 }
 public enum ItemType
 {
-    Money,      // 재화       id : 0 ~ 10
-    Weapon,     // 무기       id : 1001 ~ 2000
-    Armor,      // 방어구     id : 2001 ~ 3000
-    Accessory,  // 장신구     id : 3001 ~ 4000
-    Consume,    // 소비아이템  id : 4001 ~ 5000
-    Material,   // 재료       id : 5001 ~ 5000
-    Etc,        // 기타       id : 6001 ~ 6000
+    Money = 0,      // 재화       id : 0 ~ 10
+    Weapon,         // 무기       id : 1001 ~ 2000
+    Armor,          // 방어구     id : 2001 ~ 3000
+    Accessory,      // 장신구     id : 3001 ~ 4000
+    Consume,        // 소비아이템  id : 4001 ~ 5000
+    Material,       // 재료       id : 5001 ~ 5000
+    Etc,            // 기타       id : 6001 ~ 6000
 }
 public class ItemDB : Singleton<ItemDB>
 {
