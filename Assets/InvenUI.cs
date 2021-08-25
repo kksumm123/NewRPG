@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class InvenUI : MonoBehaviour
 {
+    ItemBox baseItemBox;
     void Awake()
     {
         List<TextButtonBox> categoryBox = new List<TextButtonBox>();
@@ -15,9 +16,10 @@ public class InvenUI : MonoBehaviour
             categoryBox.Add(transform.Find($"Inventory/Category/CategoryBox{i}").GetComponent<TextButtonBox>());
             categoryBox[i].button.onClick.AddListener(() => ShowItemCategory((ItemType)i));
         }
+
+        baseItemBox = transform.Find("Inventory/TypeDetail/Scroll View/Viewport/Content/Item").GetComponent<ItemBox>();
     }
 
-    TextButtonBox baseItemBox;
     List<GameObject> itemboxs = new List<GameObject>();
     void ShowItemCategory(ItemType itemType)
     {
@@ -25,19 +27,21 @@ public class InvenUI : MonoBehaviour
         itemboxs.Clear();
 
         // 리스트 표시
-        List<ItemInfo> showItemList = ItemDB.Instance.GetItems(itemType);
+        List<InventoryItemInfo> showItemList = UserData.Instance.GetItems(itemType);
 
         baseItemBox.gameObject.SetActive(true);
         foreach (var item in showItemList)
         {
             var newItemBox = Instantiate(baseItemBox, baseItemBox.transform.parent);
             newItemBox.button.onClick.AddListener(() => OnClick(item));
+            newItemBox.Init(item);
             itemboxs.Add(newItemBox.gameObject);
         }
         baseItemBox.gameObject.SetActive(false);
-        void OnClick(ItemInfo item)
+        void OnClick(InventoryItemInfo item)
         {
-            print(item.name);
+            string itemName = item.ItemInfo.name;
+            print(itemName);
         }
     }
 }
