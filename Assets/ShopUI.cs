@@ -24,12 +24,14 @@ public partial class ShopUI : Singleton<ShopUI>
         npcTalkBoxText.text = "";
         transform.Find("CloseButton/Button").GetComponent<Button>().onClick
                                             .AddListener(() => CloseUI());
-        InitBuyUI();
+        InitBuyAndSellUI();
 
         // Buy, Sell, Craft, Exit
         categoryBaseBox = transform.Find("ShopMenu/Category/BaseBox")
                            .GetComponent<TextButtonBox>();
         InitCategory();
+
+        gameObject.SetActive(false);
 
         void InitCategory()
         {

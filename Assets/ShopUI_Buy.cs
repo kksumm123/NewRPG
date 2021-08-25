@@ -10,12 +10,17 @@ public partial class ShopUI : Singleton<ShopUI>
     Text selectedItemTypeTitle;
     ShopItemBaseBox baseShopItemBaseBox;
     Button npcTalkBoxOKButton;
-    void InitBuyUI()
+    Text shopItemType;
+
+    void InitBuyAndSellUI()
     {
         selectedItemTypeTitle = transform.Find("SubCategory/TypeDetail/Title/Title/TextParent/Text").GetComponent<Text>();
+        shopItemType = transform.Find("SubCategory/BuyAndSell/ShopItemType/Text").GetComponent<Text>();
         baseShopItemBaseBox = transform.Find("SubCategory/TypeDetail/Scroll View/Viewport/ItemList/ItemBaseBox").GetComponent<ShopItemBaseBox>();
         baseShopItemBaseBox.LinkComponent();
         npcTalkBoxOKButton = transform.Find("NPCTalkBox/OKButton").GetComponent<Button>();
+        itemTypeBaseBox = transform.Find("SubCategory/BuyAndSell/ShopItemType/ItemTypeList/BaseBox")
+                                   .GetComponent<TextButtonBox>();
     }
     TextButtonBox itemTypeBaseBox;
     List<GameObject> itemTypeBaseBoxs = new List<GameObject>();
@@ -23,11 +28,13 @@ public partial class ShopUI : Singleton<ShopUI>
 
     void ShowBuyUI()
     {
+        shopItemType.text = "Buy";
         ShowBuyAndSellUI(ShowBuyList);
         ShowBuyList(ItemType.Weapon);
     }
     void ShowSellUI()
     {
+        shopItemType.text = "Sell";
         ShowBuyAndSellUI(ShowSellList);
         ShowSellList(ItemType.Weapon);
     }
@@ -35,8 +42,6 @@ public partial class ShopUI : Singleton<ShopUI>
     {
         SwitchShopMenuAndSubCategory();
 
-        itemTypeBaseBox = transform.Find("SubCategory/Buy/ItemType/ItemTypeList/BaseBox")
-                           .GetComponent<TextButtonBox>();
         InitCategory();
 
         void InitCategory()
@@ -71,6 +76,7 @@ public partial class ShopUI : Singleton<ShopUI>
 
         shopItemBaseBoxs.ForEach(x => Destroy(x));
         shopItemBaseBoxs.Clear();
+
         // 리스트 표시
         List<ItemInfo> showItemList = ItemDB.Instance.GetItems(itemType);
         baseShopItemBaseBox.gameObject.SetActive(true);
@@ -93,6 +99,7 @@ public partial class ShopUI : Singleton<ShopUI>
                     var newItem = new InventoryItemInfo();
                     string result = UserData.Instance.ProcessBuy(item, 1);
                     SetNPCTalkBoxText(result);
+                    ShowBuyList(itemType);
                 });
         }
     }
@@ -127,6 +134,7 @@ public partial class ShopUI : Singleton<ShopUI>
                     var newItem = new InventoryItemInfo();
                     string result = UserData.Instance.ProcessSell(item, 1);
                     SetNPCTalkBoxText(result);
+                    ShowSellList(itemType);
                 });
         }
     }
