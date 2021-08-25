@@ -53,7 +53,7 @@ MonoBehaviour:
     rewards:
     - itemID: 1
       count: 500
-    - itemID: 11
+    - itemID: 1001
       count: 1
   - questTitle: "\uB3CC \uC218\uC9D1"
     id: 2
@@ -73,6 +73,7 @@ MonoBehaviour:
     buyPrice: 0
     registAtShop: 0
     itemType: 0
+    maxStackCount: 0
   - name: "\uD55C\uC190\uAC80"
     id: 1001
     iconName: Sword
@@ -80,6 +81,7 @@ MonoBehaviour:
     buyPrice: 100
     registAtShop: 1
     itemType: 1
+    maxStackCount: 0
   - name: "\uBC29\uD328"
     id: 2001
     iconName: Shield
@@ -87,6 +89,7 @@ MonoBehaviour:
     buyPrice: 120
     registAtShop: 1
     itemType: 2
+    maxStackCount: 0
   - name: "\uC791\uC740\uD3EC\uC158"
     id: 4001
     iconName: Potion_Low
@@ -94,6 +97,7 @@ MonoBehaviour:
     buyPrice: 40
     registAtShop: 1
     itemType: 4
+    maxStackCount: 0
   - name: "\uD06C\uB9AC\uC2A4\uD0C8 \uC6D0\uC11D"
     id: 5001
     iconName: Crystal_Stone
@@ -101,6 +105,7 @@ MonoBehaviour:
     buyPrice: 40
     registAtShop: 1
     itemType: 5
+    maxStackCount: 0
   monsters:
   - name: "\uC2AC\uB77C\uC784"
     id: 1
