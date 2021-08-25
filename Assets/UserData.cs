@@ -108,11 +108,9 @@ public class UserData : Singleton<UserData>
     internal string ProcessSell(InventoryItemInfo item, int count)
     {
         int totalGold = item.ItemInfo.sellPrice * count;
+
         // 아이템 삭제
-        for (int i = 0; i < count; i++)
-        {
-            RemoveItem(item);
-        }
+        RemoveItem(item, count);
 
         // 돈 추가
         AddGold(totalGold);
@@ -120,8 +118,11 @@ public class UserData : Singleton<UserData>
         return $"{item.ItemInfo.name}, {count} 구매 해따";
     }
 
-    private void RemoveItem(InventoryItemInfo item)
+    private void RemoveItem(InventoryItemInfo item, int removeCount)
     {
-
+        item.count -= removeCount;
+        Debug.Assert(item.count >= 0, "0보다 작아질 수 없어");
+        if (item.count == 0)
+            itemData.data.item.Remove(item);
     }
 }
