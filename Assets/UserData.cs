@@ -73,8 +73,12 @@ public class UserData : Singleton<UserData>
         throw new NotImplementedException();
     }
 
-    private void SubGold(int totalGold)
+    private void AddGold(int addGold)
     {
-        throw new NotImplementedException();
+        accountData.data.gold += addGold;
+    }
+    private void SubGold(int subGold)
+    {
+        accountData.data.gold -= subGold;
     }
 }
