@@ -11,7 +11,7 @@ public class ItemBox : MonoBehaviour
     public Image icon;
     public Text count;
     public GameObject activeGo;
-    void LinkComponent()
+    public void LinkComponent()
     {
         button = GetComponent<Button>();
         icon = transform.Find("Icon").GetComponent<Image>();

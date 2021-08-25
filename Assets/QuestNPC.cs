@@ -20,7 +20,7 @@ public abstract class NPC : MonoBehaviour
     void ShowYiKey_performed(InputAction.CallbackContext obj)
     {
         print("UI 표시하기");
-        CharacterTextBoxUI.Instance.Close();
+        CharacterTextBoxUI.Instance.CloseUI();
         ShowUI();
     }
 
@@ -52,7 +52,7 @@ public abstract class NPC : MonoBehaviour
             return;
 
         showUIKey.Disable();
-        CharacterTextBoxUI.Instance.Close();
+        CharacterTextBoxUI.Instance.CloseUI();
     }
 }
 public class QuestNPC : NPC

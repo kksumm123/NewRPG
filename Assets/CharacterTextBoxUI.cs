@@ -38,13 +38,13 @@ public class CharacterTextBoxUI : Singleton<CharacterTextBoxUI>
         nameText.text = _name;
         portrait.sprite = Resources.Load<Sprite>("NPCs/" + portraitSpriteName);
 
-        canvasGroup.DOFade(0, 0.5f).SetDelay(visibleTime).SetUpdate(true);
+        CloseUI().SetDelay(visibleTime).SetUpdate(true);
     }
 
-    public void Close()
+    public Tweener CloseUI()
     {
-        canvasGroup.DOFade(0, 0.5f)
-                   .SetUpdate(true)
-                   .OnComplete(() => gameObject.SetActive(false));
+        return canvasGroup.DOFade(0, 0.5f)
+                          .SetUpdate(true)
+                          .OnComplete(() => gameObject.SetActive(false));
     }
 }
