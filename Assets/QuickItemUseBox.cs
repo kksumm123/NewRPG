@@ -11,11 +11,15 @@ public class QuickItemUseBox : MonoBehaviour, IDropHandler
 {
     public ItemBox itembox;
     public Text number;
+    public Text coolTimeText;
+    public Image coolTimeFilled;
     public void LinkComponent()
     {
         number = transform.Find("Number").GetComponent<Text>();
         itembox = GetComponent<ItemBox>();
         itembox.LinkComponent();
+        coolTimeText = transform.Find("CoolTimeText").GetComponent<Text>();
+        coolTimeFilled = transform.Find("CoolTimeFilled").GetComponent<Image>();
     }
     public void OnDrop(PointerEventData eventData)
     {
@@ -42,6 +46,32 @@ public class QuickItemUseBox : MonoBehaviour, IDropHandler
 
     void OnClick()
     {
+        // 쿨타임이 끝나지 않았으면 리턴
+        if (Time.time < endTime)
+            return;
+
         print(number.text);
+
+        StartCoroutine(StartCoolTimeCo());
+    }
+
+    float endTime; //쿨타임 종료시간
+    IEnumerator StartCoolTimeCo()
+    {
+        float coolTimeSeconds = 3;
+        endTime = Time.time + coolTimeSeconds;
+        while (Time.time < endTime)
+        {
+            float remainTime = endTime - Time.time;
+
+            coolTimeText.text = remainTime.ToString("0.0");
+
+            float remainPercent = remainTime / coolTimeSeconds; //1 -> 0
+            coolTimeFilled.fillAmount = remainPercent;
+
+            yield return null;
+        }
+        coolTimeText.text = "";
+        coolTimeFilled.fillAmount = 0;
     }
 }
