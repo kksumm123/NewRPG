@@ -8,6 +8,7 @@ public class UserQuestData
 {
     public List<int> acceptIDs = new List<int>();
     public List<int> rejectIDs = new List<int>();
+    public int activeQuestID;
 }
 [System.Serializable]
 public class UserItemData
