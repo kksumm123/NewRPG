@@ -16,15 +16,10 @@ public class InvenUI : MonoBehaviour
             var button = transform.Find($"Inventory/Category/CategoryBox{i}").GetComponent<TextButtonBox>();
             button.LinkComponent();
             categoryBox.Add(button);
-            categoryBox[i - 1].button.onClick.AddListener(() => ShowItemCategory((ItemType)i));
+            var tmp_i = i;
+            categoryBox[tmp_i - 1].button.onClick.AddListener(() => ShowItemCategory((ItemType)tmp_i));
             print($"{(ItemType)i} 연결해따");
         }
-        //categoryBox[0].button.onClick.AddListener(() => ShowItemCategory(ItemType.Weapon));
-        //categoryBox[1].button.onClick.AddListener(() => ShowItemCategory(ItemType.Armor));
-        //categoryBox[2].button.onClick.AddListener(() => ShowItemCategory(ItemType.Accessory));
-        //categoryBox[3].button.onClick.AddListener(() => ShowItemCategory(ItemType.Consume));
-        //categoryBox[4].button.onClick.AddListener(() => ShowItemCategory(ItemType.Material));
-        //categoryBox[5].button.onClick.AddListener(() => ShowItemCategory(ItemType.Etc));
         baseItemBox = transform.Find("Inventory/TypeDetail/Scroll View/Viewport/Content/ItemBox").GetComponent<ItemBox>();
         baseItemBox.LinkComponent();
     }

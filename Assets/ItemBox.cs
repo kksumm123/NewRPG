@@ -16,7 +16,7 @@ public class ItemBox : MonoBehaviour
         button = GetComponent<Button>();
         icon = transform.Find("Icon").GetComponent<Image>();
         count = transform.Find("Count").GetComponent<Text>();
-        activeGo = transform.Find("Selected").gameObject;
+        activeGo = transform.Find("Selected")?.gameObject;
     }
 
     internal void Init(InventoryItemInfo item)
