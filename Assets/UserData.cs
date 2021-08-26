@@ -14,6 +14,7 @@ public class UserItemData
 {
     public int lastUID;
     public List<InventoryItemInfo> item = new List<InventoryItemInfo>();
+    public List<int> quickItemUIDs = new List<int>();
 }
 [System.Serializable]
 public class AccountData
@@ -39,6 +40,8 @@ public class UserData : Singleton<UserData>
         questData = new PlayerPrefsData<UserQuestData>("UserQuestData");
         itemData = new PlayerPrefsData<UserItemData>("UserItemData");
         accountData = new PlayerPrefsData<AccountData>("UserAccountData");
+        if (itemData.data.quickItemUIDs.Count == 0)
+            itemData.data.quickItemUIDs.AddRange(new int[10]);
     }
     private void OnDestroy()
     {
@@ -129,5 +132,11 @@ public class UserData : Singleton<UserData>
         Debug.Assert(item.count >= 0, "0보다 작아질 수 없어");
         if (item.count == 0)
             itemData.data.item.Remove(item);
+    }
+
+    internal InventoryItemInfo GetItem(int itemUID)
+    {
+        return itemData.data.item.Where(x => x.uid == itemUID)
+                                 .FirstOrDefault();
     }
 }
