@@ -18,7 +18,6 @@ public class InvenUI : MonoBehaviour
             categoryBox.Add(button);
             var tmp_i = i;
             categoryBox[tmp_i - 1].button.onClick.AddListener(() => ShowItemCategory((ItemType)tmp_i));
-            print($"{(ItemType)i} 연결해따");
         }
         baseItemBox = transform.Find("Inventory/TypeDetail/Scroll View/Viewport/Content/ItemBox").GetComponent<ItemBox>();
         baseItemBox.LinkComponent();
@@ -27,9 +26,8 @@ public class InvenUI : MonoBehaviour
     List<GameObject> itemboxs = new List<GameObject>();
     void ShowItemCategory(ItemType itemType)
     {
-        print($"{itemType} 클릭해따");
-
         gameObject.SetActive(true);
+
         itemboxs.ForEach(x => Destroy(x));
         itemboxs.Clear();
 
