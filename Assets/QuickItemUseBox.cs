@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DG.Tweening;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -46,6 +47,10 @@ public class QuickItemUseBox : MonoBehaviour, IDropHandler
 
     void OnClick()
     {
+        // 정보 없으면 리턴
+        if (itembox.inventoryItemInfo == null)
+            return;
+
         // 쿨타임이 끝나지 않았으면 리턴
         if (Time.time < endTime)
             return;
@@ -58,7 +63,7 @@ public class QuickItemUseBox : MonoBehaviour, IDropHandler
     float endTime; //쿨타임 종료시간
     IEnumerator StartCoolTimeCo()
     {
-        float coolTimeSeconds = 3;
+        float coolTimeSeconds = 1;
         endTime = Time.time + coolTimeSeconds;
         while (Time.time < endTime)
         {
@@ -73,5 +78,7 @@ public class QuickItemUseBox : MonoBehaviour, IDropHandler
         }
         coolTimeText.text = "";
         coolTimeFilled.fillAmount = 0;
+
+        transform.DOPunchScale(Vector3.one * 0.15f, 0.5f); 
     }
 }
