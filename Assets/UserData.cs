@@ -15,6 +15,7 @@ public class UserItemData
     public int lastUID;
     public List<InventoryItemInfo> item = new List<InventoryItemInfo>();
     public List<int> quickItemUIDs = new List<int>();
+    public List<int> equipItemUIDs = new List<int>();
 }
 [System.Serializable]
 public class AccountData
@@ -42,6 +43,8 @@ public class UserData : Singleton<UserData>
         accountData = new PlayerPrefsData<AccountData>("UserAccountData");
         if (itemData.data.quickItemUIDs.Count == 0)
             itemData.data.quickItemUIDs.AddRange(new int[10]);
+        if (itemData.data.equipItemUIDs.Count == 0)
+            itemData.data.equipItemUIDs.AddRange(new int[8]);
     }
     private void OnDestroy()
     {
