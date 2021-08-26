@@ -16,6 +16,7 @@ public class EquipUI : MonoBehaviour
         {
             var parent = i < 4 ? parentLeft : parentRight;
             EquipItemBox newBox = Instantiate(baseBox, parent);
+            newBox.Init(i);
         }
         baseBox.gameObject.SetActive(false);
     }
