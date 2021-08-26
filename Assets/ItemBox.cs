@@ -11,6 +11,7 @@ public class ItemBox : MonoBehaviour
     public Image icon;
     public Text count;
     public GameObject activeGo;
+    public InventoryItemInfo inventoryItemInfo;
     public void LinkComponent()
     {
         button = GetComponent<Button>();
@@ -21,6 +22,7 @@ public class ItemBox : MonoBehaviour
 
     internal void Init(InventoryItemInfo item)
     {
+        inventoryItemInfo = item;
         icon.sprite = item.ItemInfo.Sprite;
         count.text = item.count.ToString();
     }
