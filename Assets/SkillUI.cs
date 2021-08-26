@@ -5,6 +5,19 @@ using UnityEngine;
 public class SkillUI : MonoBehaviour
 {
     QuickItemUseBox baseBox;
+
+    public string[] keyBinding = new string[]{
+    "<keyboard>/1",
+    "<keyboard>/2",
+    "<keyboard>/3",
+    "<keyboard>/4",
+    "<keyboard>/5",
+    "<keyboard>/6",
+    "<keyboard>/7",
+    "<keyboard>/8",
+    "<keyboard>/9",
+    "<keyboard>/0",
+    };
     void Awake()
     {
         baseBox = GetComponentInChildren<QuickItemUseBox>();
@@ -16,7 +29,7 @@ public class SkillUI : MonoBehaviour
             var newButton = Instantiate(baseBox, baseBox.transform.parent);
             int itemUID = UserData.Instance.itemData.data.quickItemUIDs[i];
             InventoryItemInfo inventoryItemInfo = UserData.Instance.GetItem(itemUID);
-            newButton.Init(i, inventoryItemInfo);
+            newButton.Init(i, inventoryItemInfo, keyBinding[i]);
         }
         baseBox.gameObject.SetActive(false);
     }

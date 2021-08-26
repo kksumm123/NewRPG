@@ -8185,7 +8185,7 @@ GameObject:
   - component: {fileID: 606564354}
   - component: {fileID: 606564353}
   m_Layer: 5
-  m_Name: ShortCut
+  m_Name: Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8745,6 +8745,7 @@ MonoBehaviour:
     data:
       lastUID: 0
       item: []
+      quickItemUIDs: 
     useDebug: 0
   accountData:
     data:
@@ -13098,6 +13099,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ea2fcd659931284a872fab2be216290, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keyBinding:
+  - <keyboard>/1
+  - <keyboard>/2
+  - <keyboard>/3
+  - <keyboard>/4
+  - <keyboard>/5
+  - <keyboard>/6
+  - <keyboard>/7
+  - <keyboard>/8
+  - <keyboard>/9
+  - <keyboard>/0
 --- !u!1001 &1050847088
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14554,6 +14566,7 @@ GameObject:
   - component: {fileID: 1166057160}
   - component: {fileID: 1166057159}
   - component: {fileID: 1166057158}
+  - component: {fileID: 1166057161}
   m_Layer: 5
   m_Name: SkillBox
   m_TagString: Untagged
@@ -14662,6 +14675,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itembox: {fileID: 0}
+  number: {fileID: 0}
+--- !u!114 &1166057161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166057156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6737411366c1d6f45b76a83242384df3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shortcutKey:
+    m_Name: Shortcut Key
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: b110af20-3a55-43af-961d-83116866f559
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
 --- !u!1 &1168991403
 GameObject:
   m_ObjectHideFlags: 0
@@ -25531,7 +25565,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 111.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1652916639
@@ -29291,7 +29325,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8572205549933708499, guid: 06be8f175242d084a9e278a7a4b08902, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.322403
+      value: 3.3224034
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06be8f175242d084a9e278a7a4b08902, type: 3}

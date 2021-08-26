@@ -8,8 +8,8 @@ using UnityEngine.UI;
 public class ShortcutButton : MonoBehaviour
 {
     Button button;
-    [SerializeField] InputAction shortcutKey = new InputAction();
-    private void Awake()
+    public InputAction shortcutKey = new InputAction();
+    private void Start()
     {
         button = GetComponent<Button>();
         shortcutKey.performed += ShortcutKey_performed;
@@ -18,7 +18,6 @@ public class ShortcutButton : MonoBehaviour
 
     private void ShortcutKey_performed(InputAction.CallbackContext obj)
     {
-        print("clicked" + shortcutKey.bindings[0]);
         button.onClick.Invoke();
     }
 }
