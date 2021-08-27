@@ -8,6 +8,16 @@ using UnityEngine.UI;
 public class InvenUI : MonoBehaviour
 {
     ItemBox baseItemBox;
+    private void OnEnable()
+    {
+        StageManager.GameState = GameStateType.Menu;
+    }
+    private void OnDisable()
+    {
+        //if (Application. == true)
+        //return;
+        StageManager.GameState = GameStateType.Play;
+    }
     void Awake()
     {
         transform.Find("CloseButton/Button").GetComponent<Button>().onClick

@@ -39,7 +39,16 @@ public class QuestListUI : Singleton<QuestListUI>
 
     CanvasGroup npcTalkBoxCanvasGroup;
     Text npcTalkBoxText;
-
+    private void OnEnable()
+    {
+        StageManager.GameState = GameStateType.Menu;
+    }
+    private void OnDisable()
+    {
+        //if (Application. == true)
+        //return;
+        StageManager.GameState = GameStateType.Play;
+    }
     void Awake()
     {
         canvasGroup = GetComponent<CanvasGroup>();
