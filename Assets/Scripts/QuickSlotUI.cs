@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class QuickSlotUI : MonoBehaviour
+public class QuickSlotUI : Singleton<QuickSlotUI>
 {
     QuickItemUseBox baseBox;
 
