@@ -69,6 +69,7 @@ MonoBehaviour:
   - name: "\uACE8\uB4DC"
     id: 1
     iconName: Gold
+    description: "\uB098\uB294 \uACE8\uB4DC\uC57C"
     sellPrice: 0
     buyPrice: 0
     registAtShop: 0
@@ -77,6 +78,7 @@ MonoBehaviour:
   - name: "\uD55C\uC190\uAC80"
     id: 1001
     iconName: Sword
+    description: "\uD55C\uC190\uAC80\uC774\uB2E4\uB78C\uC950"
     sellPrice: 50
     buyPrice: 100
     registAtShop: 1
@@ -85,6 +87,7 @@ MonoBehaviour:
   - name: "\uBC29\uD328"
     id: 2001
     iconName: Shield
+    description: "\uBB34\uC5C7\uC774\uB4E0 \uB9C9\uB294 \uBC29\uD328\uD2B8"
     sellPrice: 60
     buyPrice: 120
     registAtShop: 1
@@ -93,6 +96,8 @@ MonoBehaviour:
   - name: "\uC791\uC740\uD3EC\uC158"
     id: 4001
     iconName: Potion_Low
+    description: "\uC18C\uB7C9\uC758 HP\uB97C \uD68C\uBCF5\uC2DC\uCF1C\uC8FC\uB294
+      \uD3EC\uBB3C"
     sellPrice: 20
     buyPrice: 40
     registAtShop: 1
@@ -101,6 +106,7 @@ MonoBehaviour:
   - name: "\uD06C\uB9AC\uC2A4\uD0C8 \uC6D0\uC11D"
     id: 5001
     iconName: Crystal_Stone
+    description: "\uC6D0\uC11D \uD22C\uC11D \uC4F0\uB9AC\uC11D"
     sellPrice: 20
     buyPrice: 40
     registAtShop: 1

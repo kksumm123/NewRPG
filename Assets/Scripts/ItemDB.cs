@@ -72,6 +72,8 @@ public class ItemInfo
     public string name;
     public int id;
     public string iconName;
+    [TextArea]
+    public string description;
     public Sprite Sprite => Resources.Load<Sprite>($"Icons/{iconName}");
     public int sellPrice; // 상점에 팔 때
     public int buyPrice; // 상점에서 구입할 때

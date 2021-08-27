@@ -60,6 +60,7 @@ public class InvenUI : MonoBehaviour
         {
             string itemName = item.ItemInfo.name;
             print(itemName);
+            ItemInfoUI.Instance.ShowUI(item);
         }
     }
 

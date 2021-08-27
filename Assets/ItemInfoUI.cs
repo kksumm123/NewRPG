@@ -1,18 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class ItemInfoUI : MonoBehaviour
+public class ItemInfoUI : Singleton<ItemInfoUI>
 {
-    // Start is called before the first frame update
+    ItemBox itembox;
+    Text title;
+    Text description;
+
     void Start()
     {
-        
+        itembox = GetComponentInChildren<ItemBox>();
+        itembox.LinkComponent();
+        title = transform.Find("Title").GetComponent<Text>();
+        description = transform.Find("Description").GetComponent<Text>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ShowUI(InventoryItemInfo item)
     {
-        
+        title.text = item.ItemInfo.name;
+        description.text = item.ItemInfo.description;
+        itembox.Init(item);
     }
 }
