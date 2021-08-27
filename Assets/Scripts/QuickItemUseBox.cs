@@ -26,13 +26,15 @@ public class QuickItemUseBox : MonoBehaviour, IDropHandler
     {
         print(eventData);
         ItemBox fromItembox = eventData.pointerDrag.GetComponent<ItemBox>();
+
+        int itemUID = fromItembox.inventoryItemInfo.uid;
+        // 기존에 같은 UID 잇으면 해제하자
+        QuickSlotUI.Instance.ClearSlot(itemUID);
+
+        // 아이템 할당
         itembox.Init(fromItembox.inventoryItemInfo);
 
-        // 기존에 같은 UID 잇으면 해제하자
-
-
         // 할당하면 UserData에 저장
-        int itemUID = fromItembox.inventoryItemInfo.uid;
         UserData.Instance.itemData.data.quickItemUIDs[index] = itemUID;
     }
 

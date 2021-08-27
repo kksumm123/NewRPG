@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -30,7 +31,22 @@ public class QuickSlotUI : Singleton<QuickSlotUI>
             int itemUID = UserData.Instance.itemData.data.quickItemUIDs[i];
             InventoryItemInfo inventoryItemInfo = UserData.Instance.GetItem(itemUID);
             newButton.Init(i, inventoryItemInfo, keyBinding[i]);
+            quickSlots.Add(newButton);
         }
         baseBox.gameObject.SetActive(false);
+    }
+    List<QuickItemUseBox> quickSlots = new List<QuickItemUseBox>();
+    internal void ClearSlot(int itemUID)
+    {
+        //quickSlots.Find(x => x.itembox != null && x.itembox.inventoryItemInfo.uid == itemUID)
+        //          ?.itembox.Init(null);
+        quickSlots.ForEach(
+            (x) =>
+            {
+                if (x.itembox != null && x.itembox.inventoryItemInfo != null
+                              && x.itembox.inventoryItemInfo.uid == itemUID)
+                    x.itembox.Init(null);
+            });
+
     }
 }
