@@ -13113,6 +13113,7 @@ GameObject:
   - component: {fileID: 1100536675}
   - component: {fileID: 1100536674}
   - component: {fileID: 1100536673}
+  - component: {fileID: 1100536676}
   m_Layer: 5
   m_Name: InventoryButton
   m_TagString: Untagged
@@ -13233,6 +13234,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1100536671}
   m_CullTransparentMesh: 1
+--- !u!114 &1100536676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100536671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6737411366c1d6f45b76a83242384df3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shortcutKey:
+    m_Name: Shortcut Key
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 8346c606-aae3-451e-8d30-0cc78b409fee
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 5d71785b-6720-48c1-838d-d627502f22f3
+      m_Path: <Keyboard>/i
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Shortcut Key
+      m_Flags: 0
 --- !u!1 &1110961995
 GameObject:
   m_ObjectHideFlags: 0
@@ -28244,7 +28273,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8572205549933708499, guid: 06be8f175242d084a9e278a7a4b08902, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.322403
+      value: 3.3224034
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06be8f175242d084a9e278a7a4b08902, type: 3}

@@ -10,6 +10,9 @@ public class InvenUI : MonoBehaviour
     ItemBox baseItemBox;
     void Awake()
     {
+        transform.Find("CloseButton/Button").GetComponent<Button>().onClick
+                                            .AddListener(() => CloseUI());
+
         List<TextButtonBox> categoryBox = new List<TextButtonBox>();
         for (int i = 1; i <= 6; i++)
         {
@@ -49,8 +52,13 @@ public class InvenUI : MonoBehaviour
             print(itemName);
         }
     }
+
     public void ShowUI()
     {
         ShowItemCategory(ItemType.Weapon);
+    }
+    void CloseUI()
+    {
+        gameObject.SetActive(false);
     }
 }
