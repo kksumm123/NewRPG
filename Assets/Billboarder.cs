@@ -9,9 +9,15 @@ public class Billboarder : MonoBehaviour
     void Start()
     {
         cameraTr = Camera.main.transform;
+        Billboarding();
     }
 
     void Update()
+    {
+        Billboarding();
+    }
+
+    private void Billboarding()
     {
         if (yOnly)
         {
