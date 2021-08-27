@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkillUI : MonoBehaviour
+public class QuickSlotUI : MonoBehaviour
 {
     QuickItemUseBox baseBox;
 
