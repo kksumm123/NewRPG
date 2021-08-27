@@ -91,7 +91,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6437516539524326682}
   m_Layer: 7
-  m_Name: ArcherDecal
+  m_Name: ArcherArrowDecal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
