@@ -57,7 +57,7 @@ public class QuickItemUseBox : MonoBehaviour, IDropHandler
             return;
 
         // 쿨타임이 끝나지 않았으면 리턴
-        if (Time.time < endTime)
+        if (Time.realtimeSinceStartup < endTime)
             return;
 
         print(number.text);
@@ -69,10 +69,10 @@ public class QuickItemUseBox : MonoBehaviour, IDropHandler
     IEnumerator StartCoolTimeCo()
     {
         float coolTimeSeconds = 1;
-        endTime = Time.time + coolTimeSeconds;
-        while (Time.time < endTime)
+        endTime = Time.realtimeSinceStartup + coolTimeSeconds;
+        while (Time.realtimeSinceStartup < endTime)
         {
-            float remainTime = endTime - Time.time;
+            float remainTime = endTime - Time.realtimeSinceStartup;
 
             coolTimeText.text = remainTime.ToString("0.0");
 

@@ -79,7 +79,7 @@ public class ItemInfo
     public int buyPrice; // 상점에서 구입할 때
     public bool registAtShop; // 상점에 등록할 지, 말 지
     public ItemType itemType;
-    public int maxStackCount; // 한 슬롯에 최대 몇개 쌓이는지
+    public int maxStackCount = 1; // 한 슬롯에 최대 몇개 쌓이는지
 }
 [System.Serializable]
 public class InventoryItemInfo
