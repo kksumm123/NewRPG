@@ -23,7 +23,10 @@ public class StageManager : Singleton<StageManager>
                 return;
 
             if (value == GameStateType.Menu)
+            {
+                Cursor.lockState = CursorLockMode.None;
                 Time.timeScale = 0;
+            }
             else
                 Time.timeScale = 1;
 
