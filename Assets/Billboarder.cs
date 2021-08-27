@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class Billboarder : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public bool yOnly;
+    Transform cameraTr;
     void Start()
     {
-        
+        cameraTr = Camera.main.transform;
     }
 
-    // Update is called once per frame
-    void Update()1. 
+    void Update()
     {
-        
+        if (yOnly)
+        {
+            transform.rotation = cameraTr.rotation;
+            var rotation = transform.rotation.eulerAngles;
+            rotation.x = 0;
+            rotation.z = 0;
+            transform.rotation = Quaternion.Euler(rotation);
+        }
+        else
+            transform.rotation = cameraTr.rotation;
     }
 }

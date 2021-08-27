@@ -2674,6 +2674,7 @@ GameObject:
   - component: {fileID: 3779848828516095127}
   - component: {fileID: 5609192757934425958}
   - component: {fileID: 1776929922}
+  - component: {fileID: 1798368779}
   m_Layer: 6
   m_Name: Archer
   m_TagString: Player
@@ -2825,6 +2826,19 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1798368779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6364062014487214359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eeb65ca6f56c0e44ad6079473aed0b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indicatePrefab: {fileID: 960069963818840772, guid: 0090c44c1a6e82845b952080cd3e6e55, type: 3}
 --- !u!1 &6364062015150933242
 GameObject:
   m_ObjectHideFlags: 0
