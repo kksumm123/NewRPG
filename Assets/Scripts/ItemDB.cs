@@ -71,9 +71,12 @@ public class SkillInfo
 {
     public int id;
     public string name;
+    public int mana;
     [TextArea]
     public string description;
     public string icon;
+
+    public Sprite Sprite => Resources.Load<Sprite>($"Icons/{icon}");
 }
 [System.Serializable]
 public class ItemInfo
@@ -106,16 +109,19 @@ public class ItemDB : Singleton<ItemDB>
     [SerializeField] List<ItemInfo> items;
     [SerializeField] List<MonsterInfo> monsters;
     [SerializeField] List<DestinationInfo> destinations;
+    public List<SkillInfo> skills;
     Dictionary<int, QuestInfo> questMap;
     Dictionary<int, ItemInfo> itemMap;
     Dictionary<int, MonsterInfo> monsterMap;
     Dictionary<int, DestinationInfo> destinationMap;
+    Dictionary<int, SkillInfo> skillMap;
     private void Awake()
     {
         questMap = quests.ToDictionary(x => x.id);
         monsterMap = monsters.ToDictionary(x => x.id);
         destinationMap = destinations.ToDictionary(x => x.id);
         itemMap = items.ToDictionary(x => x.id);
+        skillMap = skills.ToDictionary(x => x.id);
     }
 
     internal static QuestInfo GetQuestInfo(int questID)

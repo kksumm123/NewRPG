@@ -56,6 +56,10 @@ public class UserData : Singleton<UserData>
 
     // 계정 정보
     public PlayerPrefsData<AccountData> accountData;
+
+    // 스킬 정보
+    public PlayerPrefsData<SkillData> skillData;
+
     internal Action<int, int> onChangedGold;
 
     private void Awake()
@@ -63,6 +67,7 @@ public class UserData : Singleton<UserData>
         questData = new PlayerPrefsData<UserQuestData>("UserQuestData");
         itemData = new PlayerPrefsData<UserItemData>("UserItemData");
         accountData = new PlayerPrefsData<AccountData>("UserAccountData");
+        skillData = new PlayerPrefsData<SkillData>("UserSkillData");
         if (itemData.data.quickItemUIDs.Count == 0)
             itemData.data.quickItemUIDs.AddRange(new int[10]);
         if (itemData.data.equipItemUIDs.Count == 0)

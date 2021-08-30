@@ -118,3 +118,81 @@ MonoBehaviour:
   destinations:
   - name: "\uCD0C\uC7A5\uC9D1"
     id: 1
+  skills:
+  - id: 1
+    name: "\uB3CB\uBCF4\uAE30"
+    mana: 0
+    description: "\uD788\uC555 ! \uBA40\uB9AC\uBCF4\uAE30 !"
+    icon: Skill_1
+  - id: 2
+    name: "\uD558\uD2B8 \uBFC5"
+    mana: 0
+    description: "\uD761\uD608 + 1%"
+    icon: Skill_2
+  - id: 3
+    name: "\uD558\uD2B8 \uBFC5\uBFC5\uBFC5"
+    mana: 0
+    description: "\uD761\uD608 + 3%"
+    icon: Skill_3
+  - id: 4
+    name: "\uD2BC\uD2BC\uD574\uC9C0\uAE30"
+    mana: 0
+    description: "\uC9F1\uC9F1 \uD2BC\uD2BC\uD574"
+    icon: Skill_4
+  - id: 5
+    name: "\uB69D\uB531\uB69D\uB531"
+    mana: 0
+    description: "\uC7A5\uBE44\uC218\uB9AC\uD574\uBC84\uB9AC\uAE30"
+    icon: Skill_5
+  - id: 6
+    name: "\uB611\uB531\uB611\uB531"
+    mana: 0
+    description: "\uC2DC\uACC4\uB97C \uB354 \uBCF4\uCC44\uACE0 \uC2F6\uC9C0\uB9CC"
+    icon: Skill_6
+  - id: 7
+    name: "\uB3C5 \uBC14\uB974\uAE30"
+    mana: 0
+    description: "\uD750\uD750\uD750 \uC774\uAC83\uC740 \uCD5C\uAC15\uC758 \uB3C5,
+      \uB2FF\uAE30\uB9CC \uD574\uB3C4 \uC8FD\uC5B4\uBC84\uB9B0\uB2E4\uAD6C, \uD59D\uCA15......
+      \uC5B4 ?"
+    icon: Skill_7
+  - id: 8
+    name: "\uD654\uC0B4\uC5F0\uC0AC"
+    mana: 0
+    description: "\uC289, \uC288\uC289, \uC289\uC289"
+    icon: Skill_8
+  - id: 9
+    name: "\uD68C\uBCF5 \uC18C"
+    mana: 0
+    description: "\uC74C\uBA38"
+    icon: Skill_9
+  - id: 10
+    name: "\uD68C\uBCF5 \uC911"
+    mana: 0
+    description: "\uB098\uBB34\uC544\uBE44\uD0C0\uBD88"
+    icon: Skill_10
+  - id: 11
+    name: "\uD68C\uBCF5 \uB300"
+    mana: 0
+    description: "\uB300\uB098\uBB34 \uD5EC\uB9AC\uCF65\uD130"
+    icon: Skill_11
+  - id: 12
+    name: "\uBD80\uC2DD"
+    mana: 0
+    description: "\uBD80\uC2DD\uC911\uB3C5"
+    icon: Skill_12
+  - id: 13
+    name: "\uB354\uBE14 \uC0F7"
+    mana: 0
+    description: "\uC77C\uD0C0\uC774\uD53C"
+    icon: Skill_13
+  - id: 14
+    name: "\uAC15\uD574\uC9C0\uAE30"
+    mana: 0
+    description: "\uACF5\uACA9\uB825 +10%"
+    icon: Skill_14
+  - id: 15
+    name: "\uC18D\uC131\uACF5\uACA9"
+    mana: 0
+    description: "\uB79C\uB364\uD55C \uC18D\uC131\uC73C\uB85C \uACF5\uACA9"
+    icon: Skill_15

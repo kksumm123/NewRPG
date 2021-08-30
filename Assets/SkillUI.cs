@@ -48,19 +48,15 @@ public class SkillUI : BaseUI<SkillUI>
     }
 
     bool isCompleteLink = false;
-    SkillDeckBox baseSkillDeckBox;
-    List<SkillDeckBox> skillDeckBoxs = new List<SkillDeckBox>();
     private void LinkComponent()
     {
         InitDeck();
         InitSkillList();
+        isCompleteLink = true;
     }
 
-    private void InitSkillList()
-    {
-        throw new NotImplementedException();
-    }
-
+    SkillDeckBox baseSkillDeckBox;
+    List<SkillDeckBox> skillDeckBoxs = new List<SkillDeckBox>();
     void InitDeck()
     {
         // 초기화 하자
@@ -77,7 +73,22 @@ public class SkillUI : BaseUI<SkillUI>
             skillDeckBoxs.Add(newbox);
         }
         baseSkillDeckBox.gameObject.SetActive(false);
-        isCompleteLink = true;
+    }
+
+    SkillListBox baseSkillListBox;
+    List<SkillListBox> skillListBoxs = new List<SkillListBox>();
+    private void InitSkillList()
+    {
+        baseSkillListBox = GetComponentInChildren<SkillListBox>(true);
+
+        var skills = ItemDB.Instance.skills;
+        for (int i = 0; i < skills.Count; i++)
+        {
+            var newSkill = Instantiate(baseSkillListBox, baseSkillListBox.transform.parent);
+            newSkill.Init(skills[i]);
+            skillListBoxs.Add(newSkill);
+        }
+        baseSkillListBox.gameObject.SetActive(false);
     }
 }
 public enum DeckStateType
