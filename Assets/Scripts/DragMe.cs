@@ -21,7 +21,18 @@ public class DragMe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
     public void OnBeginDrag(PointerEventData eventData)
     {
         if (canvas == null)
+        {
+            // 드래그 이벤트 취소
+            eventData.pointerDrag = null;
             return;
+        }
+
+        if (icon.sprite == null)
+        {
+            // 드래그 이벤트 취소
+            eventData.pointerDrag = null;
+            return;
+        }
 
         // We have clicked something that can be dragged.
         // What we want to do is create an icon for this.
@@ -32,6 +43,8 @@ public class DragMe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 
         var image = m_DraggingIcon.AddComponent<Image>();
         image.raycastTarget = false;
+
+        image.enabled = icon.sprite != null;
         image.sprite = icon.sprite;
         image.SetNativeSize();
 

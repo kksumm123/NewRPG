@@ -33,16 +33,16 @@ public class QuickItemUseBox : MonoBehaviour, IDropHandler
 
             // 기존 itembox의 정보를 저장하자
             var thisInventoryItemInfo = itembox.inventoryItemInfo;
-
+            var fromInventoryItemInfo = fromQuickItemUseBox.itembox.inventoryItemInfo;
             // 기존껄 바꾸자
-            SetIconAndSaveSlotData(fromQuickItemUseBox.itembox.inventoryItemInfo
-                                , fromQuickItemUseBox.itembox.inventoryItemInfo.uid
+            SetIconAndSaveSlotData(fromInventoryItemInfo
+                                , fromInventoryItemInfo != null ? fromInventoryItemInfo.uid : 0
                                 , itembox
                                 , index);
 
             // From에 있는걸 바꾸자
             SetIconAndSaveSlotData(thisInventoryItemInfo
-                                , thisInventoryItemInfo.uid
+                                , thisInventoryItemInfo != null ? thisInventoryItemInfo.uid : 0
                                 , fromQuickItemUseBox.itembox
                                 , fromQuickItemUseBox.index);
         }
