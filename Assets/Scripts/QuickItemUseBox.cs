@@ -38,7 +38,7 @@ public class QuickItemUseBox : MonoBehaviour, IDropHandler
         UserData.Instance.itemData.data.quickItemUIDs[index] = itemUID;
     }
 
-    int index;
+    public int index;
     internal void Init(int i, InventoryItemInfo inventoryItemInfo, string keyBindingString)
     {
         index = i;

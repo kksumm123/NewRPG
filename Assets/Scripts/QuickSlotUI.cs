@@ -45,7 +45,10 @@ public class QuickSlotUI : Singleton<QuickSlotUI>
             {
                 if (x.itembox != null && x.itembox.inventoryItemInfo != null
                               && x.itembox.inventoryItemInfo.uid == itemUID)
+                {
                     x.itembox.Init(null);
+                    UserData.Instance.itemData.data.quickItemUIDs[x.index] = 0;
+                }
             });
 
     }
