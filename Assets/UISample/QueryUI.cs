@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace UISample
 {
-    public class QueryUI : BaseUI<QueryUI>
+    public class QueryUI : BaseUI_Teachers<QueryUI>
     {
         Text contentText;
         GameObject baseButton;

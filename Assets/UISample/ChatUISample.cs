@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace UISample
 {
-    public class ChatUISample : BaseUI<ChatUISample>
+    public class ChatUISample : BaseUI_Teachers<ChatUISample>
     {
         new private void OnEnable()
         {

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace UISample
 {
-    public class RadioButtonUI : BaseUI<RadioButtonUI>
+    public class RadioButtonUI : BaseUI_Teachers<RadioButtonUI>
     {
         Toggle toggle3;
         Toggle toggle2;

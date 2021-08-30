@@ -64,7 +64,7 @@ public class SingletonBase : HistoryUI
 /// Close() : UI 닫는 함수
 /// </summary>
 /// <typeparam name="T"></typeparam>
-public class BaseUI<T> : SingletonMonoBehaviour<T>, IHistoryUI
+public class BaseUI_Teachers<T> : SingletonMonoBehaviour<T>, IHistoryUI
 where T : SingletonBase
 {
     protected bool AllowBackAction => true;

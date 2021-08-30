@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace UISample
 {
-    public class QuestUISample : BaseUI<QuestUISample>
+    public class QuestUISample : BaseUI_Teachers<QuestUISample>
     {
         new private void OnEnable()
         {
