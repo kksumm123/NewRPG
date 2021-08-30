@@ -17,6 +17,7 @@ public class RewardBox : MonoBehaviour
     internal void Init(RewardInfo item)
     {
         icon.sprite = ItemDB.GetItemInfo(item.itemID).Sprite;
+        icon.SetNativeSize();
         count.text = item.count.ToString();
     }
 }
