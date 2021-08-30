@@ -5,6 +5,11 @@ using UnityEngine;
 public class BaseUI<T> : Singleton<T> where T : MonoBehaviour
 {
     CanvasGroup canvasGroup;
+    private void Awake()
+    {
+        canvasGroup = GetComponent<CanvasGroup>();
+    }
+
     void OnEnable()
     {
         StageManager.GameState = GameStateType.Menu;
