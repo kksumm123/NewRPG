@@ -6,17 +6,16 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-public partial class ShopUI : Singleton<ShopUI>
+public partial class ShopUI : BaseUI<ShopUI>
 {
-    CanvasGroup canvasGroup;
     GameObject shopMenu;
     GameObject subCategory;
     Text npcTalkBoxText;
 
     TextButtonBox categoryBaseBox;
-    void Awake()
+    new void Awake()
     {
-        canvasGroup = GetComponent<CanvasGroup>();
+        base.Awake();
         canvasGroup.alpha = 0;
         shopMenu = transform.Find("ShopMenu").gameObject;
         subCategory = transform.Find("SubCategory").gameObject;
@@ -74,18 +73,8 @@ public partial class ShopUI : Singleton<ShopUI>
     {
         throw new NotImplementedException();
     }
-    private void OnEnable()
-    {
-        StageManager.GameState = GameStateType.Menu;
-    }
-    private void OnDisable()
-    {
-        //if (Application. == true)
-        //return;
-        StageManager.GameState = GameStateType.Play;
-    }
 
-    internal void ShowUI()
+    public override void ShowUI()
     {
         if (gameObject.activeSelf)
             return;
@@ -119,11 +108,5 @@ public partial class ShopUI : Singleton<ShopUI>
             npcTalkBoxOKButton.onClick.RemoveAllListeners();
             npcTalkBoxOKButton.onClick.AddListener(() => { action(); });
         }
-    }
-
-    void CloseUI()
-    {
-        canvasGroup.DOFade(0, 0.5f).SetUpdate(true)
-                   .OnComplete(() => gameObject.SetActive(false));
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-public partial class ShopUI : Singleton<ShopUI>
+public partial class ShopUI : BaseUI<ShopUI>
 {
     Text selectedItemTypeTitle;
     ShopItemBaseBox baseShopItemBaseBox;

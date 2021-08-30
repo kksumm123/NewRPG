@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 public class BaseUI<T> : Singleton<T> where T : MonoBehaviour
 {
-    CanvasGroup canvasGroup;
-    private void Awake()
+    protected CanvasGroup canvasGroup;
+    protected void Awake()
     {
         canvasGroup = GetComponent<CanvasGroup>();
     }
@@ -20,7 +20,7 @@ public class BaseUI<T> : Singleton<T> where T : MonoBehaviour
         //return;
         StageManager.GameState = GameStateType.Play;
     }
-    public void ShowUI()
+    public virtual void ShowUI()
     {
         if (gameObject.activeSelf)
             return;
