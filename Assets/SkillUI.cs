@@ -48,8 +48,28 @@ public class SkillUI : BaseUI<SkillUI>
     }
 
     bool isCompleteLink = false;
+    SkillDeckBox baseSkillDeckBox;
+    List<SkillDeckBox> skillDeckBoxs = new List<SkillDeckBox>();
     private void LinkComponent()
     {
-        throw new NotImplementedException();
+        // 초기화 하자
+        baseSkillDeckBox = GetComponentInChildren<SkillDeckBox>(true);
+
+        // 레벨 1, 5번 사용가능
+        // 2 : 6, 3 : 7, 4 : 8, ...
+        for (int i = 0; i < 8; i++)
+        {
+            var newbox = Instantiate(baseSkillDeckBox, baseSkillDeckBox.transform.parent);
+            newbox.Init();
+            skillDeckBoxs.Add(newbox);
+        }
+
+        isCompleteLink = true;
     }
+}
+public enum DeckStateType
+{
+    Disable,
+    Enable,
+    Used,
 }

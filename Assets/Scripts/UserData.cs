@@ -24,6 +24,8 @@ public class AccountData
     public int gold;
     public int crystal;
     public string username;
+    public int level;
+    public int exp;
 }
 public class UserData : Singleton<UserData>
 {
