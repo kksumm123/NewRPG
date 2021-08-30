@@ -55,15 +55,17 @@ public class SkillUI : BaseUI<SkillUI>
         // 초기화 하자
         baseSkillDeckBox = GetComponentInChildren<SkillDeckBox>(true);
 
-        // 레벨 1, 5번 사용가능
-        // 2 : 6, 3 : 7, 4 : 8, ...
+        // 레벨 1, 5개 사용가능
+        // 2 : 6, 3 : 7, 4 : 8, ... 
+        int level = UserData.Instance.accountData.data.level;
         for (int i = 0; i < 8; i++)
         {
+            DeckStateType deckState = 4 + level > i ? DeckStateType.Enable : DeckStateType.Disable;
             var newbox = Instantiate(baseSkillDeckBox, baseSkillDeckBox.transform.parent);
-            newbox.Init();
+            newbox.Init(deckState);
             skillDeckBoxs.Add(newbox);
         }
-
+        baseSkillDeckBox.gameObject.SetActive(false);
         isCompleteLink = true;
     }
 }
