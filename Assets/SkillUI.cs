@@ -1,4 +1,5 @@
 ﻿using DG.Tweening;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -37,5 +38,18 @@ public class BaseUI<T> : Singleton<T> where T : MonoBehaviour
 }
 public class SkillUI : BaseUI<SkillUI>
 {
-    
+
+    public override void ShowUI()
+    {
+        base.ShowUI();
+
+        if (isCompleteLink == false)
+            LinkComponent();
+    }
+
+    bool isCompleteLink = false;
+    private void LinkComponent()
+    {
+        throw new NotImplementedException();
+    }
 }

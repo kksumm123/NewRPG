@@ -71,7 +71,7 @@ public partial class ShopUI : BaseUI<ShopUI>
 
     void ShowCraftUI()
     {
-        throw new NotImplementedException();
+        print("미구현");
     }
 
     public override void ShowUI()
