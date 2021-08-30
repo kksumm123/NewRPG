@@ -25,17 +25,50 @@ public class QuickItemUseBox : MonoBehaviour, IDropHandler
     public void OnDrop(PointerEventData eventData)
     {
         print(eventData);
-        ItemBox fromItembox = eventData.pointerDrag.GetComponent<ItemBox>();
+        var fromQuickItemUseBox = eventData.pointerDrag.GetComponent<QuickItemUseBox>();
+        if (fromQuickItemUseBox)
+        {
+            // 스왑 바꾸기
+            // 기존에 있던거랑 fromQuickItemUseBox랑 바꾸자
 
-        int itemUID = fromItembox.inventoryItemInfo.uid;
-        // 기존에 같은 UID 잇으면 해제하자
-        QuickSlotUI.Instance.ClearSlot(itemUID);
+            // 기존 itembox의 정보를 저장하자
+            var thisInventoryItemInfo = itembox.inventoryItemInfo;
 
+            // 기존껄 바꾸자
+            SetIconAndSaveSlotData(fromQuickItemUseBox.itembox.inventoryItemInfo
+                                , fromQuickItemUseBox.itembox.inventoryItemInfo.uid
+                                , itembox
+                                , index);
+
+            // From에 있는걸 바꾸자
+            SetIconAndSaveSlotData(thisInventoryItemInfo
+                                , thisInventoryItemInfo.uid
+                                , fromQuickItemUseBox.itembox
+                                , fromQuickItemUseBox.index);
+        }
+        else
+        {
+            // ItemBox 관련해서 쓰기 위해서는
+            // ItemBox, QuickSlotUI, UserData 3개의 컴포넌트를 가져와야한다
+            // 그러므로 인터페이스를 사용하는 편이 좋다
+            // 인터페이스는 어떻게 쓰는거지?
+            ItemBox fromItembox = eventData.pointerDrag.GetComponent<ItemBox>();
+
+            int itemUID = fromItembox.inventoryItemInfo.uid;
+            // 기존에 같은 UID 잇으면 해제하자
+            QuickSlotUI.Instance.ClearSlot(itemUID);
+            SetIconAndSaveSlotData(fromItembox.inventoryItemInfo, itemUID, itembox, index);
+        }
+    }
+
+    void SetIconAndSaveSlotData(InventoryItemInfo setInventoryItemInfo, int SaveitemUID
+                                , ItemBox itembox, int index)
+    {
         // 아이템 할당
-        itembox.Init(fromItembox.inventoryItemInfo);
+        itembox.Init(setInventoryItemInfo);
 
         // 할당하면 UserData에 저장
-        UserData.Instance.itemData.data.quickItemUIDs[index] = itemUID;
+        UserData.Instance.itemData.data.quickItemUIDs[index] = SaveitemUID;
     }
 
     public int index;
