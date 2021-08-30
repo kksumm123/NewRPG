@@ -95,6 +95,23 @@ public class QuickItemUseBox : MonoBehaviour, IDropHandler
 
         print(number.text);
 
+        // 소비 아이템인가?
+        bool isConsumable = itembox.inventoryItemInfo.ItemInfo.itemType == ItemType.Consume;
+        if (isConsumable)
+        {
+            // 소비 아이템인 경우 수량을 줄이자
+            itembox.inventoryItemInfo.count -= 1;
+
+            // 개수가 0이면 itembox 비우자
+            if (itembox.inventoryItemInfo.count <= 0)
+            {
+                UserData.Instance.RemoveItem(itembox.inventoryItemInfo, 0);
+                itembox.inventoryItemInfo = null;
+            }
+
+            // 바뀐 정보로 다시 Init()
+            itembox.Init(itembox.inventoryItemInfo);
+        }
         StartCoroutine(StartCoolTimeCo());
     }
 

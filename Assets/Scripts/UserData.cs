@@ -131,7 +131,7 @@ public class UserData : Singleton<UserData>
         return $"{item.ItemInfo.name}, {count}개 판매 해따";
     }
 
-    private void RemoveItem(InventoryItemInfo item, int removeCount)
+    public void RemoveItem(InventoryItemInfo item, int removeCount)
     {
         item.count -= removeCount;
         Debug.Assert(item.count >= 0, "0보다 작아질 수 없어");
