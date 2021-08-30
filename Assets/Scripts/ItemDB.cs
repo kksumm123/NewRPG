@@ -67,6 +67,15 @@ public class DestinationInfo
     public int id;
 }
 [System.Serializable]
+public class SkillInfo
+{
+    public int id;
+    public string name;
+    [TextArea]
+    public string description;
+    public string icon;
+}
+[System.Serializable]
 public class ItemInfo
 {
     public string name;
@@ -80,15 +89,6 @@ public class ItemInfo
     public bool registAtShop; // 상점에 등록할 지, 말 지
     public ItemType itemType;
     public int maxStackCount = 1; // 한 슬롯에 최대 몇개 쌓이는지
-}
-[System.Serializable]
-public class InventoryItemInfo
-{
-    public int uid;
-    public int id;
-    public int count;
-
-    public ItemInfo ItemInfo => ItemDB.GetItemInfo(id);
 }
 public enum ItemType
 {

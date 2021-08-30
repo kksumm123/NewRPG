@@ -11,6 +11,14 @@ public class UserQuestData
     public int activeQuestID;
 }
 [System.Serializable]
+public class InventoryItemInfo
+{
+    public int uid;
+    public int id;
+    public int count;
+    public ItemInfo ItemInfo => ItemDB.GetItemInfo(id);
+}
+[System.Serializable]
 public class UserItemData
 {
     public int lastUID;
@@ -26,6 +34,17 @@ public class AccountData
     public string username;
     public int level = 1;
     public int exp;
+}
+[System.Serializable]
+public class UserSkillInfo
+{
+    public int id;
+    public int level;
+}
+[System.Serializable]
+public class SkillData
+{
+    public List<UserSkillInfo> equipItemUIDs = new List<UserSkillInfo>();
 }
 public class UserData : Singleton<UserData>
 {

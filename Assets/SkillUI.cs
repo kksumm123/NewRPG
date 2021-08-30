@@ -52,6 +52,17 @@ public class SkillUI : BaseUI<SkillUI>
     List<SkillDeckBox> skillDeckBoxs = new List<SkillDeckBox>();
     private void LinkComponent()
     {
+        InitDeck();
+        InitSkillList();
+    }
+
+    private void InitSkillList()
+    {
+        throw new NotImplementedException();
+    }
+
+    void InitDeck()
+    {
         // 초기화 하자
         baseSkillDeckBox = GetComponentInChildren<SkillDeckBox>(true);
 
