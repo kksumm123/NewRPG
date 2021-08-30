@@ -52,6 +52,7 @@ public partial class ShopUI : Singleton<ShopUI>
             cmdList.Add(new Tuple<string, UnityAction>(GetItemTypeString(ItemType.Accessory), () => action(ItemType.Accessory)));
             cmdList.Add(new Tuple<string, UnityAction>(GetItemTypeString(ItemType.Consume), () => action(ItemType.Consume)));
             cmdList.Add(new Tuple<string, UnityAction>(GetItemTypeString(ItemType.Material), () => action(ItemType.Material)));
+            cmdList.Add(new Tuple<string, UnityAction>(GetItemTypeString(ItemType.Etc), () => action(ItemType.Etc)));
 
             itemTypeBaseBoxs.ForEach(x => Destroy(x));
             itemTypeBaseBoxs.Clear();

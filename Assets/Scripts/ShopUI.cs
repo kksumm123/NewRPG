@@ -105,6 +105,7 @@ public partial class ShopUI : Singleton<ShopUI>
     float speechSpeed = 20f;
     private void SetNPCTalkBoxText(string showText, Action action = null)
     {
+        print(showText);
         npcTalkBoxText.text = "";
         npcTalkBoxText.DOKill();
         npcTalkBoxText.DOText(showText, showText.Length / speechSpeed)

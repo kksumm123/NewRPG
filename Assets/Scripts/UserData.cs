@@ -128,7 +128,7 @@ public class UserData : Singleton<UserData>
         // 돈 추가
         AddGold(totalGold);
 
-        return $"{item.ItemInfo.name}, {count}개 구매 해따";
+        return $"{item.ItemInfo.name}, {count}개 판매 해따";
     }
 
     private void RemoveItem(InventoryItemInfo item, int removeCount)
