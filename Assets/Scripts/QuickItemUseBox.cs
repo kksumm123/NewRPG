@@ -116,7 +116,7 @@ public class QuickItemUseBox : MonoBehaviour, IDropHandler
     IEnumerator StartCoolTimeCo()
     {
         float coolTimeSeconds = 1;
-        endTime = Time.realtimeSinceStartup + coolTimeSeconds;
+        endTime = Time.realtimeSinceStartup + coolTimeSeconds; 
         while (Time.realtimeSinceStartup < endTime)
         {
             float remainTime = endTime - Time.realtimeSinceStartup;

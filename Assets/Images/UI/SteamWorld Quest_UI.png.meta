@@ -37,7 +37,7 @@ TextureImporter:
     second: SteamWorld Quest_UI_10
   - first:
       213: -2727284807396297517
-    second: SteamWorld Quest_UI_11
+    second: DisableCard
   - first:
       213: 1925815648309689984
     second: SteamWorld Quest_UI_12
@@ -871,7 +871,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SteamWorld Quest_UI_11
+      name: DisableCard
       rect:
         serializedVersion: 2
         x: 5
@@ -1485,7 +1485,7 @@ TextureImporter:
         serializedVersion: 2
         x: 8
         y: 1503
-        width: 110
+        width: 260
         height: 37
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1506,7 +1506,7 @@ TextureImporter:
         serializedVersion: 2
         x: 298
         y: 1502
-        width: 111
+        width: 588
         height: 38
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1525,10 +1525,10 @@ TextureImporter:
       name: SteamWorld Quest_UI_42
       rect:
         serializedVersion: 2
-        x: 407
-        y: 1514
-        width: 112
-        height: 16
+        x: 900
+        y: 1508
+        width: 644
+        height: 37
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1546,10 +1546,10 @@ TextureImporter:
       name: SteamWorld Quest_UI_43
       rect:
         serializedVersion: 2
-        x: 582
-        y: 1514
-        width: 133
-        height: 16
+        x: 1549
+        y: 1508
+        width: 856
+        height: 37
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1567,10 +1567,10 @@ TextureImporter:
       name: SteamWorld Quest_UI_44
       rect:
         serializedVersion: 2
-        x: 747
-        y: 1514
-        width: 133
-        height: 16
+        x: 2832
+        y: 1508
+        width: 36
+        height: 5
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1588,10 +1588,10 @@ TextureImporter:
       name: SteamWorld Quest_UI_45
       rect:
         serializedVersion: 2
-        x: 900
-        y: 1528
-        width: 4
-        height: 5
+        x: 2831
+        y: 1477
+        width: 448
+        height: 2
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1609,10 +1609,10 @@ TextureImporter:
       name: SteamWorld Quest_UI_46
       rect:
         serializedVersion: 2
-        x: 904
-        y: 1519
-        width: 133
-        height: 16
+        x: 2390
+        y: 1477
+        width: 441
+        height: 2
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1630,10 +1630,10 @@ TextureImporter:
       name: SteamWorld Quest_UI_47
       rect:
         serializedVersion: 2
-        x: 1035
-        y: 1519
-        width: 169
-        height: 16
+        x: 758
+        y: 1476
+        width: 328
+        height: 3
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1651,10 +1651,10 @@ TextureImporter:
       name: SteamWorld Quest_UI_48
       rect:
         serializedVersion: 2
-        x: 1203
-        y: 1508
-        width: 38
-        height: 37
+        x: 3
+        y: 1457
+        width: 443
+        height: 2
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1672,10 +1672,10 @@ TextureImporter:
       name: SteamWorld Quest_UI_49
       rect:
         serializedVersion: 2
-        x: 1240
-        y: 1519
-        width: 303
-        height: 16
+        x: 449
+        y: 1457
+        width: 443
+        height: 2
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1693,10 +1693,10 @@ TextureImporter:
       name: SteamWorld Quest_UI_50
       rect:
         serializedVersion: 2
-        x: 1539
-        y: 1528
-        width: 5
-        height: 5
+        x: 473
+        y: 1412
+        width: 904
+        height: 42
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1711,726 +1711,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SteamWorld Quest_UI_51
-      rect:
-        serializedVersion: 2
-        x: 1549
-        y: 1518
-        width: 338
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9a263026bc4afe450800000000000000
-      internalID: 6120291612049498793
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_52
-      rect:
-        serializedVersion: 2
-        x: 1885
-        y: 1508
-        width: 184
-        height: 37
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b35a9407fa87b24d0800000000000000
-      internalID: -3158298018771786437
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_53
-      rect:
-        serializedVersion: 2
-        x: 2067
-        y: 1518
-        width: 189
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 081446747c0c50c60800000000000000
-      internalID: 7783839493108547968
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_54
-      rect:
-        serializedVersion: 2
-        x: 2249
-        y: 1518
-        width: 156
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cd491c9ab90194b60800000000000000
-      internalID: 7730728496112178396
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_55
-      rect:
-        serializedVersion: 2
-        x: 116
-        y: 1515
-        width: 95
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3af9fdb9675bd6440800000000000000
-      internalID: 4930796688066453411
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_56
-      rect:
-        serializedVersion: 2
-        x: 209
-        y: 1515
-        width: 29
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c03e92a0cca376850800000000000000
-      internalID: 6370124845957112588
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_57
-      rect:
-        serializedVersion: 2
-        x: 232
-        y: 1515
-        width: 36
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 134690ed7a6a65270800000000000000
-      internalID: 8238955808235807793
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_58
-      rect:
-        serializedVersion: 2
-        x: 507
-        y: 1515
-        width: 22
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1a9bf11c792270970800000000000000
-      internalID: 8720977238601742753
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_59
-      rect:
-        serializedVersion: 2
-        x: 523
-        y: 1514
-        width: 61
-        height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d15b37d773fbf9b20800000000000000
-      internalID: 3143441309976737053
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_60
-      rect:
-        serializedVersion: 2
-        x: 709
-        y: 1514
-        width: 40
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 003f0e365c3e420b0800000000000000
-      internalID: -5754223986948902144
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_61
-      rect:
-        serializedVersion: 2
-        x: 715
-        y: 1521
-        width: 11
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 95a497ad0c2a48870800000000000000
-      internalID: 8684244930659961433
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_62
-      rect:
-        serializedVersion: 2
-        x: 880
-        y: 1523
-        width: 6
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 42ac4ecd27130d550800000000000000
-      internalID: 6183496657781705252
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_63
-      rect:
-        serializedVersion: 2
-        x: 900
-        y: 1520
-        width: 10
-        height: 4
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a6072a39ec6f663b0800000000000000
-      internalID: -5519452926195371926
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_64
-      rect:
-        serializedVersion: 2
-        x: 874
-        y: 1515
-        width: 10
-        height: 4
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3ed0e27e6231beeb0800000000000000
-      internalID: -4689633529167999517
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_65
-      rect:
-        serializedVersion: 2
-        x: 3
-        y: 1482
-        width: 8
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 165cff1e8a6039bb0800000000000000
-      internalID: -4930589844624652959
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_66
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 1488
-        width: 17
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 02bd77024cb369c40800000000000000
-      internalID: 5518664106933476128
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_67
-      rect:
-        serializedVersion: 2
-        x: 11
-        y: 1482
-        width: 269
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c1b75ab4401f1d820800000000000000
-      internalID: 2941397032400943900
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_68
-      rect:
-        serializedVersion: 2
-        x: 274
-        y: 1482
-        width: 88
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b3b1dc4906ef1d9e0800000000000000
-      internalID: -1598216701973030085
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_69
-      rect:
-        serializedVersion: 2
-        x: 360
-        y: 1482
-        width: 51
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 96620adc682c421b0800000000000000
-      internalID: -5682202945603492247
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_70
-      rect:
-        serializedVersion: 2
-        x: 394
-        y: 1482
-        width: 48
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4c2317efebdc06fc0800000000000000
-      internalID: -3503574289897934140
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_71
-      rect:
-        serializedVersion: 2
-        x: 442
-        y: 1482
-        width: 83
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e28a3d93f481fc030800000000000000
-      internalID: 3517056562551302190
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_72
-      rect:
-        serializedVersion: 2
-        x: 525
-        y: 1482
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d3696bed8b5cd65d0800000000000000
-      internalID: -3067578373368277443
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_73
-      rect:
-        serializedVersion: 2
-        x: 535
-        y: 1476
-        width: 557
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d60d4794bcf5e6bd0800000000000000
-      internalID: -2635063405249769363
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_74
-      rect:
-        serializedVersion: 2
-        x: 806
-        y: 1482
-        width: 96
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4082cc8817b5a89a0800000000000000
-      internalID: -6230066591329146876
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_75
-      rect:
-        serializedVersion: 2
-        x: 900
-        y: 1482
-        width: 51
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3f955048841be45d0800000000000000
-      internalID: -3076326570436765197
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_76
-      rect:
-        serializedVersion: 2
-        x: 934
-        y: 1482
-        width: 48
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d584cd0f218d31960800000000000000
-      internalID: 7571632974401914973
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_77
-      rect:
-        serializedVersion: 2
-        x: 982
-        y: 1482
-        width: 83
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f7cbd0707eeacec30800000000000000
-      internalID: 4390076044058410111
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_78
-      rect:
-        serializedVersion: 2
-        x: 1065
-        y: 1482
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7a5755267f30c5df0800000000000000
-      internalID: -190272723214830169
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_79
-      rect:
-        serializedVersion: 2
-        x: 1075
-        y: 1482
-        width: 277
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9020ceaf9733e2410800000000000000
-      internalID: 1454156328681079305
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_80
-      rect:
-        serializedVersion: 2
-        x: 1346
-        y: 1482
-        width: 88
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c572c7ac0e13a03d0800000000000000
-      internalID: -3239722140400081060
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_81
-      rect:
-        serializedVersion: 2
-        x: 1432
-        y: 1482
-        width: 51
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7b2c851a1eb0eb410800000000000000
-      internalID: 1494645190036079287
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_82
-      rect:
-        serializedVersion: 2
-        x: 1466
-        y: 1482
-        width: 48
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5877f120d25bd17d0800000000000000
-      internalID: -2945999376316663931
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_83
-      rect:
-        serializedVersion: 2
-        x: 1514
-        y: 1482
-        width: 83
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d5af06c43aa9f7c80800000000000000
-      internalID: -8322763560205616547
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_84
-      rect:
-        serializedVersion: 2
-        x: 1597
-        y: 1482
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: adfbcc877213329b0800000000000000
-      internalID: -5106183506907840550
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: SteamWorld Quest_UI_85
       rect:
         serializedVersion: 2
         x: 1607
         y: 1482
-        width: 277
+        width: 302
         height: 13
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -2441,174 +1727,6 @@ TextureImporter:
       bones: []
       spriteID: 487fd17ba046d5a00800000000000000
       internalID: 746863110398015364
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_86
-      rect:
-        serializedVersion: 2
-        x: 1878
-        y: 1482
-        width: 31
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c9a2928b1ee981d70800000000000000
-      internalID: 9014129346476583580
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_87
-      rect:
-        serializedVersion: 2
-        x: 436
-        y: 1482
-        width: 8
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 997b1856b20a11540800000000000000
-      internalID: 4976935171468146585
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_88
-      rect:
-        serializedVersion: 2
-        x: 518
-        y: 1482
-        width: 8
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1d6b6e5731f492c00800000000000000
-      internalID: 876318547501299409
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_89
-      rect:
-        serializedVersion: 2
-        x: 976
-        y: 1482
-        width: 8
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c47ab166e9801fe20800000000000000
-      internalID: 3382494271542896460
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_90
-      rect:
-        serializedVersion: 2
-        x: 1058
-        y: 1482
-        width: 8
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d89f82682a29012f0800000000000000
-      internalID: -1004141490170431091
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_91
-      rect:
-        serializedVersion: 2
-        x: 1508
-        y: 1482
-        width: 8
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 708727fb7d04f9700800000000000000
-      internalID: 549228974936586247
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_92
-      rect:
-        serializedVersion: 2
-        x: 1590
-        y: 1482
-        width: 8
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 49d455a7734f0ee60800000000000000
-      internalID: 7989654258068049300
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_93
-      rect:
-        serializedVersion: 2
-        x: 1899
-        y: 1482
-        width: 10
-        height: 4
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1482f4fb9f40a29a0800000000000000
-      internalID: -6257183261574879167
       vertices: []
       indices: 
       edges: []
@@ -2698,27 +1816,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SteamWorld Quest_UI_98
-      rect:
-        serializedVersion: 2
-        x: 3
-        y: 1412
-        width: 1374
-        height: 47
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 659f2d3e229fa6f80800000000000000
-      internalID: -8112397850508068522
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: SteamWorld Quest_UI_99
       rect:
         serializedVersion: 2
@@ -2740,27 +1837,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SteamWorld Quest_UI_100
-      rect:
-        serializedVersion: 2
-        x: 1416
-        y: 1412
-        width: 6
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b28a78aaf4ce2d040800000000000000
-      internalID: 4671055590444214315
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: SteamWorld Quest_UI_101
       rect:
         serializedVersion: 2
@@ -2777,27 +1853,6 @@ TextureImporter:
       bones: []
       spriteID: c7d24f24fd0d32d70800000000000000
       internalID: 9017280536245448060
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_102
-      rect:
-        serializedVersion: 2
-        x: 2390
-        y: 1414
-        width: 5
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7080275ebc1b64670800000000000000
-      internalID: 8522694834131175431
       vertices: []
       indices: 
       edges: []
@@ -4289,27 +3344,6 @@ TextureImporter:
       bones: []
       spriteID: 1d36fd374ac5ad560800000000000000
       internalID: 7339280404142056401
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SteamWorld Quest_UI_UnderLine
-      rect:
-        serializedVersion: 2
-        x: 2392
-        y: 1477
-        width: 449
-        height: 2
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7854ddfad659bdd10800000000000000
-      internalID: 2151477545334031751
       vertices: []
       indices: 
       edges: []
