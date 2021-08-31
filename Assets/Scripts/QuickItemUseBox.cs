@@ -110,7 +110,8 @@ public class QuickItemUseBox : MonoBehaviour, IDropHandler
         print(number.text);
 
         // 소비 아이템인가?
-        bool isConsumable = itembox.inventoryItemInfo.ItemInfo.itemType == ItemType.Consume;
+        bool isConsumable = itembox.inventoryItemInfo.type == QuickSlotType.Item
+                        && itembox.inventoryItemInfo.ItemInfo.itemType == ItemType.Consume;
         if (isConsumable)
         {
             // 소비 아이템인 경우 수량을 줄이자
