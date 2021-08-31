@@ -79,9 +79,10 @@ public class QuickItemUseBox : MonoBehaviour, IDropHandler
     {
         // 아이템 할당
         itembox.Init(setInventoryItemInfo);
-
         // 할당하면 UserData에 저장
-        UserData.Instance.itemData.data.quickItemUIDs[index] = SaveitemUID;
+        var quickSlotInfo = UserData.Instance.itemData.data.quickItemUIDs[index];
+        quickSlotInfo.type = setInventoryItemInfo.type;
+        quickSlotInfo.uIDorID = SaveitemUID;
     }
 
     public int index;

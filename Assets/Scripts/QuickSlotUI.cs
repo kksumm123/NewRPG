@@ -28,8 +28,18 @@ public class QuickSlotUI : Singleton<QuickSlotUI>
         for (int i = 0; i < 10; i++)
         {
             var newButton = Instantiate(baseBox, baseBox.transform.parent);
-            int itemUID = UserData.Instance.itemData.data.quickItemUIDs[i];
-            InventoryItemInfo inventoryItemInfo = UserData.Instance.GetItem(itemUID);
+            var quickSlotInfo = UserData.Instance.itemData.data.quickItemUIDs[i];
+            InventoryItemInfo inventoryItemInfo = null;
+            if (quickSlotInfo.type == QuickSlotType.Item)
+            {
+                int itemUID = quickSlotInfo.uIDorID;
+                inventoryItemInfo = UserData.Instance.GetItem(itemUID);
+            }
+            else if (quickSlotInfo.type == QuickSlotType.Skill)
+            {
+                int skillID = quickSlotInfo.uIDorID;
+                inventoryItemInfo = ItemDB.GetSkillInfo(skillID).GetInventoryItemInfo();
+            }
             newButton.Init(i, inventoryItemInfo, keyBinding[i]);
             quickSlots.Add(newButton);
         }
@@ -48,7 +58,7 @@ public class QuickSlotUI : Singleton<QuickSlotUI>
                                       && x.itembox.inventoryItemInfo.uid == itemUID)
                 {
                     x.itembox.Init(null);
-                    UserData.Instance.itemData.data.quickItemUIDs[x.index] = 0;
+                    UserData.Instance.itemData.data.quickItemUIDs[x.index] = null;
                 }
             });
 
