@@ -81,7 +81,9 @@ public class QuickItemUseBox : MonoBehaviour, IDropHandler
         itembox.Init(setInventoryItemInfo);
         // 할당하면 UserData에 저장
         var quickSlotInfo = UserData.Instance.itemData.data.quickItemUIDs[index];
-        quickSlotInfo.type = setInventoryItemInfo.type;
+        // ItemInfo가 null이면(= 빈칸과 스위칭 햇으면) type에 기본값으로 item할당
+        quickSlotInfo.type = setInventoryItemInfo != null ?
+                            setInventoryItemInfo.type : QuickSlotType.Item;
         quickSlotInfo.uIDorID = SaveitemUID;
     }
 
@@ -99,6 +101,10 @@ public class QuickItemUseBox : MonoBehaviour, IDropHandler
 
     void OnClick()
     {
+        // menu상태일 땐 사용못하도록
+        if (StageManager.GameState == GameStateType.Menu)
+            return;
+
         // 정보 없으면 리턴
         if (itembox.inventoryItemInfo == null)
             return;
