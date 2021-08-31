@@ -52,7 +52,24 @@ public class SkillUI : BaseUI<SkillUI>
     {
         InitDeck();
         InitSkillList();
+
+        RestoreDeckInfo();
         isCompleteLink = true;
+    }
+
+    private void RestoreDeckInfo()
+    {
+        var deckIDs = UserData.Instance.skillData.data.deckIDs;
+        for (int i = 0; i < skillDeckBoxs.Count; i++)
+        {
+            var deckBox = skillDeckBoxs[i];
+            var skillID = deckIDs[i];
+            SkillInfo skillInfo = null;
+            if (skillID > 0)
+                skillInfo = ItemDB.GetSkillInfo(skillID);
+
+            deckBox.SetUI(skillInfo);
+        }
     }
 
     SkillDeckBox baseSkillDeckBox;

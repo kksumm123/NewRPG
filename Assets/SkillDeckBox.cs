@@ -45,20 +45,31 @@ public class SkillDeckBox : MonoBehaviour, IDropHandler
             SetUI(skillInfo);
     }
 
-    private void SetUI(SkillInfo skillInfo)
+    public void SetUI(SkillInfo skillInfo)
     {
-        icon.sprite = skillInfo.Sprite;
-        skillName.text = skillInfo.name;
+        if (skillInfo != null)
+        {
+            icon.sprite = skillInfo.Sprite;
+            skillName.text = skillInfo.name;
 
-        var userSkillInfo = UserData.Instance.skillData.data.skills
-                                    .Find(x => x.id == skillInfo.id);
-        if (userSkillInfo != null)
-            skillLevel.text  = $"Lv.{userSkillInfo.level}";
+            var userSkillInfo = UserData.Instance.skillData.data.skills
+                                        .Find(x => x.id == skillInfo.id);
+            if (userSkillInfo != null)
+                skillLevel.text = $"Lv.{userSkillInfo.level}";
+            else
+                skillLevel.text = "미획득";
+
+            bgImage.sprite = normalSprite;
+            SetActiveUI(true);
+        }
         else
-            skillLevel.text = "미획득";
-
-        bgImage.sprite = normalSprite;
-        SetActiveUI(true);
+        {
+            icon.sprite = null;
+            skillName.text = string.Empty;
+            SetActiveUI(false);
+            bgImage.sprite = deckState == DeckStateType.Enable ?
+                         enableSprite : disableSprite;
+        }
     }
 
     private void SetActiveUI(bool state)
