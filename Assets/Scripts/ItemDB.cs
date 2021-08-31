@@ -77,6 +77,14 @@ public class SkillInfo
     public string icon;
 
     public Sprite Sprite => Resources.Load<Sprite>($"Icons/{icon}");
+
+    internal InventoryItemInfo GetInventoryItemInfo()
+    {
+        InventoryItemInfo inventoryItemInfo = new InventoryItemInfo();
+        inventoryItemInfo.id = inventoryItemInfo.uid = id;
+        inventoryItemInfo.type = QuickSlotType.Skill;
+        return inventoryItemInfo;
+    }
 }
 [System.Serializable]
 public class ItemInfo

@@ -36,7 +36,7 @@ public class QuickSlotUI : Singleton<QuickSlotUI>
         baseBox.gameObject.SetActive(false);
     }
     List<QuickItemUseBox> quickSlots = new List<QuickItemUseBox>();
-    internal void ClearSlot(int itemUID)
+    internal void ClearSlot(QuickSlotType _type, int itemUID)
     {
         //quickSlots.Find(x => x.itembox != null && x.itembox.inventoryItemInfo.uid == itemUID)
         //          ?.itembox.Init(null);
@@ -44,7 +44,8 @@ public class QuickSlotUI : Singleton<QuickSlotUI>
             (x) =>
             {
                 if (x.itembox != null && x.itembox.inventoryItemInfo != null
-                              && x.itembox.inventoryItemInfo.uid == itemUID)
+                                      && x.itembox.inventoryItemInfo.type == _type
+                                      && x.itembox.inventoryItemInfo.uid == itemUID)
                 {
                     x.itembox.Init(null);
                     UserData.Instance.itemData.data.quickItemUIDs[x.index] = 0;

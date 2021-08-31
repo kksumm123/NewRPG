@@ -45,20 +45,33 @@ public class QuickItemUseBox : MonoBehaviour, IDropHandler
                                 , thisInventoryItemInfo != null ? thisInventoryItemInfo.uid : 0
                                 , fromQuickItemUseBox.itembox
                                 , fromQuickItemUseBox.index);
+            return;
         }
-        else
+
+        SkillDeckBox skillDeckBox = eventData.pointerDrag.GetComponent<SkillDeckBox>();
+        if (skillDeckBox != null)
+        {
+            InventoryItemInfo inventoryItemInfo = skillDeckBox.skillInfo.GetInventoryItemInfo();
+            QuickSlotUI.Instance.ClearSlot(QuickSlotType.Skill, inventoryItemInfo.id);
+            SetIconAndSaveSlotData(inventoryItemInfo, inventoryItemInfo.id, itembox, index);
+            return;
+        }
+
+        ItemBox fromItembox = eventData.pointerDrag.GetComponent<ItemBox>();
+        if (fromItembox != null)
         {
             // ItemBox 관련해서 쓰기 위해서는
             // ItemBox, QuickSlotUI, UserData 3개의 컴포넌트를 가져와야한다
             // 그러므로 인터페이스를 사용하는 편이 좋다
             // 인터페이스는 어떻게 쓰는거지?
-            ItemBox fromItembox = eventData.pointerDrag.GetComponent<ItemBox>();
 
             int itemUID = fromItembox.inventoryItemInfo.uid;
             // 기존에 같은 UID 잇으면 해제하자
-            QuickSlotUI.Instance.ClearSlot(itemUID);
+            QuickSlotUI.Instance.ClearSlot(QuickSlotType.Item, itemUID);
             SetIconAndSaveSlotData(fromItembox.inventoryItemInfo, itemUID, itembox, index);
+            return;
         }
+
     }
 
     void SetIconAndSaveSlotData(InventoryItemInfo setInventoryItemInfo, int SaveitemUID
@@ -116,7 +129,7 @@ public class QuickItemUseBox : MonoBehaviour, IDropHandler
     IEnumerator StartCoolTimeCo()
     {
         float coolTimeSeconds = 1;
-        endTime = Time.realtimeSinceStartup + coolTimeSeconds; 
+        endTime = Time.realtimeSinceStartup + coolTimeSeconds;
         while (Time.realtimeSinceStartup < endTime)
         {
             float remainTime = endTime - Time.realtimeSinceStartup;

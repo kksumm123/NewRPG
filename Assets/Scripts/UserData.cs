@@ -16,7 +16,11 @@ public class InventoryItemInfo
     public int uid;
     public int id;
     public int count;
+    [NonSerialized]
+    public QuickSlotType type;
     public ItemInfo ItemInfo => ItemDB.GetItemInfo(id);
+
+    public SkillInfo SkillInfo => ItemDB.GetSkillInfo(id);
 }
 [System.Serializable]
 public class UserItemData : ISerializationCallbackReceiver
@@ -74,6 +78,11 @@ public class SkillData : ISerializationCallbackReceiver
     }
 
     public void OnBeforeSerialize() { }
+}
+public enum QuickSlotType
+{
+    Item,
+    Skill,
 }
 public class UserData : Singleton<UserData>
 {
