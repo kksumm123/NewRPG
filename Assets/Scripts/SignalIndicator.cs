@@ -10,8 +10,11 @@ public class SignalIndicator : MonoBehaviour
 
     void Awake()
     {
-        terrainCollider = Terrain.activeTerrain.GetComponent<Collider>();
-        indicatorLayer = 1 << LayerMask.NameToLayer("Indicator");
+        if (terrainCollider != null)
+        {
+            terrainCollider = Terrain.activeTerrain.GetComponent<Collider>();
+            indicatorLayer = 1 << LayerMask.NameToLayer("Indicator");
+        }
     }
     RaycastHit hit;
     void Update()
