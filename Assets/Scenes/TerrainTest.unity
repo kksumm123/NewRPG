@@ -2668,6 +2668,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89212fcb7fc9a9f438a70a7a10643462, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillInfo:
+    id: 0
+    name: 
+    mana: 0
+    description: 
+    icon: 
 --- !u!1 &242976320
 GameObject:
   m_ObjectHideFlags: 0
@@ -6591,6 +6597,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enableSprite: {fileID: 21300000, guid: 7408610c409756b4b899b30f64edebc9, type: 2}
   disableSprite: {fileID: 21300000, guid: 14f90a637a5914b429f38069a0f1b7db, type: 2}
+  skillInfo:
+    id: 0
+    name: 
+    mana: 0
+    description: 
+    icon: 
 --- !u!1 &455435608
 GameObject:
   m_ObjectHideFlags: 0
@@ -9434,8 +9446,8 @@ MonoBehaviour:
     data:
       lastUID: 0
       item: []
-      quickItemUIDs: 
-      equipItemUIDs: 
+      quickItemUIDs: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+      equipItemUIDs: 0000000000000000000000000000000000000000000000000000000000000000
     useDebug: 0
   accountData:
     data:
@@ -9447,7 +9459,9 @@ MonoBehaviour:
     useDebug: 0
   skillData:
     data:
-      equipItemUIDs: []
+      skills:
+      - id: 1
+        level: 5
     useDebug: 0
 --- !u!4 &649555911
 Transform:

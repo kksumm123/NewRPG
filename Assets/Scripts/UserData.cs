@@ -61,7 +61,7 @@ public class UserSkillInfo
 [System.Serializable]
 public class SkillData
 {
-    public List<UserSkillInfo> equipItemUIDs = new List<UserSkillInfo>();
+    public List<UserSkillInfo> skills = new List<UserSkillInfo>();
 }
 public class UserData : Singleton<UserData>
 {
@@ -91,6 +91,7 @@ public class UserData : Singleton<UserData>
         questData.SaveData();
         itemData.SaveData();
         accountData.SaveData();
+        skillData.SaveData();
     }
 
     internal string ProcessBuy(ItemInfo item, int count)

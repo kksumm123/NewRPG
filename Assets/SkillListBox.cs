@@ -8,8 +8,11 @@ public class SkillListBox : MonoBehaviour
     Text skillName;
     Text skillMana;
     Image icon;
-    public void Init(SkillInfo skillInfo)
+
+    public SkillInfo skillInfo;
+    public void Init(SkillInfo _skillInfo)
     {
+        skillInfo = _skillInfo;
         skillName = transform.Find("SkillName").GetComponent<Text>();
         skillMana = transform.Find("SkillMana").GetComponent<Text>();
         icon = transform.Find("Icon").GetComponent<Image>();
