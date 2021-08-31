@@ -45,15 +45,16 @@ public class SkillDeckBox : MonoBehaviour, IDropHandler
             SetUI(skillInfo);
     }
 
-    public void SetUI(SkillInfo skillInfo)
+    public void SetUI(SkillInfo _skillInfo)
     {
-        if (skillInfo != null)
+        skillInfo = _skillInfo;
+        if (_skillInfo != null)
         {
-            icon.sprite = skillInfo.Sprite;
-            skillName.text = skillInfo.name;
+            icon.sprite = _skillInfo.Sprite;
+            skillName.text = _skillInfo.name;
 
             var userSkillInfo = UserData.Instance.skillData.data.skills
-                                        .Find(x => x.id == skillInfo.id);
+                                        .Find(x => x.id == _skillInfo.id);
             if (userSkillInfo != null)
                 skillLevel.text = $"Lv.{userSkillInfo.level}";
             else
