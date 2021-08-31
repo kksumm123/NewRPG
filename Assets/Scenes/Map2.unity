@@ -2606,7 +2606,7 @@ MonoBehaviour:
   enableRefraction: 0
   meshRenderer: {fileID: 229346506}
   meshFilter: {fileID: 229346507}
-  material: {fileID: 2100000, guid: d337fc5282607644ebb2f3575513265e, type: 2}
+  material: {fileID: 2100000, guid: 330c28167d111eb46b989104fbdf245f, type: 2}
 --- !u!23 &229346506
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2626,7 +2626,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d337fc5282607644ebb2f3575513265e, type: 2}
+  - {fileID: 2100000, guid: 330c28167d111eb46b989104fbdf245f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -25927,6 +25927,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1451376334255335677, guid: 4bb057e82b035d64e80f562a1d99de73, type: 3}
   m_PrefabInstance: {fileID: 1459170894}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1491957814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491957813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7c2b49c5119b664798d93f1b302dd1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!64 &1491957817
 MeshCollider:
   m_ObjectHideFlags: 0
