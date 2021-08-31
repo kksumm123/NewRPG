@@ -30,12 +30,14 @@ public class ItemBox : MonoBehaviour
             {
                 icon.sprite = item.ItemInfo.Sprite;
                 icon.SetNativeSize();
+                icon.transform.localScale = Vector3.one * 2.3f;
                 count.text = item.count.ToString();
             }
-            else
+            else if (item.type == QuickSlotType.Skill)
             {
                 icon.sprite = item.SkillInfo.Sprite;
                 icon.SetNativeSize();
+                icon.transform.localScale = Vector3.one * 0.5f;
                 count.text = string.Empty;
             }
         }
