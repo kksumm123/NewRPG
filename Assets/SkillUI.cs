@@ -45,6 +45,8 @@ public class SkillUI : BaseUI<SkillUI>
 
         if (isCompleteLink == false)
             LinkComponent();
+
+        RestoreDeckInfo();
     }
 
     bool isCompleteLink = false;
@@ -52,8 +54,6 @@ public class SkillUI : BaseUI<SkillUI>
     {
         InitDeck();
         InitSkillList();
-
-        RestoreDeckInfo();
         isCompleteLink = true;
     }
 
