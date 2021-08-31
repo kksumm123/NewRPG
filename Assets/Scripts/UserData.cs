@@ -19,21 +19,38 @@ public class InventoryItemInfo
     public ItemInfo ItemInfo => ItemDB.GetItemInfo(id);
 }
 [System.Serializable]
-public class UserItemData
+public class UserItemData : ISerializationCallbackReceiver
 {
     public int lastUID;
     public List<InventoryItemInfo> item = new List<InventoryItemInfo>();
     public List<int> quickItemUIDs = new List<int>();
     public List<int> equipItemUIDs = new List<int>();
+
+    public void OnAfterDeserialize()
+    {
+        if (quickItemUIDs.Count == 0)
+            quickItemUIDs.AddRange(new int[10]);
+        if (equipItemUIDs.Count == 0)
+            equipItemUIDs.AddRange(new int[8]);
+    }
+
+    public void OnBeforeSerialize() { }
 }
 [System.Serializable]
-public class AccountData
+public class AccountData : ISerializationCallbackReceiver
 {
     public int gold;
     public int crystal;
     public string username;
     public int level = 1;
     public int exp;
+
+    public void OnAfterDeserialize()
+    {
+        level = Math.Max(1, level);
+    }
+
+    public void OnBeforeSerialize() { }
 }
 [System.Serializable]
 public class UserSkillInfo
@@ -68,10 +85,6 @@ public class UserData : Singleton<UserData>
         itemData = new PlayerPrefsData<UserItemData>("UserItemData");
         accountData = new PlayerPrefsData<AccountData>("UserAccountData");
         skillData = new PlayerPrefsData<SkillData>("UserSkillData");
-        if (itemData.data.quickItemUIDs.Count == 0)
-            itemData.data.quickItemUIDs.AddRange(new int[10]);
-        if (itemData.data.equipItemUIDs.Count == 0)
-            itemData.data.equipItemUIDs.AddRange(new int[8]);
     }
     private void OnDestroy()
     {
