@@ -6595,8 +6595,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a64cc6b80e21040418df79fff1cbbb23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enableSprite: {fileID: 21300000, guid: 7408610c409756b4b899b30f64edebc9, type: 2}
-  disableSprite: {fileID: 21300000, guid: 14f90a637a5914b429f38069a0f1b7db, type: 2}
+  normalSprite: {fileID: 21300000, guid: 7408610c409756b4b899b30f64edebc9, type: 2}
+  enableSprite: {fileID: 21300000, guid: 14f90a637a5914b429f38069a0f1b7db, type: 2}
+  disableSprite: {fileID: 21300000, guid: f1a1bf2f757af4045b60de18886d2028, type: 2}
   skillInfo:
     id: 0
     name: 

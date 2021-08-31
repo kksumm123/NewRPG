@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class SkillDeckBox : MonoBehaviour, IDropHandler
 {
+
+    [SerializeField] Sprite normalSprite;
     [SerializeField] Sprite enableSprite;
     [SerializeField] Sprite disableSprite;
     Image bgImage;
@@ -16,8 +18,10 @@ public class SkillDeckBox : MonoBehaviour, IDropHandler
 
 
     DeckStateType deckState;
-    public void Init(DeckStateType _deckState)
+    int index;
+    public void Init(int _index, DeckStateType _deckState)
     {
+        index = _index;
         bgImage = transform.Find("BG").GetComponent<Image>();
         skillName = transform.Find("SkillName").GetComponent<Text>();
         skillLevel = transform.Find("SkillLevel").GetComponent<Text>();
@@ -36,7 +40,7 @@ public class SkillDeckBox : MonoBehaviour, IDropHandler
     {
         // eventData.pointerDrag = 드래그가 시작된 오브제트
         skillInfo = eventData.pointerDrag.GetComponent<SkillListBox>().skillInfo;
-        
+        UserData.Instance.skillData.data.deckIDs[index] = skillInfo.id;
         if (skillInfo != null)
             SetUI(skillInfo);
     }
@@ -46,14 +50,14 @@ public class SkillDeckBox : MonoBehaviour, IDropHandler
         icon.sprite = skillInfo.Sprite;
         skillName.text = skillInfo.name;
 
-        int level = 0;
         var userSkillInfo = UserData.Instance.skillData.data.skills
                                     .Find(x => x.id == skillInfo.id);
         if (userSkillInfo != null)
-            level = userSkillInfo.level;
+            skillLevel.text  = $"Lv.{userSkillInfo.level}";
+        else
+            skillLevel.text = "미획득";
 
-        print(level);
-        skillLevel.text = level.ToString();
+        bgImage.sprite = normalSprite;
         SetActiveUI(true);
     }
 

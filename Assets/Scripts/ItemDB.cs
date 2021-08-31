@@ -165,4 +165,11 @@ public class ItemDB : Singleton<ItemDB>
     {
         return items.Where(x => x.itemType == itemType).ToList();
     }
+
+    internal static SkillInfo GetSkillInfo(int id)
+    {
+        if (Instance.skillMap.TryGetValue(id, out SkillInfo result) == false)
+            Debug.LogError($"Skill ID {id}가 없습니다");
+        return result;
+    }
 }

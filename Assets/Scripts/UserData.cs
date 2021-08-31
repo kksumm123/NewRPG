@@ -57,11 +57,22 @@ public class UserSkillInfo
 {
     public int id;
     public int level;
+
+    public SkillInfo SkillInfo => ItemDB.GetSkillInfo(id);
 }
 [System.Serializable]
-public class SkillData
+public class SkillData : ISerializationCallbackReceiver
 {
     public List<UserSkillInfo> skills = new List<UserSkillInfo>();
+
+    public List<int> deckIDs = new List<int>(8);
+
+    public void OnAfterDeserialize()
+    {
+        deckIDs.AddRange(new int[8]);
+    }
+
+    public void OnBeforeSerialize() { }
 }
 public class UserData : Singleton<UserData>
 {

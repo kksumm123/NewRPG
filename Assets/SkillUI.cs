@@ -69,7 +69,7 @@ public class SkillUI : BaseUI<SkillUI>
         {
             DeckStateType deckState = 4 + level > i ? DeckStateType.Enable : DeckStateType.Disable;
             var newbox = Instantiate(baseSkillDeckBox, baseSkillDeckBox.transform.parent);
-            newbox.Init(deckState);
+            newbox.Init(i, deckState);
             skillDeckBoxs.Add(newbox);
         }
         baseSkillDeckBox.gameObject.SetActive(false);
