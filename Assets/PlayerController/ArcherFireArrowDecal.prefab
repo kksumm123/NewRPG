@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 769853091}
   - component: {fileID: 769853092}
   - component: {fileID: 3607114527968811754}
+  - component: {fileID: 769853094}
   m_Layer: 7
   m_Name: PointLight
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 769853090}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.452}
+  m_LocalPosition: {x: 0, y: 0, z: -0.654}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7150582466030384572}
@@ -104,6 +105,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbdc8b070f1682c4e99084adcf9adfff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &769853094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769853090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff83909e6061a1242b0b86a304e70f50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &66855818278269542

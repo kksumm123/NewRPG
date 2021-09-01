@@ -77,6 +77,7 @@ public class ArrowController : MonoBehaviour, IProjectile
             var contact = other.GetContact(0);
             var decalRotation = transform.rotation.eulerAngles
                             + new Vector3(0, 0, Random.Range(-90, 90));
+            print($"{transform.position}, {transform.rotation.eulerAngles}\n{transform.rotation.eulerAngles} -> {decalRotation}");
             Instantiate(arrowDecal, contact.point, Quaternion.Euler(decalRotation));
             Destroy(gameObject);
         }
