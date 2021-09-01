@@ -71,10 +71,9 @@ public class ProjectileParabolaDrawer : MonoBehaviour
         float angle0, angle1;
         bool targetInRange = ProjectileMath.LaunchAngle(speed, distance, yOffset, Physics.gravity.magnitude, out angle0, out angle1);
 
+        currentAngle = 1f;
         if (targetInRange)
             currentAngle = angle1;
-        else
-            currentAngle = 1;
 
         projectileArc.UpdateArc(speed, distance, Physics.gravity.magnitude, currentAngle, direction, targetInRange);
     }

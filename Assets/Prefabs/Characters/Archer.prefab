@@ -1408,7 +1408,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3729885709892649324}
   m_LocalRotation: {x: 0.32326594, y: -0, z: -0, w: 0.94630814}
-  m_LocalPosition: {x: 0.38575745, y: 3.199136, z: -2.7809544}
+  m_LocalPosition: {x: 0.38576508, y: 3.1991453, z: -2.78096}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2793,7 +2793,7 @@ MonoBehaviour:
   playerInput: {fileID: 6364062014487214357}
   playerSpeed: 5
   rotationSpeed: 15
-  bulletPrefab: {fileID: 4768081910495422254, guid: 6352ca0666810d34cb23eaadb495b3e7, type: 3}
+  bulletPrefab: {fileID: 5513020356613837314, guid: 0246d438329458646848aba5c5649864, type: 3}
   barrelTransform: {fileID: 5609192757274692704}
   bulletParent: {fileID: 3458700238139163146}
   bulletHitMissDistance: 25
@@ -2801,6 +2801,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   targetPosGo: {fileID: 829653815354609235, guid: f5d49cdb6afa4524fb6c5dfd81f09171, type: 3}
+  nextSkillProjectile: {fileID: 0}
 --- !u!114 &6364062014487214357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3866,7 +3867,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8572205549933708497}
   m_LocalRotation: {x: 0.32326594, y: -0, z: -0, w: 0.94630814}
-  m_LocalPosition: {x: 0.14048386, y: 3.3224032, z: -2.6856098}
+  m_LocalPosition: {x: 0.14048767, y: 3.3224125, z: -2.685608}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

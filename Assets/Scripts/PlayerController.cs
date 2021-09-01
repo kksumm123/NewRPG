@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-public class PlayerController : MonoBehaviour
+public class PlayerController : Singleton<PlayerController>
 {
     [SerializeField] string parameterAttack = "FireStart";
     [SerializeField] string parameterSpeed = "Speed";
@@ -63,8 +63,14 @@ public class PlayerController : MonoBehaviour
             return;
 
         animator.SetTrigger(parameterAttack);
-        //GameObject bullet = Instantiate(bulletPrefab, barrelTransform.transform.position, Camera.main.transform.rotation, bulletParent);
-        GameObject bullet = Instantiate(bulletPrefab, barrelTransform.transform.position
+
+        GameObject projectile = bulletPrefab;
+        if (nextSkillProjectile != null)
+        {
+            projectile = nextSkillProjectile;
+            nextSkillProjectile = null;
+        }
+        GameObject bullet = Instantiate(projectile, barrelTransform.transform.position
             , Quaternion.LookRotation(Camera.main.transform.forward), bulletParent);
         var bulletController = bullet.GetComponent<IProjectile>();
         bulletController.CurrentAngle = projectileParabolaDrawer.currentAngle;
@@ -86,7 +92,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    
+
     #endregion ShootAction_performed
     void Update()
     {
@@ -126,5 +132,16 @@ public class PlayerController : MonoBehaviour
         controller.Move(playerVelocity * Time.deltaTime);
         Quaternion targetRotation = Quaternion.Euler(0, Camera.main.transform.rotation.eulerAngles.y, 0);
         transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+    }
+
+    public GameObject nextSkillProjectile;
+    internal void UseSkill(SkillInfo skillInfo)
+    {
+        // skillInfo.arrowPrefabName
+        // = 다음 발사에 사용할 화살
+        if (string.IsNullOrEmpty(skillInfo.arrowPrefabName) == false)
+        {
+            nextSkillProjectile = (GameObject)Resources.Load(skillInfo.arrowPrefabName);
+        }
     }
 }

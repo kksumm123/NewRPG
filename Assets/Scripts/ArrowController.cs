@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DG.Tweening;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -48,15 +49,23 @@ public class ArrowController : MonoBehaviour, IProjectile
         float degree = -currentAngle * Mathf.Rad2Deg;
         transform.Rotate(degree, 0, degree);
         rigid.velocity = rigid.transform.forward * speed;
+
+        torqueRotate = transform.rotation.eulerAngles;
+        DOTween.To(() => torqueRotate.z, value => torqueRotate.z = value
+                    , 360, 0.1f).SetLoops(-1, LoopType.Restart).SetLink(gameObject);
     }
+    Vector3 torqueRotate;
     private void Update()
     {
-
-        //transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
         if (rigid.velocity != Vector3.zero)
             transform.forward = rigid.velocity.normalized;
 
-        rigid.AddTorque(transform.forward * torqueValue, ForceMode.Force);
+
+        //rigid.AddTorque(new Vector3(0, 0, 1) * torqueValue, ForceMode.Force);
+        var rotation = transform.rotation.eulerAngles;
+        rotation.z = torqueRotate.z;
+        transform.rotation = Quaternion.Euler(rotation);
+
         if (!hit && Vector3.Distance(transform.position, target) < 0.01f)
         {
             if (hit)
@@ -77,8 +86,8 @@ public class ArrowController : MonoBehaviour, IProjectile
             var contact = other.GetContact(0);
             var decalRotation = transform.rotation.eulerAngles
                             + new Vector3(0, 0, Random.Range(-90, 90));
-            print($"{transform.position}, {transform.rotation.eulerAngles}\n{transform.rotation.eulerAngles} -> {decalRotation}");
             Instantiate(arrowDecal, contact.point, Quaternion.Euler(decalRotation));
+            print($"{transform.position}, {transform.rotation.eulerAngles}\n{transform.rotation.eulerAngles} -> {decalRotation}");
             Destroy(gameObject);
         }
     }

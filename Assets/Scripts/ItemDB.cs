@@ -70,11 +70,12 @@ public class DestinationInfo
 public class SkillInfo
 {
     public int id;
-    public string name;
+    public string name; 
     public int mana;
     [TextArea]
     public string description;
     public string icon;
+    public string arrowPrefabName;
 
     public Sprite Sprite => Resources.Load<Sprite>($"Icons/{icon}");
 

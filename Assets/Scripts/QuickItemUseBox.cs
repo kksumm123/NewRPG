@@ -130,6 +130,9 @@ public class QuickItemUseBox : MonoBehaviour, IDropHandler
             // 바뀐 정보로 다시 Init()
             itembox.Init(itembox.inventoryItemInfo);
         }
+        
+        UseSlot();
+
         StartCoroutine(StartCoolTimeCo());
     }
 
@@ -153,5 +156,17 @@ public class QuickItemUseBox : MonoBehaviour, IDropHandler
         coolTimeFilled.fillAmount = 0;
 
         transform.DOPunchScale(Vector3.one * 0.15f, 0.5f).SetUpdate(true);
+    }
+
+    void UseSlot()
+    {
+        switch (itembox.inventoryItemInfo.type)
+        {
+            case QuickSlotType.Item:
+                break;
+            case QuickSlotType.Skill:
+                PlayerController.Instance.UseSkill(itembox.inventoryItemInfo.SkillInfo);
+                break;
+        }
     }
 }
