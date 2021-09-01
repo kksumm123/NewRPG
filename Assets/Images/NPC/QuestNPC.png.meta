@@ -111,6 +111,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -820,6 +821,36 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      QuestNPC_7: -5045484304902667008
+      QuestNPC_28: 4206978058048110603
+      QuestNPC_94: 974564216100682408
+      QuestNPC_65: -8905290175027985048
+      QuestNPC_20: 3859627347410558954
+      QuestNPC_43: -4828475973449396342
+      QuestNPC_100: 6137121621796318343
+      QuestNPC_93: 8229518565988324763
+      QuestNPC_16: -3024399079271524811
+      QuestNPC_74: -196896039088836783
+      QuestNPC_102: -8798158113634842821
+      QuestNPC_42: 6136587804522330384
+      QuestNPC_8: 106476344767080721
+      QuestNPC_9: 9163586950897241468
+      QuestNPC_63: -6182763283472486846
+      QuestNPC_109: 6552156049575166951
+      QuestNPC_44: -324664269015456315
+      QuestNPC_95: -5371986839000561401
+      QuestNPC_17: -8186602344254529383
+      QuestNPC_15: 5521178226537735867
+      QuestNPC_64: 919822339491508711
+      QuestNPC_22: 1747856118944525312
+      QuestNPC_92: 1722809166784135670
+      QuestNPC_19: 1695444316981607781
+      QuestNPC_18: -6830938194914885791
+      QuestNPC_21: 1816017752596724394
+      QuestNPC_29: 5905603125715185930
+      QuestNPC_101: 8704698074392518071
+      QuestNPC_27: 157513854255998105
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

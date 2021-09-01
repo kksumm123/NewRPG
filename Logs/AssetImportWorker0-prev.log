@@ -1,10 +1,10 @@
 Using pre-set license
-Built from '2020.3/staging' branch; Version is '2020.3.13f1 (71691879b7f5) revision 7432472'; Using compiler version '192528614'; Build Type 'Release'
+Built from '2021.2/staging' branch; Version is '2021.2.0b6 (2055a14f48ed) revision 2119073'; Using compiler version '192829333'; Build Type 'Release'
 OS: 'Windows 10 Pro; OS build 19043.1165; Version 2009; 64bit' Language: 'ko' Physical Memory: 32676 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
- COMMAND LINE ARGUMENTS:
-E:\Unity\2020.3.13f1\Editor\Unity.exe
+COMMAND LINE ARGUMENTS:
+E:\Unity\2021.2.0b6\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
@@ -15,282 +15,577 @@ C:/UnityProject/Study/NewRPG
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-10792
+8247
 Successfully changed project path to: C:/UnityProject/Study/NewRPG
 C:/UnityProject/Study/NewRPG
-Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 52.40 ms, found 0 plugins.
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 49.65 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Initialize engine version: 2020.3.13f1 (71691879b7f5)
-[Subsystems] Discovering subsystems at path E:/Unity/2020.3.13f1/Editor/Data/Resources/UnitySubsystems
+Initialize engine version: 2021.2.0b6 (2055a14f48ed)
+[Subsystems] Discovering subsystems at path E:/Unity/2021.2.0b6/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/UnityProject/Study/NewRPG/Assets
-GfxDevice: creating device client; threaded=0
+GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
     Renderer: NVIDIA GeForce GTX 1060 3GB (ID=0x1b84)
-    Vendor:   
+    Vendor:   NVIDIA
     VRAM:     2988 MB
     Driver:   27.21.14.5671
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Initialize mono
-Mono path[0] = 'E:/Unity/2020.3.13f1/Editor/Data/Managed'
-Mono path[1] = 'E:/Unity/2020.3.13f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'E:/Unity/2020.3.13f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56520
+Mono path[0] = 'E:/Unity/2021.2.0b6/Editor/Data/Managed'
+Mono path[1] = 'E:/Unity/2021.2.0b6/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'E:/Unity/2021.2.0b6/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56956
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: E:/Unity/2020.3.13f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.000725 seconds.
+Register platform support module: E:/Unity/2021.2.0b6/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002034 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 57.20 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 51.66 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.274 seconds
+- Completed reload, in  0.688 seconds
+Domain Reload Profiling:
+	ReloadAssembly (704ms)
+		BeginReloadAssembly (64ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (371ms)
+			LoadAssemblies (62ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (124ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (19ms)
+			SetupLoadedEditorAssemblies (171ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (52ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (78ms)
+				ProcessInitializeOnLoadMethodAttributes (35ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001905 seconds.
+Registered in 0.002684 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 59.21 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 53.38 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
+[com.unity.burst] Burst is disabled entirely, either from the command line or because this is not the main Unity process
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogWarning (object)
+Unity.Burst.Editor.BurstLoader:.cctor () (at Library/PackageCache/com.unity.burst@1.6.0-pre.2/Editor/BurstLoader.cs:107)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Library/PackageCache/com.unity.burst@1.6.0-pre.2/Editor/BurstLoader.cs Line: 107)
+
 Mono: successfully reloaded assembly
-- Completed reload, in  1.551 seconds
+- Completed reload, in  1.207 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1233ms)
+		BeginReloadAssembly (116ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (20ms)
+		EndReloadAssembly (1054ms)
+			LoadAssemblies (52ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (213ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (40ms)
+			SetupLoadedEditorAssemblies (653ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (53ms)
+				BeforeProcessingInitializeOnLoad (72ms)
+				ProcessInitializeOnLoadAttributes (505ms)
+				ProcessInitializeOnLoadMethodAttributes (13ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 0.69 ms, found 0 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.90 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3569 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 191.9 MB.
-System memory in use after: 192.0 MB.
-
-Unloading 26 unused Assets to reduce memory usage. Loaded Objects now: 4336.
-Total: 2.530800 ms (FindLiveObjects: 0.297000 ms CreateObjectMapping: 0.134000 ms MarkObjects: 1.977100 ms  DeleteObjects: 0.122200 ms)
+Unloading 4042 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 56 unused Assets / (1.8 MB). Loaded Objects now: 4541.
+Memory consumption went from 203.3 MB to 201.4 MB.
+Total: 3.153500 ms (FindLiveObjects: 0.315000 ms CreateObjectMapping: 0.104000 ms MarkObjects: 2.406000 ms  DeleteObjects: 0.327600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Scenes/TerrainTest.unity
-  artifactKey: Guid(4b9cbc1a124e210428f2dda0568d9233) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/TerrainTest.unity using Guid(4b9cbc1a124e210428f2dda0568d9233) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35874565f64aa08a1d280ab8978ecc6c') in 0.011541 seconds 
-  Import took 0.015746 seconds .
+  Time since last request: 922282.192899 seconds.
+  path: Assets/New Terrain.asset
+  artifactKey: Guid(b1891eba4e2f2884c897b73b437a8f45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New Terrain.asset using Guid(b1891eba4e2f2884c897b73b437a8f45) Importer(815301076,1909f56bfc062723c751e8b465ee728b) 
 
+
+
+
+
+
+
+ -> (artifact id: 'f16a88bf1d2bf22d8a6e8912599fe0f2') in 0.078535 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 265.038173 seconds.
+  path: Assets/PlayerController/Archer_Arrow.prefab
+  artifactKey: Guid(0246d438329458646848aba5c5649864) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerController/Archer_Arrow.prefab using Guid(0246d438329458646848aba5c5649864) Importer(815301076,1909f56bfc062723c751e8b465ee728b) NotSupportedException: ForwardRendererData has been deprecated. Use UniversalRendererData instead
+  at UnityEngine.Rendering.Universal.ForwardRendererData.Create () [0x00001] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\ForwardRendererData.cs:55 
+  at UnityEngine.Rendering.Universal.ScriptableRendererData.InternalCreateRenderer () [0x00009] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\ScriptableRendererData.cs:68 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreateRenderers () [0x00056] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\Data\UniversalRenderPipelineAsset.cs:421 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0006a] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\Data\UniversalRenderPipelineAsset.cs:371 
+  at UnityEngine.Rendering.RenderPipelineAsset.InternalCreatePipeline () [0x00004] in <034e42dfc48f4911988983b3b27bcd25>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.Rendering.RenderPipelineAsset:InternalCreatePipeline()
+UnityEngine.Rendering.RenderPipelineManager:PrepareRenderPipeline(RenderPipelineAsset)
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal(RenderPipelineAsset, IntPtr, List`1, AtomicSafetyHandle)
+UnityEngine.Camera:Render(Camera)
+UnityEditor.PreviewRenderUtility:Render(Boolean, Boolean)
+UnityEditor.GameObjectInspector:DoRenderPreview()
+UnityEditor.GameObjectInspector:RenderStaticPreview(String, Object[], Int32, Int32)
+UnityEditor.AssetPreviewUpdater:CreatePreview(Object, Object[], String, Int32, Int32)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset(Object, Object[], String)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.0.0/Runtime/ForwardRendererData.cs Line: 55)
+
+ -> (artifact id: 'f5026d0b48cfb227c941f815eb59769d') in 0.067684 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/PlayerController/Bullet.mat
+  artifactKey: Guid(b3c13b4e9daf0664fb737b905eb0814e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerController/Bullet.mat using Guid(b3c13b4e9daf0664fb737b905eb0814e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) NotSupportedException: ForwardRendererData has been deprecated. Use UniversalRendererData instead
+  at UnityEngine.Rendering.Universal.ForwardRendererData.Create () [0x00001] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\ForwardRendererData.cs:55 
+  at UnityEngine.Rendering.Universal.ScriptableRendererData.InternalCreateRenderer () [0x00009] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\ScriptableRendererData.cs:68 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreateRenderers () [0x00056] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\Data\UniversalRenderPipelineAsset.cs:421 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0006a] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\Data\UniversalRenderPipelineAsset.cs:371 
+  at UnityEngine.Rendering.RenderPipelineAsset.InternalCreatePipeline () [0x00004] in <034e42dfc48f4911988983b3b27bcd25>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.Rendering.RenderPipelineAsset:InternalCreatePipeline()
+UnityEngine.Rendering.RenderPipelineManager:PrepareRenderPipeline(RenderPipelineAsset)
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal(RenderPipelineAsset, IntPtr, List`1, AtomicSafetyHandle)
+UnityEngine.Camera:Render(Camera)
+UnityEditor.PreviewRenderUtility:Render(Boolean, Boolean)
+UnityEditor.MaterialEditor:DoRenderPreview(PreviewRenderUtility, Boolean)
+UnityEditor.MaterialEditor:RenderStaticPreview(String, Object[], Int32, Int32)
+UnityEditor.AssetPreviewUpdater:CreatePreview(Object, Object[], String, Int32, Int32)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset(Object, Object[], String)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.0.0/Runtime/ForwardRendererData.cs Line: 55)
+
+ -> (artifact id: '50f68f1abc101e9ff991779703148cfd') in 0.107188 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/PlayerController/PlayerController.inputactions
+  artifactKey: Guid(4c1ea294f509b5b45baaba8c6b0e980e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerController/PlayerController.inputactions using Guid(4c1ea294f509b5b45baaba8c6b0e980e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86e1d935ebf5a7d003819cebd38b6624') in 0.006322 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/PlayerController/Archer_FireArrow.prefab
+  artifactKey: Guid(6352ca0666810d34cb23eaadb495b3e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerController/Archer_FireArrow.prefab using Guid(6352ca0666810d34cb23eaadb495b3e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) NotSupportedException: ForwardRendererData has been deprecated. Use UniversalRendererData instead
+  at UnityEngine.Rendering.Universal.ForwardRendererData.Create () [0x00001] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\ForwardRendererData.cs:55 
+  at UnityEngine.Rendering.Universal.ScriptableRendererData.InternalCreateRenderer () [0x00009] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\ScriptableRendererData.cs:68 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreateRenderers () [0x00056] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\Data\UniversalRenderPipelineAsset.cs:421 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0006a] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\Data\UniversalRenderPipelineAsset.cs:371 
+  at UnityEngine.Rendering.RenderPipelineAsset.InternalCreatePipeline () [0x00004] in <034e42dfc48f4911988983b3b27bcd25>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.Rendering.RenderPipelineAsset:InternalCreatePipeline()
+UnityEngine.Rendering.RenderPipelineManager:PrepareRenderPipeline(RenderPipelineAsset)
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal(RenderPipelineAsset, IntPtr, List`1, AtomicSafetyHandle)
+UnityEngine.Camera:Render(Camera)
+UnityEditor.PreviewRenderUtility:Render(Boolean, Boolean)
+UnityEditor.GameObjectInspector:DoRenderPreview()
+UnityEditor.GameObjectInspector:RenderStaticPreview(String, Object[], Int32, Int32)
+UnityEditor.AssetPreviewUpdater:CreatePreview(Object, Object[], String, Int32, Int32)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset(Object, Object[], String)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.0.0/Runtime/ForwardRendererData.cs Line: 55)
+
+ -> (artifact id: 'c0ab76cc63cb567415209ca1ffe79582') in 0.035642 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/PlayerController/BulletDecal.prefab
+  artifactKey: Guid(f089d6a4a8ff96c4fb740a676c64ed84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerController/BulletDecal.prefab using Guid(f089d6a4a8ff96c4fb740a676c64ed84) Importer(815301076,1909f56bfc062723c751e8b465ee728b) NotSupportedException: ForwardRendererData has been deprecated. Use UniversalRendererData instead
+  at UnityEngine.Rendering.Universal.ForwardRendererData.Create () [0x00001] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\ForwardRendererData.cs:55 
+  at UnityEngine.Rendering.Universal.ScriptableRendererData.InternalCreateRenderer () [0x00009] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\ScriptableRendererData.cs:68 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreateRenderers () [0x00056] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\Data\UniversalRenderPipelineAsset.cs:421 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0006a] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\Data\UniversalRenderPipelineAsset.cs:371 
+  at UnityEngine.Rendering.RenderPipelineAsset.InternalCreatePipeline () [0x00004] in <034e42dfc48f4911988983b3b27bcd25>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.Rendering.RenderPipelineAsset:InternalCreatePipeline()
+UnityEngine.Rendering.RenderPipelineManager:PrepareRenderPipeline(RenderPipelineAsset)
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal(RenderPipelineAsset, IntPtr, List`1, AtomicSafetyHandle)
+UnityEngine.Camera:Render(Camera)
+UnityEditor.PreviewRenderUtility:Render(Boolean, Boolean)
+UnityEditor.GameObjectInspector:DoRenderPreview()
+UnityEditor.GameObjectInspector:RenderStaticPreview(String, Object[], Int32, Int32)
+UnityEditor.AssetPreviewUpdater:CreatePreview(Object, Object[], String, Int32, Int32)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset(Object, Object[], String)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.0.0/Runtime/ForwardRendererData.cs Line: 55)
+
+ -> (artifact id: '549849a9d3b1034bee9776b7ce071186') in 0.022523 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/PlayerController/BulletHoles.png
+  artifactKey: Guid(9ee100097ce8a18479c9299f42910b68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerController/BulletHoles.png using Guid(9ee100097ce8a18479c9299f42910b68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9cb557e0325a82eb012a808069e1cf3') in 0.100983 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/PlayerController/ArcherArrowDecal.prefab
+  artifactKey: Guid(ee17c5d5d13275f4eaaaee5eb2bdd31a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerController/ArcherArrowDecal.prefab using Guid(ee17c5d5d13275f4eaaaee5eb2bdd31a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) NotSupportedException: ForwardRendererData has been deprecated. Use UniversalRendererData instead
+  at UnityEngine.Rendering.Universal.ForwardRendererData.Create () [0x00001] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\ForwardRendererData.cs:55 
+  at UnityEngine.Rendering.Universal.ScriptableRendererData.InternalCreateRenderer () [0x00009] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\ScriptableRendererData.cs:68 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreateRenderers () [0x00056] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\Data\UniversalRenderPipelineAsset.cs:421 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0006a] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\Data\UniversalRenderPipelineAsset.cs:371 
+  at UnityEngine.Rendering.RenderPipelineAsset.InternalCreatePipeline () [0x00004] in <034e42dfc48f4911988983b3b27bcd25>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.Rendering.RenderPipelineAsset:InternalCreatePipeline()
+UnityEngine.Rendering.RenderPipelineManager:PrepareRenderPipeline(RenderPipelineAsset)
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal(RenderPipelineAsset, IntPtr, List`1, AtomicSafetyHandle)
+UnityEngine.Camera:Render(Camera)
+UnityEditor.PreviewRenderUtility:Render(Boolean, Boolean)
+UnityEditor.GameObjectInspector:DoRenderPreview()
+UnityEditor.GameObjectInspector:RenderStaticPreview(String, Object[], Int32, Int32)
+UnityEditor.AssetPreviewUpdater:CreatePreview(Object, Object[], String, Int32, Int32)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset(Object, Object[], String)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.0.0/Runtime/ForwardRendererData.cs Line: 55)
+
+ -> (artifact id: '1061cc5b926739051756c9df4de14cb7') in 0.012972 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/PlayerController/ArcherFireArrowDecal.prefab
+  artifactKey: Guid(bb3280e63b83e3545bc783980cde8a19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerController/ArcherFireArrowDecal.prefab using Guid(bb3280e63b83e3545bc783980cde8a19) Importer(815301076,1909f56bfc062723c751e8b465ee728b) NotSupportedException: ForwardRendererData has been deprecated. Use UniversalRendererData instead
+  at UnityEngine.Rendering.Universal.ForwardRendererData.Create () [0x00001] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\ForwardRendererData.cs:55 
+  at UnityEngine.Rendering.Universal.ScriptableRendererData.InternalCreateRenderer () [0x00009] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\ScriptableRendererData.cs:68 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreateRenderers () [0x00056] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\Data\UniversalRenderPipelineAsset.cs:421 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0006a] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\Data\UniversalRenderPipelineAsset.cs:371 
+  at UnityEngine.Rendering.RenderPipelineAsset.InternalCreatePipeline () [0x00004] in <034e42dfc48f4911988983b3b27bcd25>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.Rendering.RenderPipelineAsset:InternalCreatePipeline()
+UnityEngine.Rendering.RenderPipelineManager:PrepareRenderPipeline(RenderPipelineAsset)
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal(RenderPipelineAsset, IntPtr, List`1, AtomicSafetyHandle)
+UnityEngine.Camera:Render(Camera)
+UnityEditor.PreviewRenderUtility:Render(Boolean, Boolean)
+UnityEditor.GameObjectInspector:DoRenderPreview()
+UnityEditor.GameObjectInspector:RenderStaticPreview(String, Object[], Int32, Int32)
+UnityEditor.AssetPreviewUpdater:CreatePreview(Object, Object[], String, Int32, Int32)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset(Object, Object[], String)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.0.0/Runtime/ForwardRendererData.cs Line: 55)
+
+ -> (artifact id: '2b3eb0e4ce88ed9ddf2a910bf5136420') in 0.019300 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/PlayerController/Bullet.prefab
+  artifactKey: Guid(e9c25b0f844b2764c8cf7c4d0c06f4a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerController/Bullet.prefab using Guid(e9c25b0f844b2764c8cf7c4d0c06f4a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) NotSupportedException: ForwardRendererData has been deprecated. Use UniversalRendererData instead
+  at UnityEngine.Rendering.Universal.ForwardRendererData.Create () [0x00001] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\ForwardRendererData.cs:55 
+  at UnityEngine.Rendering.Universal.ScriptableRendererData.InternalCreateRenderer () [0x00009] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\ScriptableRendererData.cs:68 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreateRenderers () [0x00056] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\Data\UniversalRenderPipelineAsset.cs:421 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0006a] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\Data\UniversalRenderPipelineAsset.cs:371 
+  at UnityEngine.Rendering.RenderPipelineAsset.InternalCreatePipeline () [0x00004] in <034e42dfc48f4911988983b3b27bcd25>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.Rendering.RenderPipelineAsset:InternalCreatePipeline()
+UnityEngine.Rendering.RenderPipelineManager:PrepareRenderPipeline(RenderPipelineAsset)
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal(RenderPipelineAsset, IntPtr, List`1, AtomicSafetyHandle)
+UnityEngine.Camera:Render(Camera)
+UnityEditor.PreviewRenderUtility:Render(Boolean, Boolean)
+UnityEditor.GameObjectInspector:DoRenderPreview()
+UnityEditor.GameObjectInspector:RenderStaticPreview(String, Object[], Int32, Int32)
+UnityEditor.AssetPreviewUpdater:CreatePreview(Object, Object[], String, Int32, Int32)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset(Object, Object[], String)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.0.0/Runtime/ForwardRendererData.cs Line: 55)
+
+ -> (artifact id: '072aad2c1b3a0cddbbafaa57790c210b') in 0.009333 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.883755 seconds.
+  path: Assets/PlayerController/Archer_FireArrow.prefab
+  artifactKey: Guid(6352ca0666810d34cb23eaadb495b3e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerController/Archer_FireArrow.prefab using Guid(6352ca0666810d34cb23eaadb495b3e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) NotSupportedException: ForwardRendererData has been deprecated. Use UniversalRendererData instead
+  at UnityEngine.Rendering.Universal.ForwardRendererData.Create () [0x00001] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\ForwardRendererData.cs:55 
+  at UnityEngine.Rendering.Universal.ScriptableRendererData.InternalCreateRenderer () [0x00009] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\ScriptableRendererData.cs:68 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreateRenderers () [0x00056] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\Data\UniversalRenderPipelineAsset.cs:421 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0006a] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\Data\UniversalRenderPipelineAsset.cs:371 
+  at UnityEngine.Rendering.RenderPipelineAsset.InternalCreatePipeline () [0x00004] in <034e42dfc48f4911988983b3b27bcd25>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.Rendering.RenderPipelineAsset:InternalCreatePipeline()
+UnityEngine.Rendering.RenderPipelineManager:PrepareRenderPipeline(RenderPipelineAsset)
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal(RenderPipelineAsset, IntPtr, List`1, AtomicSafetyHandle)
+UnityEngine.Camera:Render(Camera)
+UnityEditor.PreviewRenderUtility:Render(Boolean, Boolean)
+UnityEditor.GameObjectInspector:DoRenderPreview()
+UnityEditor.GameObjectInspector:RenderStaticPreview(String, Object[], Int32, Int32)
+UnityEditor.AssetPreviewUpdater:CreatePreview(Object, Object[], String, Int32, Int32)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset(Object, Object[], String)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.0.0/Runtime/ForwardRendererData.cs Line: 55)
+
+ -> (artifact id: '625e2f5cac0b016baaac696e97291570') in 0.016872 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001753 seconds.
+Registered in 0.003297 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.76 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.89 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.562 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.70 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3369 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 178.2 MB.
-System memory in use after: 178.4 MB.
+[com.unity.burst] Burst is disabled entirely, either from the command line or because this is not the main Unity process
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogWarning (object)
+Unity.Burst.Editor.BurstLoader:.cctor () (at Library/PackageCache/com.unity.burst@1.6.0-pre.2/Editor/BurstLoader.cs:107)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4338.
-Total: 2.864700 ms (FindLiveObjects: 0.366600 ms CreateObjectMapping: 0.182800 ms MarkObjects: 2.203000 ms  DeleteObjects: 0.111600 ms)
+(Filename: Library/PackageCache/com.unity.burst@1.6.0-pre.2/Editor/BurstLoader.cs Line: 107)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.277 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1308ms)
+		BeginReloadAssembly (127ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (41ms)
+		EndReloadAssembly (1111ms)
+			LoadAssemblies (56ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (247ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (37ms)
+			SetupLoadedEditorAssemblies (553ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (64ms)
+				ProcessInitializeOnLoadAttributes (461ms)
+				ProcessInitializeOnLoadMethodAttributes (17ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (61ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.85 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3857 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 29 unused Assets / (1.8 MB). Loaded Objects now: 4667.
+Memory consumption went from 201.9 MB to 200.1 MB.
+Total: 3.449600 ms (FindLiveObjects: 0.303800 ms CreateObjectMapping: 0.197300 ms MarkObjects: 2.612900 ms  DeleteObjects: 0.334800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 289.936543 seconds.
-  path: Assets/LowPolySoldiers_demo
-  artifactKey: Guid(5d1ef10e85e5c40468055d511de205d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/LowPolySoldiers_demo using Guid(5d1ef10e85e5c40468055d511de205d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be5d20dcc53ac20a2f575aaa6f0e298a') in 0.006224 seconds 
-  Import took 0.011189 seconds .
-
+  Time since last request: 79.861168 seconds.
+  path: Assets/URP/Global Volume Profile.asset
+  artifactKey: Guid(646eead1c465ada4380e3eca1ac79d97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/URP/Global Volume Profile.asset using Guid(646eead1c465ada4380e3eca1ac79d97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37d069f902d65ff6e06661a3b8da42a8') in 0.026004 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.113068 seconds.
-  path: Assets/LowPolySoldiers_demo
-  artifactKey: Guid(5d1ef10e85e5c40468055d511de205d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/LowPolySoldiers_demo using Guid(5d1ef10e85e5c40468055d511de205d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be5d20dcc53ac20a2f575aaa6f0e298a') in 0.001716 seconds 
-  Import took 0.006396 seconds .
+  Time since last request: 0.000013 seconds.
+  path: Assets/URP/TerainMat.mat
+  artifactKey: Guid(121b98e467bb9f04ba53639e9ccf17f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/URP/TerainMat.mat using Guid(121b98e467bb9f04ba53639e9ccf17f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) NotSupportedException: ForwardRendererData has been deprecated. Use UniversalRendererData instead
+  at UnityEngine.Rendering.Universal.ForwardRendererData.Create () [0x00001] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\ForwardRendererData.cs:55 
+  at UnityEngine.Rendering.Universal.ScriptableRendererData.InternalCreateRenderer () [0x00009] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\ScriptableRendererData.cs:68 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreateRenderers () [0x00056] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\Data\UniversalRenderPipelineAsset.cs:421 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0006a] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\Data\UniversalRenderPipelineAsset.cs:371 
+  at UnityEngine.Rendering.RenderPipelineAsset.InternalCreatePipeline () [0x00004] in <034e42dfc48f4911988983b3b27bcd25>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.Rendering.RenderPipelineAsset:InternalCreatePipeline()
+UnityEngine.Rendering.RenderPipelineManager:PrepareRenderPipeline(RenderPipelineAsset)
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal(RenderPipelineAsset, IntPtr, List`1, AtomicSafetyHandle)
+UnityEngine.Camera:Render(Camera)
+UnityEditor.PreviewRenderUtility:Render(Boolean, Boolean)
+UnityEditor.MaterialEditor:DoRenderPreview(PreviewRenderUtility, Boolean)
+UnityEditor.MaterialEditor:RenderStaticPreview(String, Object[], Int32, Int32)
+UnityEditor.AssetPreviewUpdater:CreatePreview(Object, Object[], String, Int32, Int32)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset(Object, Object[], String)
 
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.0.0/Runtime/ForwardRendererData.cs Line: 55)
+
+ -> (artifact id: '73e15025e9944d4805a0961725b50b1e') in 0.033671 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 12.276277 seconds.
-  path: Assets/UnityRoyale/FX/Shaders/Flame_style.shadergraph
-  artifactKey: Guid(d87e126f03b0f9d4199aa1af559e7d92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UnityRoyale/FX/Shaders/Flame_style.shadergraph using Guid(d87e126f03b0f9d4199aa1af559e7d92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc91a1e91cc0dcd1c553bc7d14f5bc47') in 0.072850 seconds 
-  Import took 0.078161 seconds .
-
+  Time since last request: 0.000017 seconds.
+  path: Assets/URP/UniversalRenderPipelineAsset_Renderer.asset
+  artifactKey: Guid(013d3bb0c5af1784683b938c9adb09f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/URP/UniversalRenderPipelineAsset_Renderer.asset using Guid(013d3bb0c5af1784683b938c9adb09f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45d44121c0062b76394c42138066c17a') in 0.004150 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.200602 seconds.
-  path: Assets/UnityRoyale/FX/Shaders/Flame_style.shadergraph
-  artifactKey: Guid(d87e126f03b0f9d4199aa1af559e7d92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UnityRoyale/FX/Shaders/Flame_style.shadergraph using Guid(d87e126f03b0f9d4199aa1af559e7d92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc91a1e91cc0dcd1c553bc7d14f5bc47') in 0.002790 seconds 
-  Import took 0.006989 seconds .
-
+  Time since last request: 0.000013 seconds.
+  path: Assets/URP/UniversalRenderPipelineAsset.asset
+  artifactKey: Guid(6231efb803692eb4982ad9a6d5284b8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/URP/UniversalRenderPipelineAsset.asset using Guid(6231efb803692eb4982ad9a6d5284b8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bda596515d63751a1e616e99b6d14836') in 0.001866 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 61.275616 seconds.
-  path: Assets/Shader
-  artifactKey: Guid(3d2e56bbcc22a5748be2ea029210b03d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Shader using Guid(3d2e56bbcc22a5748be2ea029210b03d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '972160fa84536936172fe04a8775dc4c') in 0.002139 seconds 
-  Import took 0.006856 seconds .
+  Time since last request: 55.428496 seconds.
+  path: Assets/PlayerController/Archer_FireArrow.prefab
+  artifactKey: Guid(6352ca0666810d34cb23eaadb495b3e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerController/Archer_FireArrow.prefab using Guid(6352ca0666810d34cb23eaadb495b3e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) NotSupportedException: ForwardRendererData has been deprecated. Use UniversalRendererData instead
+  at UnityEngine.Rendering.Universal.ForwardRendererData.Create () [0x00001] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\ForwardRendererData.cs:55 
+  at UnityEngine.Rendering.Universal.ScriptableRendererData.InternalCreateRenderer () [0x00009] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\ScriptableRendererData.cs:68 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreateRenderers () [0x00056] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\Data\UniversalRenderPipelineAsset.cs:421 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0006a] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\Data\UniversalRenderPipelineAsset.cs:371 
+  at UnityEngine.Rendering.RenderPipelineAsset.InternalCreatePipeline () [0x00004] in <034e42dfc48f4911988983b3b27bcd25>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.Rendering.RenderPipelineAsset:InternalCreatePipeline()
+UnityEngine.Rendering.RenderPipelineManager:PrepareRenderPipeline(RenderPipelineAsset)
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal(RenderPipelineAsset, IntPtr, List`1, AtomicSafetyHandle)
+UnityEngine.Camera:Render(Camera)
+UnityEditor.PreviewRenderUtility:Render(Boolean, Boolean)
+UnityEditor.GameObjectInspector:DoRenderPreview()
+UnityEditor.GameObjectInspector:RenderStaticPreview(String, Object[], Int32, Int32)
+UnityEditor.AssetPreviewUpdater:CreatePreview(Object, Object[], String, Int32, Int32)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset(Object, Object[], String)
 
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.0.0/Runtime/ForwardRendererData.cs Line: 55)
+
+ -> (artifact id: '12556ebbdc138ccacd21956bc36e6941') in 0.027608 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 25.252620 seconds.
-  path: Assets/UISample
-  artifactKey: Guid(188a599ca77c53d42ae4dc9a6b1e32da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UISample using Guid(188a599ca77c53d42ae4dc9a6b1e32da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca41e0b7168f8c37c5fed08bc456a5dd') in 0.001874 seconds 
-  Import took 0.006620 seconds .
+  Time since last request: 0.000013 seconds.
+  path: Assets/PlayerController/ArcherFireArrowDecal.prefab
+  artifactKey: Guid(bb3280e63b83e3545bc783980cde8a19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PlayerController/ArcherFireArrowDecal.prefab using Guid(bb3280e63b83e3545bc783980cde8a19) Importer(815301076,1909f56bfc062723c751e8b465ee728b) NotSupportedException: ForwardRendererData has been deprecated. Use UniversalRendererData instead
+  at UnityEngine.Rendering.Universal.ForwardRendererData.Create () [0x00001] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\ForwardRendererData.cs:55 
+  at UnityEngine.Rendering.Universal.ScriptableRendererData.InternalCreateRenderer () [0x00009] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\ScriptableRendererData.cs:68 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreateRenderers () [0x00056] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\Data\UniversalRenderPipelineAsset.cs:421 
+  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.CreatePipeline () [0x0006a] in C:\UnityProject\Study\NewRPG\Library\PackageCache\com.unity.render-pipelines.universal@12.0.0\Runtime\Data\UniversalRenderPipelineAsset.cs:371 
+  at UnityEngine.Rendering.RenderPipelineAsset.InternalCreatePipeline () [0x00004] in <034e42dfc48f4911988983b3b27bcd25>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.Rendering.RenderPipelineAsset:InternalCreatePipeline()
+UnityEngine.Rendering.RenderPipelineManager:PrepareRenderPipeline(RenderPipelineAsset)
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal(RenderPipelineAsset, IntPtr, List`1, AtomicSafetyHandle)
+UnityEngine.Camera:Render(Camera)
+UnityEditor.PreviewRenderUtility:Render(Boolean, Boolean)
+UnityEditor.GameObjectInspector:DoRenderPreview()
+UnityEditor.GameObjectInspector:RenderStaticPreview(String, Object[], Int32, Int32)
+UnityEditor.AssetPreviewUpdater:CreatePreview(Object, Object[], String, Int32, Int32)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset(Object, Object[], String)
 
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.0.0/Runtime/ForwardRendererData.cs Line: 55)
+
+ -> (artifact id: '33c365a5ea188f5e0562829ad82b75fd') in 0.017885 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 19.952750 seconds.
-  path: Assets/Shader/TransparentAlpha.shadergraph
-  artifactKey: Guid(bc7b3961e78130e4c9f62ba8a0bec5e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Shader/TransparentAlpha.shadergraph using Guid(bc7b3961e78130e4c9f62ba8a0bec5e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f45829e98530bb521f3083665ddf11a') in 0.002970 seconds 
-  Import took 0.007242 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.280584 seconds.
-  path: Assets/Shader/TransparentAlpha.shadergraph
-  artifactKey: Guid(bc7b3961e78130e4c9f62ba8a0bec5e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Shader/TransparentAlpha.shadergraph using Guid(bc7b3961e78130e4c9f62ba8a0bec5e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f45829e98530bb521f3083665ddf11a') in 0.004004 seconds 
-  Import took 0.008865 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 149.970709 seconds.
-  path: Assets/Shader/TransparentAlpha.shadergraph
-  artifactKey: Guid(bc7b3961e78130e4c9f62ba8a0bec5e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Shader/TransparentAlpha.shadergraph using Guid(bc7b3961e78130e4c9f62ba8a0bec5e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6b107a68863ca2bfb034af3c59bfc83') in 0.002924 seconds 
-  Import took 0.008095 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 25.490631 seconds.
-  path: Assets/Stylized Water For URP/Textures/Caustics/Caustics 4.png
-  artifactKey: Guid(832a95b3f67bea74b941f33cce3a7651) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Stylized Water For URP/Textures/Caustics/Caustics 4.png using Guid(832a95b3f67bea74b941f33cce3a7651) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98fd764aae4caf33d2ba98ab892313a1') in 0.050466 seconds 
-  Import took 0.055426 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.006066 seconds.
-  path: Assets/Stylized Water For URP/Textures/Caustics/Caustics 4.png
-  artifactKey: Guid(832a95b3f67bea74b941f33cce3a7651) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Stylized Water For URP/Textures/Caustics/Caustics 4.png using Guid(832a95b3f67bea74b941f33cce3a7651) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98fd764aae4caf33d2ba98ab892313a1') in 0.005688 seconds 
-  Import took 0.010162 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.202856 seconds.
-  path: Assets/Stylized Water For URP/Scripts/UI/Resources/Icons/color.png
-  artifactKey: Guid(089cd13dbe5c3fc44a1f238bb33156b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Stylized Water For URP/Scripts/UI/Resources/Icons/color.png using Guid(089cd13dbe5c3fc44a1f238bb33156b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd4b7173106c016f982bfcfdd7102b58') in 0.005345 seconds 
-  Import took 0.009980 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.004671 seconds.
-  path: Assets/Stylized Water For URP/Scripts/UI/Resources/Icons/color.png
-  artifactKey: Guid(089cd13dbe5c3fc44a1f238bb33156b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Stylized Water For URP/Scripts/UI/Resources/Icons/color.png using Guid(089cd13dbe5c3fc44a1f238bb33156b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd4b7173106c016f982bfcfdd7102b58') in 0.004178 seconds 
-  Import took 0.008227 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.053421 seconds.
-  path: Assets/Stylized Water For URP/Scripts/UI/Resources/Icons/Discord.png
-  artifactKey: Guid(be1ea077bd3d5fe40bfe76eff7e300e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Stylized Water For URP/Scripts/UI/Resources/Icons/Discord.png using Guid(be1ea077bd3d5fe40bfe76eff7e300e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1850d2f133e753a321a51e84c5bca22f') in 0.006058 seconds 
-  Import took 0.010656 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.359323 seconds.
-  path: Assets/Stylized Water For URP/Textures/Foam/Foam 1.png
-  artifactKey: Guid(0a33360c1c6b85c45bb8a19af0c4e87a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Stylized Water For URP/Textures/Foam/Foam 1.png using Guid(0a33360c1c6b85c45bb8a19af0c4e87a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfbf465d77ff390661db9d7e9d81c305') in 0.006223 seconds 
-  Import took 0.011046 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000106 seconds.
-  path: Assets/Stylized Water For URP/Textures/Foam/Foam 2.png
-  artifactKey: Guid(fcabffd57a8d737448ad0269a9d3092d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Stylized Water For URP/Textures/Foam/Foam 2.png using Guid(fcabffd57a8d737448ad0269a9d3092d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e15f310d13bdbcde4194be616577f1c') in 0.005458 seconds 
-  Import took 0.009469 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000150 seconds.
-  path: Assets/Stylized Water For URP/Textures/Foam/Foam 3.png
-  artifactKey: Guid(86ed7ce9e52fd71459c3ce9ac144d310) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Stylized Water For URP/Textures/Foam/Foam 3.png using Guid(86ed7ce9e52fd71459c3ce9ac144d310) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '302381eff69a267032b3c7406e53389c') in 0.006187 seconds 
-  Import took 0.010218 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.061970 seconds.
-  path: Assets/Stylized Water For URP/Textures/Foam/Foam 6.png
-  artifactKey: Guid(5293ac8cd3dd6f6478585f4f30abddf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Stylized Water For URP/Textures/Foam/Foam 6.png using Guid(5293ac8cd3dd6f6478585f4f30abddf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00d429b59fa028fe5f5a6549a4621b01') in 0.006586 seconds 
-  Import took 0.011752 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000122 seconds.
-  path: Assets/Stylized Water For URP/Textures/Foam/Foam 7.png
-  artifactKey: Guid(ab507ff7ff37d954da98b07bf0bb152e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Stylized Water For URP/Textures/Foam/Foam 7.png using Guid(ab507ff7ff37d954da98b07bf0bb152e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1bd23efc6cbcc8de64b5c938b038bb3') in 0.006575 seconds 
-  Import took 0.010370 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000136 seconds.
-  path: Assets/Stylized Water For URP/Textures/Foam/Foam 8.png
-  artifactKey: Guid(59322d9235e3b2a44a08574ae149f003) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Stylized Water For URP/Textures/Foam/Foam 8.png using Guid(59322d9235e3b2a44a08574ae149f003) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1103bad8c6bc5215d983b55fd145752f') in 0.005806 seconds 
-  Import took 0.009310 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.329688 seconds.
-  path: Assets/FXIFIED/Stylized VFX Free Pack/Resources/font/hurry up.ttf
-  artifactKey: Guid(999d6718663be1340a0770a4e3a6741b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FXIFIED/Stylized VFX Free Pack/Resources/font/hurry up.ttf using Guid(999d6718663be1340a0770a4e3a6741b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5fa9b8c0feea99aba9ce95b793ef9b9') in 0.140641 seconds 
-  Import took 0.145497 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000129 seconds.
-  path: Assets/Stylized Water For URP/Scripts/UI/Resources/Icons/Forum.png
-  artifactKey: Guid(3a013fbf440f65945af849c426c8b5e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Stylized Water For URP/Scripts/UI/Resources/Icons/Forum.png using Guid(3a013fbf440f65945af849c426c8b5e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff01253a9b14096a4c5bafc1acabe093') in 0.004790 seconds 
-  Import took 0.009486 seconds .
-
-AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+  Time since last request: 65.444940 seconds.
+  path: Assets/URP/UniversalRenderPipelineAsset_Renderer.asset
+  artifactKey: Guid(013d3bb0c5af1784683b938c9adb09f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/URP/UniversalRenderPipelineAsset_Renderer.asset using Guid(013d3bb0c5af1784683b938c9adb09f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdb91717b8cd654b9a76ca155c942d46') in 0.001932 seconds 

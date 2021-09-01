@@ -549,6 +549,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -3358,6 +3359,136 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      SteamWorld Quest_UI_173: 4260287535498926876
+      SteamWorld Quest_UI_49: -987539502415100963
+      SteamWorld Quest_UI_39: 4753478583682241405
+      SteamWorld Quest_UI_8: -1501202257632250561
+      SteamWorld Quest_UI_30: -6292859878441758710
+      SteamWorld Quest_UI_50: 6294035392338639851
+      SteamWorld Quest_UI_10: -6724688312605048927
+      SteamWorld Quest_UI_28: 2376791891773853382
+      SteamWorld Quest_UI_38: 5135283688373807394
+      SteamWorld Quest_UI_112: 8139169865610394306
+      SteamWorld Quest_UI_6: 5242001367093029043
+      SteamWorld Quest_UI_114: 7497959102170512084
+      SteamWorld Quest_UI_109: 520725551423731172
+      SteamWorld Quest_UI_146: 4935773552913261961
+      SteamWorld Quest_UI_33: 446708890707462554
+      SteamWorld Quest_UI_174: 7339280404142056401
+      SteamWorld Quest_UI_95: -2134856447354254832
+      SteamWorld Quest_UI_150: 7224937291440451189
+      SteamWorld Quest_UI_158: -2199686399675168204
+      SteamWorld Quest_UI_20: -4860556048621758268
+      SteamWorld Quest_UI_99: -2171914618672938850
+      SteamWorld Quest_UI_170: -7319328337485366167
+      SteamWorld Quest_UI_159: 6859523317466796771
+      SteamWorld Quest_UI_2: -8391940068568656174
+      SteamWorld Quest_UI_42: -6399782180159588322
+      SteamWorld Quest_UI_143: 3268753810007854361
+      SteamWorld Quest_UI_167: 782984873141817892
+      SteamWorld Quest_UI_115: -5873722268685420509
+      SteamWorld Quest_UI_37: -5002531042194515873
+      SteamWorld Quest_UI_110: -4920397902336077523
+      SteamWorld Quest_UI_111: 4577770787618472715
+      SteamWorld Quest_UI_121: -5007782956248510659
+      SteamWorld Quest_UI_17: -1786800225652756896
+      SteamWorld Quest_UI_116: 4900897142886336869
+      SteamWorld Quest_UI_96: -26009865892666491
+      SteamWorld Quest_UI_163: -5677010645472859962
+      SteamWorld Quest_UI_132: 3819211414213562112
+      SteamWorld Quest_UI_122: -5653030962704363402
+      SteamWorld Quest_UI_12: 1925815648309689984
+      SteamWorld Quest_UI_103: 840712155220461534
+      SteamWorld Quest_UI_41: 2791370551009219687
+      SteamWorld Quest_UI_120: -6631647344130443092
+      SteamWorld Quest_UI_101: 9017280536245448060
+      SteamWorld Quest_UI_43: -3385686205980842975
+      SteamWorld Quest_UI_149: 2324526666674609206
+      SteamWorld Quest_UI_45: -588340485950016893
+      SteamWorld Quest_UI_134: 900926487200006026
+      SteamWorld Quest_UI_36: -7393995797544366812
+      SteamWorld Quest_UI_48: 7840893646420061248
+      SteamWorld Quest_UI_Select: 3092504100402844462
+      SteamWorld Quest_UI_3: -206072083056664929
+      SteamWorld Quest_UI_133: 435368675501364154
+      SteamWorld Quest_UI_168: -3230207027576573863
+      SteamWorld Quest_UI_141: -6467694444570465613
+      SteamWorld Quest_UI_154: 2656487293720521057
+      SteamWorld Quest_UI_1: 2042705447902057222
+      SteamWorld Quest_UI_32: -3379130177644213269
+      SteamWorld Quest_UI_162: 2156339883296151531
+      SteamWorld Quest_UI_9: -1298684327936807785
+      SteamWorld Quest_UI_118: -5043730681011916965
+      SteamWorld Quest_UI_137: -1779022835473240037
+      SteamWorld Quest_UI_105: -7292861678462265544
+      SteamWorld Quest_UI_19: 788082836168732032
+      SteamWorld Quest_UI_47: -8054711617570210087
+      SteamWorld Quest_UI_94: 2469501502210923439
+      SteamWorld Quest_UI_13: 574003454367006109
+      SteamWorld Quest_UI_156: 8612676192434248187
+      SteamWorld Quest_UI_Selected: -2307647919702860006
+      SteamWorld Quest_UI_153: 7840805879412161024
+      SteamWorld Quest_UI_144: 115716525109230736
+      SteamWorld Quest_UI_46: 9011729488657980966
+      SteamWorld Quest_UI_113: -3382701985063242605
+      SteamWorld Quest_UI_135: -5371094079947363268
+      SteamWorld Quest_UI_171: 8493536254381067545
+      SteamWorld Quest_UI_151: 6189650411517022551
+      SteamWorld Quest_UI_129: 7586136061993721962
+      SteamWorld Quest_UI_165: 3766210153005447018
+      SteamWorld Quest_UI_172: -7954908824094484639
+      SteamWorld Quest_UI_106: -4980109743214122446
+      SteamWorld Quest_UI_127: 557087649151960598
+      SteamWorld Quest_UI_4: -9139816433689479107
+      SteamWorld Quest_UI_14: -1962686518724164964
+      SteamWorld Quest_UI_131: -6999669933134749401
+      SteamWorld Quest_UI_5: 1661835248894817310
+      SteamWorld Quest_UI_15: 8536951456515006099
+      SteamWorld Quest_UI_164: 2828944559145427826
+      SteamWorld Quest_UI_140: -5555147932067690322
+      SteamWorld Quest_UI_138: -3928993605822310504
+      SteamWorld Quest_UI_160: -8291137896645468662
+      SteamWorld Quest_UI_166: -1588085180910106299
+      SteamWorld Quest_UI_27: -3034285638682594432
+      SteamWorld Quest_UI_0: -759591750730597515
+      SteamWorld Quest_UI_152: -2167400867028234381
+      SteamWorld Quest_UI_157: -3082250598920998100
+      SteamWorld Quest_UI_125: 6897485046967375969
+      SteamWorld Quest_UI_148: 8013336424931850038
+      SteamWorld Quest_UI_21: 5722250738954769661
+      SteamWorld Quest_UI_147: 1524439124723487182
+      SteamWorld Quest_UI_31: -8201892126800155957
+      SteamWorld Quest_UI_24: 9206490693516019910
+      SteamWorld Quest_UI_161: 290341519253552217
+      SteamWorld Quest_UI_7: 2302082151667649437
+      DisableCard: -2727284807396297517
+      SteamWorld Quest_UI_169: 2201155299162941183
+      SteamWorld Quest_UI_44: 748467306536986251
+      SteamWorld Quest_UI_117: -6833618032659697298
+      SteamWorld Quest_UI_123: 5199876215343261854
+      SteamWorld Quest_UI_22: 2333041664758202456
+      SteamWorld Quest_UI_25: 1278163846183852559
+      SteamWorld Quest_UI_85: 746863110398015364
+      SteamWorld Quest_UI_23: 1662067296946633154
+      SteamWorld Quest_UI_29: 4460511704557176250
+      SteamWorld Quest_UI_35: -5504467353481258147
+      SteamWorld Quest_UI_104: 5082516707453814050
+      SteamWorld Quest_UI_124: -1289916272756349203
+      SteamWorld Quest_UI_139: 2520768168521444998
+      SteamWorld Quest_UI_40: 5679614130174402856
+      SteamWorld Quest_UI_155: -8828594573964323199
+      SteamWorld Quest_UI_145: 8928579080303203665
+      SteamWorld Quest_UI_107: -3729474487204005534
+      SteamWorld Quest_UI_136: 1551903929134930677
+      SteamWorld Quest_UI_34: -6227510728694343668
+      SteamWorld Quest_UI_16: -1875440006233592293
+      SteamWorld Quest_UI_126: 5208353560180249759
+      SteamWorld Quest_UI_26: 4874193111142783565
+      SteamWorld Quest_UI_18: 1864056238470318193
+      SteamWorld Quest_UI_130: -3331422856924902526
+      SteamWorld Quest_UI_142: -4293781054564845986
+      SteamWorld Quest_UI_119: 460302407062687039
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
