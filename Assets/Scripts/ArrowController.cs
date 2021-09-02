@@ -49,20 +49,22 @@ public class ArrowController : MonoBehaviour, IProjectile
         transform.Rotate(degree, 0, degree);
         rigid.velocity = rigid.transform.forward * speed;
 
-        torqueRotate = transform.rotation.eulerAngles;
-        DOTween.To(() => torqueRotate.z, value => torqueRotate.z = value
-                    , 360, 0.1f).SetLoops(-1, LoopType.Restart).SetLink(gameObject);
+        torqueRotateZ = transform.rotation.eulerAngles.z;
+        DOTween.To(() => torqueRotateZ, value => torqueRotateZ = value
+                    , 360, Random.Range(0.1f, 1f))
+               .SetLoops(-1, LoopType.Incremental)
+               .SetLink(gameObject)
+               .SetUpdate(true);
     }
-    Vector3 torqueRotate;
+
+    float torqueRotateZ;
     private void Update()
     {
         if (rigid.velocity != Vector3.zero)
             transform.forward = rigid.velocity.normalized;
 
-
-        //rigid.AddTorque(new Vector3(0, 0, 1) * torqueValue, ForceMode.Force);
         var rotation = transform.rotation.eulerAngles;
-        rotation.z = torqueRotate.z;
+        rotation.z = torqueRotateZ;
         transform.rotation = Quaternion.Euler(rotation);
 
         if (!hit && Vector3.Distance(transform.position, target) < 0.01f)
@@ -83,10 +85,11 @@ public class ArrowController : MonoBehaviour, IProjectile
         {
             isHit = true;
             var contact = other.GetContact(0);
-            var decalRotation = transform.rotation.eulerAngles
-                            + new Vector3(0, 0, Random.Range(-90, 90));
-            Instantiate(arrowDecal, contact.point, Quaternion.Euler(decalRotation));
+            //var decalRotation = transform.rotation.eulerAngles
+            //                + new Vector3(0, 0, Random.Range(-90, 90));
+            //Instantiate(arrowDecal, contact.point, Quaternion.Euler(decalRotation));
             //print($"{transform.position}, {transform.rotation.eulerAngles}\n{transform.rotation.eulerAngles} -> {decalRotation}");
+            Instantiate(arrowDecal, contact.point, transform.rotation);
             Destroy(gameObject);
         }
     }
