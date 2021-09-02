@@ -12,7 +12,6 @@ public class ArrowController : MonoBehaviour, IProjectile
     [SerializeField] GameObject arrowDecal = null;
     public float speed = 10f;
     [SerializeField] float timeToDestroy = 7f;
-    [SerializeField] float torqueValue = 100;
 
     public Vector3 Target { get => target; set => target = value; }
     public bool Hit { get => hit; set => hit = value; }
@@ -87,7 +86,7 @@ public class ArrowController : MonoBehaviour, IProjectile
             var decalRotation = transform.rotation.eulerAngles
                             + new Vector3(0, 0, Random.Range(-90, 90));
             Instantiate(arrowDecal, contact.point, Quaternion.Euler(decalRotation));
-            print($"{transform.position}, {transform.rotation.eulerAngles}\n{transform.rotation.eulerAngles} -> {decalRotation}");
+            //print($"{transform.position}, {transform.rotation.eulerAngles}\n{transform.rotation.eulerAngles} -> {decalRotation}");
             Destroy(gameObject);
         }
     }
