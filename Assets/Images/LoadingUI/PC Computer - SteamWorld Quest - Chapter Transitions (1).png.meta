@@ -1,0 +1,760 @@
+fileFormatVersion: 2
+guid: f509aff1d59f33146bba21f0221406e9
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Chapter Transitions (1)_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1691
+        width: 1924
+        height: 1084
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e56e2cefa7878f49a5e568711c492d9
+      internalID: 1287426766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Chapter Transitions (1)_1
+      rect:
+        serializedVersion: 2
+        x: 1930
+        y: 1699
+        width: 326
+        height: 211
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 820559d526df0b9409ae675f9edf564b
+      internalID: 716138915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Chapter Transitions (1)_3
+      rect:
+        serializedVersion: 2
+        x: 2259
+        y: 1696
+        width: 390
+        height: 315
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3afdbd692bb3b9542aa3f9ad643f08b9
+      internalID: -1969652367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Chapter Transitions (1)_4
+      rect:
+        serializedVersion: 2
+        x: 2652
+        y: 1691
+        width: 316
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a4c1d30e40d78846b5f320271a06ab7
+      internalID: 391254711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Chapter Transitions (1)_5
+      rect:
+        serializedVersion: 2
+        x: 2977
+        y: 1692
+        width: 1236
+        height: 634
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cc90470b6f4c9a4e83e08ffad274825
+      internalID: -733365959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Chapter Transitions (1)_12
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 1048
+        width: 1232
+        height: 636
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adce285ca8edf974a8379c4a4a0d73aa
+      internalID: 1645028654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Chapter Transitions (1)_13
+      rect:
+        serializedVersion: 2
+        x: 2858
+        y: 1048
+        width: 1113
+        height: 640
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de386fd5a687f6040bb3ef283bbae185
+      internalID: -1184944264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Chapter Transitions (1)_14
+      rect:
+        serializedVersion: 2
+        x: 3960
+        y: 1487
+        width: 4
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c97fa7280a9832643956b899fecf4a78
+      internalID: -1846846100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Chapter Transitions (1)_19
+      rect:
+        serializedVersion: 2
+        x: 2653
+        y: 1048
+        width: 199
+        height: 376
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7666feed95c8dec43aa17e553afc87d3
+      internalID: 2075558438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Chapter Transitions (1)_20
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1048
+        width: 208
+        height: 249
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b877b9e1c64a779439e31641cc9f6ea9
+      internalID: 1977355336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Chapter Transitions (1)_21
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 1048
+        width: 319
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d41716c6a12e62d4b88a12403b1ca3db
+      internalID: -501650273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Chapter Transitions (1)_40
+      rect:
+        serializedVersion: 2
+        x: 2077
+        y: 1048
+        width: 573
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 832514186f8b59744b2a1cde314711e8
+      internalID: 604898153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Chapter Transitions (1)_66
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 394
+        width: 449
+        height: 371
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec01be82107dec949aab7e739b0b3d5d
+      internalID: 1483408899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Chapter Transitions (1)_67
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 392
+        width: 365
+        height: 348
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeb8ff02f0d96a44a90a007731dc85cc
+      internalID: -254826140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Chapter Transitions (1)_68
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 406
+        width: 309
+        height: 381
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff2fc67319dd7d44db317d7209babd1f
+      internalID: 1269378571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Chapter Transitions (1)_69
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 393
+        width: 336
+        height: 353
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa3adda64b72df54faadd21caf0308e1
+      internalID: -214790386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Chapter Transitions (1)_70
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 391
+        width: 1281
+        height: 653
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5d2344592a9b0c4f807ef98cf020d01
+      internalID: -1004091316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Chapter Transitions (1)_72
+      rect:
+        serializedVersion: 2
+        x: 2764
+        y: 394
+        width: 297
+        height: 327
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b91b6581980831f4e93ebdf6672987f4
+      internalID: 950680630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Chapter Transitions (1)_73
+      rect:
+        serializedVersion: 2
+        x: 3064
+        y: 391
+        width: 801
+        height: 457
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5396922fe1f7b2d45bf0b153851de660
+      internalID: 230381830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Chapter Transitions (1)_74
+      rect:
+        serializedVersion: 2
+        x: 3868
+        y: 393
+        width: 485
+        height: 363
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0429819d8965098468e3c08c35541151
+      internalID: 138870581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Chapter Transitions (1)_119
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 3
+        width: 301
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee0c638f92b2a142b2973ff91206749
+      internalID: -101652140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Chapter Transitions (1)_2
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 3
+        width: 735
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2089138aa956fa4787641a528424948
+      internalID: -2011541433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Chapter Transitions (1)_6
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 1050
+        width: 294
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b5f5404dc2f15242b2f2f5e385274a9
+      internalID: -1185149674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 652e511195edebe4d9c100f2c88ff530
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_36: 1888794191
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_26: 417664069
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_54: -304841526
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_9: -1847892126
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_107: 162630851
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_106: 1119496950
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_82: 1315261510
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_55: -69879758
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_85: 1659166521
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_92: -1559863545
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_93: 1535826796
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_87: -673225605
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_71: -156130360
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_110: -136736191
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_119: -101652140
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_108: -1117916271
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_81: 42019847
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_2: -2011541433
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_46: 498659823
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_100: -1393439284
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_3: -1969652367
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_80: -1994816978
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_61: 2140413675
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_11: -774129918
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_19: 2075558438
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_28: -209918072
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_76: -594861874
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_90: -839043781
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_102: -68063765
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_113: 1545155629
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_56: -615820117
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_123: -874140875
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_5: -733365959
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_97: 1871461709
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_47: -677168301
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_40: 604898153
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_70: -1004091316
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_78: -279147078
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_17: -586523642
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_30: -849423097
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_59: -1940344817
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_115: 1507601076
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_44: 432704496
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_8: 137480893
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_52: -1794221199
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_125: -49024878
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_129: -2121686833
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_27: -592957972
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_118: -2056250482
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_120: 410857
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_65: -984519572
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_32: -539881877
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_6: -1185149674
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_127: -1146040502
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_41: 1502915469
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_124: -12360770
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_38: 463887741
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_111: -1766289413
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_62: -1577337384
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_0: 1287426766
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_53: 876450990
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_96: -1501302743
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_121: 117807976
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_4: 391254711
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_33: 440507714
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_114: 1414039401
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_67: -254826140
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_105: -1915261815
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_88: 1074248842
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_66: 1483408899
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_22: 673650480
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_58: 834319570
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_24: -652782469
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_43: 1784544771
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_1: 716138915
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_73: 230381830
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_34: -711638656
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_64: -1309487843
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_83: -1752207149
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_130: 713101547
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_31: -1029785101
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_74: 138870581
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_42: -1479329936
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_23: -1088158481
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_13: -1184944264
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_12: 1645028654
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_35: 978776293
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_63: -1483236694
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_60: 1818853724
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_18: -1920592271
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_68: 1269378571
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_57: -560680529
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_84: 825145180
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_101: 356545394
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_15: -223789799
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_77: 1237647658
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_39: 1761104368
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_20: 1977355336
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_122: 715906297
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_7: -945986619
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_25: 1615474803
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_10: -2079438879
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_117: 595029360
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_48: 675697992
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_16: -211697091
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_72: 950680630
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_49: 280185737
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_95: 388402898
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_14: -1846846100
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_94: 1266389749
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_29: 198547254
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_103: 1764424932
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_75: 1770926449
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_104: 1729432062
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_98: 1820249519
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_89: -1900911314
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_51: -1914591028
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_69: -214790386
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_79: -1645217573
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_86: 1765725077
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_37: 2024527489
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_50: -794646102
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_109: 1851651625
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_99: -295480269
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_128: -479007920
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_91: -1621198452
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_112: 225666513
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_116: 24133738
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_21: -501650273
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_126: 1023413059
+      PC Computer - SteamWorld Quest - Chapter Transitions (1)_45: -467990128
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

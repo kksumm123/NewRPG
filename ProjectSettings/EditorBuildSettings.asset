@@ -4,6 +4,15 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Map2.unity
+    guid: 63ad16bcee8d6b2438eb2f40358ef588
+  - enabled: 1
+    path: Assets/Scenes/Map3.unity
+    guid: 9ed09a622f9737f4da8e865e98b81890
+  - enabled: 1
+    path: Assets/Scenes/TerrainTest.unity
+    guid: 4b9cbc1a124e210428f2dda0568d9233
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: b80213cb7f3e745d7a8bff5a4ad04b9a, type: 2}

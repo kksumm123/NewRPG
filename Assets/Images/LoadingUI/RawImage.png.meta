@@ -1,0 +1,586 @@
+fileFormatVersion: 2
+guid: 80b474232244f1444b58173fcbeeef72
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Loading Animation (1) (1)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 681.6
+        width: 190
+        height: 170.4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78b0a70be29bf2544a56a09448f1a065
+      internalID: 788333269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Loading Animation (1) (1)_1
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 681.6
+        width: 190
+        height: 170.4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81013c05b34e90a4cbdaf894bb7a1f35
+      internalID: -963239324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Loading Animation (1) (1)_2
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 681.6
+        width: 190
+        height: 170.4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa990e4366e42c146a556e5e86c01638
+      internalID: -1722226878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Loading Animation (1) (1)_3
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 681.6
+        width: 190
+        height: 170.4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d881c642e2a26aa42903d33e28965742
+      internalID: 1599673655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Loading Animation (1) (1)_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 511.6
+        width: 190
+        height: 170.4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3e23bf251af00a4fa3fa4c1075c5280
+      internalID: -378030787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Loading Animation (1) (1)_5
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 511.6
+        width: 190
+        height: 170.4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edd54a52d9d928e4490d7af8e4ff2371
+      internalID: -318489791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Loading Animation (1) (1)_6
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 511.6
+        width: 190
+        height: 170.4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b53a1e427cfc2bb44bd4a548ccc87b6b
+      internalID: -1245357808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Loading Animation (1) (1)_7
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 511.6
+        width: 190
+        height: 170.4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e948b6196aa21024e8e8338f80e5da96
+      internalID: 655537374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Loading Animation (1) (1)_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 341.6
+        width: 190
+        height: 170.4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9e5affc3397c6a49b3bdda39aa76144
+      internalID: 427667734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Loading Animation (1) (1)_9
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 341.6
+        width: 190
+        height: 170.4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8617c9a5fbeb0b44cb57261904aeca48
+      internalID: 571594635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Loading Animation (1) (1)_10
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 341.6
+        width: 190
+        height: 170.4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c4de52920e9ac34c9b94d265351aba3
+      internalID: -1046572884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Loading Animation (1) (1)_11
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 341.6
+        width: 190
+        height: 170.4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ccf9c0210ecb0d44b0857cde96d0496
+      internalID: 1702021425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Loading Animation (1) (1)_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 171.6
+        width: 190
+        height: 170.4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 236ab5d1338ae4f4daee2812f1fce17c
+      internalID: -328998473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Loading Animation (1) (1)_13
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 171.6
+        width: 190
+        height: 170.4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07fbd8e9653dbc440a32fd7e1092025a
+      internalID: 2101454007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Loading Animation (1) (1)_14
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 171.6
+        width: 190
+        height: 170.4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12c2b20f146eab946a219d1689c63cdd
+      internalID: 1250780298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Loading Animation (1) (1)_15
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 171.6
+        width: 190
+        height: 170.4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ba94dabb2fa027469c478913ae37d4e
+      internalID: -1780040207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Loading Animation (1) (1)_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1.6000061
+        width: 190
+        height: 170.4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc7e6c9292793b54e9ef9b825c0a6b4b
+      internalID: -733787467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Loading Animation (1) (1)_17
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 1.6000061
+        width: 190
+        height: 170.4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f02050ed760817444a35025cd8933ed6
+      internalID: 1569640765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Loading Animation (1) (1)_18
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 1.6000061
+        width: 190
+        height: 170.4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c124b576a5ce987439029ddece6b1c2d
+      internalID: -1317332187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - SteamWorld Quest - Loading Animation (1) (1)_19
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 1.6000061
+        width: 190
+        height: 170.4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71bbba85ee0b69442ac5afe5c4c83809
+      internalID: 1538522507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 76227bd9c63af4b49a238bc4f4b18130
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PC Computer - SteamWorld Quest - Loading Animation (1) (1)_9: 571594635
+      PC Computer - SteamWorld Quest - Loading Animation (1) (1)_0: 788333269
+      PC Computer - SteamWorld Quest - Loading Animation (1) (1)_12: -328998473
+      PC Computer - SteamWorld Quest - Loading Animation (1) (1)_6: -1245357808
+      PC Computer - SteamWorld Quest - Loading Animation (1) (1)_8: 427667734
+      PC Computer - SteamWorld Quest - Loading Animation (1) (1)_1: -963239324
+      PC Computer - SteamWorld Quest - Loading Animation (1) (1)_3: 1599673655
+      PC Computer - SteamWorld Quest - Loading Animation (1) (1)_5: -318489791
+      PC Computer - SteamWorld Quest - Loading Animation (1) (1)_11: 1702021425
+      PC Computer - SteamWorld Quest - Loading Animation (1) (1)_19: 1538522507
+      PC Computer - SteamWorld Quest - Loading Animation (1) (1)_4: -378030787
+      PC Computer - SteamWorld Quest - Loading Animation (1) (1)_2: -1722226878
+      PC Computer - SteamWorld Quest - Loading Animation (1) (1)_7: 655537374
+      PC Computer - SteamWorld Quest - Loading Animation (1) (1)_18: -1317332187
+      PC Computer - SteamWorld Quest - Loading Animation (1) (1)_14: 1250780298
+      PC Computer - SteamWorld Quest - Loading Animation (1) (1)_17: 1569640765
+      PC Computer - SteamWorld Quest - Loading Animation (1) (1)_10: -1046572884
+      PC Computer - SteamWorld Quest - Loading Animation (1) (1)_13: 2101454007
+      PC Computer - SteamWorld Quest - Loading Animation (1) (1)_16: -733787467
+      PC Computer - SteamWorld Quest - Loading Animation (1) (1)_15: -1780040207
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
