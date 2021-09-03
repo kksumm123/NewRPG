@@ -5,11 +5,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LoadingUI : BaseUI<LoadingUI>
+public class LoadingUI : Singleton<LoadingUI>
 {
-    new void Awake()
+    void Awake()
     {
-        base.Awake();
         DontDestroyOnLoad(transform.root);
     }
     public void ShowLoadingUI(AsyncOperation result)
@@ -33,6 +32,8 @@ public class LoadingUI : BaseUI<LoadingUI>
         }
         percent.text = "100 %";
         progressBar.fillAmount = 1;
-        CloseUI();
+        CanvasGroup canvasGroup = GetComponent<CanvasGroup>();
+        canvasGroup.DOFade(0, 0.5f).SetUpdate(true)
+                   .OnComplete(() => gameObject.SetActive(false));
     }
 }

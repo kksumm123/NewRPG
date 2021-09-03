@@ -81,9 +81,10 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
         m_ShuttingDown = true;
     }
 
-    // 부숴질 때 true 안하도록
-    //private void OnDestroy()
-    //{
-    //    m_ShuttingDown = true;
-    //}
+    private void OnDestroy()
+    {
+        // 부숴질 때 true 안하도록
+        //m_ShuttingDown = true;
+        m_Instance = null;
+    }
 }

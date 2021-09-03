@@ -39,8 +39,8 @@ public class PlayerController : Singleton<PlayerController>
         aimAction = playerInput.actions["Aim"];
         shootAction.performed += ShootAction_performed;
 
-        aimAction.performed += _ => projectileParabolaDrawer.gameObject.SetActive(true);
-        aimAction.canceled += _ => projectileParabolaDrawer.gameObject.SetActive(false);
+        aimAction.performed += AimAction_performed;
+        aimAction.canceled += AimAction_canceled;
 
         projectileParabolaDrawer.Speed = bulletPrefab.GetComponent<IProjectile>().Speed;
         mapLayer = int.MaxValue;
@@ -48,9 +48,21 @@ public class PlayerController : Singleton<PlayerController>
         mapLayer &= ~(1 << LayerMask.NameToLayer("Player"));
         mapLayer &= ~(1 << LayerMask.NameToLayer("NPC"));
     }
+
+    void AimAction_performed(InputAction.CallbackContext obj)
+    {
+        projectileParabolaDrawer.gameObject.SetActive(true);
+    }
+    private void AimAction_canceled(InputAction.CallbackContext obj)
+    {
+        projectileParabolaDrawer.gameObject.SetActive(false);
+    }
+
     private void OnDestroy()
     {
         shootAction.performed -= ShootAction_performed;
+        aimAction.performed -= AimAction_performed;
+        aimAction.canceled -= AimAction_canceled;
     }
 
     #region ShootAction_performed
