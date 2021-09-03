@@ -16,6 +16,10 @@ public abstract class NPC : MonoBehaviour
     {
         showUIKey.performed += ShowYiKey_performed;
     }
+    private void OnDestroy()
+    {
+        showUIKey.performed -= ShowYiKey_performed;
+    }
 
     void ShowYiKey_performed(InputAction.CallbackContext obj)
     {

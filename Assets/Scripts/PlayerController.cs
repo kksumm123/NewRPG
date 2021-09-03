@@ -48,7 +48,10 @@ public class PlayerController : Singleton<PlayerController>
         mapLayer &= ~(1 << LayerMask.NameToLayer("Player"));
         mapLayer &= ~(1 << LayerMask.NameToLayer("NPC"));
     }
-
+    private void OnDestroy()
+    {
+        shootAction.performed -= ShootAction_performed;
+    }
 
     #region ShootAction_performed
     [SerializeField] GameObject bulletPrefab;
